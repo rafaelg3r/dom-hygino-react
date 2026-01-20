@@ -1,13 +1,13 @@
 :root {
   --semi-black: #0a0a0a;
   --semi-white: #f5e1c8;
-  --light-gray: #51484c;
-  --dark-gray: #121011;
-  --pink-gray: #2c2125;
-  --dark-pink-gray: #161213;
+  --light-grey: #51484c;
+  --dark-grey: #121011;
+  --pink-grey: #2c2125;
+  --dark-pink-grey: #161213;
   --pink-red: #e53344;
   /* --pink-red-dark: #b53342; */
-  --pink-red-dark: #7f1c26;
+  --pink-red-dark: #e53344;
   --pink-red-30: rgba(229, 51, 68, 0.3);
   --pink-red-10: rgba(229, 51, 68, 0.1);
 
@@ -51,9 +51,6 @@ h2,
 h3 {
   font-family: "Roadstore";
 }
-h2 {
-  filter: drop-shadow(0 0.8rem 1rem rgba(255, 255, 255, 0.15));
-}
 p {
   font-size: var(--p-responsive);
   color: var(--semi-white);
@@ -85,8 +82,6 @@ Link {
   transform: translateY(0);
 }
 
-
-
 body::-webkit-scrollbar {
   width: 14px;
 }
@@ -97,12 +92,20 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--dark-gray);
+  background: var(--dark-grey);
   border-radius: 3px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--dark-gray) var(--semi-black);
+    scrollbar-color: var(--dark-grey) var(--semi-black);
+  }
+}
+
+@media (max-width: 768px) {
+  .flexBtn {
+    width: 100%;
+    flex: 1 !important;
+    padding: 2rem 0 !important;
   }
 }

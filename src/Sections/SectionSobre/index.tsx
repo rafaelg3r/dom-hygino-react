@@ -1,47 +1,65 @@
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 
 import { GradientText } from "../../components/GradientText";
 
-import LogoDomHygino from "../../assets/logos/logoSlim.png";
+// import LogoDomHygino from "../../assets/logos/logoSlim.png";
+import LojaDomHygino from "../../assets/home/sobre/loja-dom-santa-rosa.jpg";
 export function SectionSobre() {
   return (
     <>
       <section id="about" className={styles.about}>
-        <div className={styles.title}>
-          <GradientText as="h2" variant="mid">
-            Conheça a Dom
-          </GradientText>
-          <span>Seu churrasco começa aqui.</span>
-        </div>
         <div className={styles.contentContainer}>
-          <motion.img
-            className={styles.logo}
-            src={LogoDomHygino}
-            alt="Logo da loja de carnes Dom Hygino"
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.9 }}
-          />
-          <div className={styles.aboutText}>
-            <p>
-              A Dom Hygino nasceu em Santa Rosa no Rio Grande do Sul com um
-              propósito claro de oferecer aos apaixonados por carne uma
-              experiência única e de alta qualidade!
-            </p>
-            <p>
-              Desde o início, a Dom se destacou por combinar tradição e cuidado
-              na escolha de carnes nobres, nacionais e importadas, criando um
-              espaço pensado para quem valoriza sabor, qualidade e experiência.
-              Nosso ambiente também é preparado para eventos exclusivos,
-              proporcionando momentos memoráveis aos nossos clientes.
-            </p>
-            <p>
-              A Dom Hygino é mais do que uma loja de carnes, é um espaço onde
-              paixão, qualidade e dedicação se encontram para transformar cada
-              corte em uma experiência única.
-            </p>
+          <div className={styles.imagesContainer}>
+            <div className={styles.aboutImageBg}> </div>
+            <img
+              src={LojaDomHygino}
+              alt="logo da dom hygino carnes e especiarias"
+              className={styles.aboutImage}
+            />
+          </div>
+          <div className={styles.textContainer}>
+            <div className={styles.titleContainer}>
+              <span className={styles.aboutSubTitle}>conheça a dom hygino</span>
+              <GradientText as="h2" variant="mid" className={styles.aboutTitle}>
+                Tradição, Qualidade e{" "}
+              </GradientText>
+              <h2 className={`${styles.aboutTitle} ${styles.highlight}`}>
+                Excelência
+              </h2>
+            </div>
+            <div className={styles.text}>
+              <p>
+                Nascida no coração de Santa Rosa, Rio Grande do Sul, a Dom
+                Hygino se destaca pela qualidade, confiança e excelência no
+                mercado de carnes nobres. Unimos a herança da tradição gaúcha ao
+                rigoroso cuidado na seleção de cortes premium, garantindo um
+                compromisso inabalável com o sabor e a experiência do cliente.
+              </p>
+              <p>
+                Nossa missão é levar a tradição gaúcha e os melhores cortes para
+                cada mesa brasileira, com o padrão premium que nossos clientes
+                merecem.
+              </p>
+            </div>
+            <div className={styles.statisticsContainer}>
+              <div>
+                <span></span>
+                <strong>Anos no Mercado</strong>
+              </div>
+              <div>
+                <span></span>
+                <strong>Lojas no Brasil</strong>
+              </div>
+              <div>
+                <span></span>
+                <strong>Produtos Diferentes</strong>
+              </div>
+              <div>
+                <span></span>
+                <strong> </strong>
+              </div>
+            </div>
           </div>
         </div>
       </section>

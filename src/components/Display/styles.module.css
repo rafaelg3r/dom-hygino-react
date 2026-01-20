@@ -1,7 +1,7 @@
 .menuDisplay {
   padding: 3rem 4rem;
   background-image: url("../../assets/menu/display/display-noise-bg.png");
-  background-color: var(--dark-pink-gray);
+  background-color: var(--dark-pink-grey);
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
   width: fit-content;
   border-radius: 0.6rem;
   padding: 0.8rem;
-  background-color: var(--pink-gray);
+  background-color: var(--pink-grey);
 }
 .sidesIcons {
   max-width: 2.4rem;

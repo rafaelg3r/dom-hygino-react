@@ -1,5 +1,5 @@
 .menuSelectors {
-  background-color: var(--dark-pink-gray);
+  background-color: var(--dark-pink-grey);
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;

@@ -7,7 +7,8 @@
   padding: 2rem;
 
   --c: var(--pink-red-30) 25%, #0000 0;
-  background: conic-gradient(at var(--g) var(--t), var(--c))
+  background:
+    conic-gradient(at var(--g) var(--t), var(--c))
       calc((var(--s) / var(--n) - var(--g) + var(--t)) / 2) 0 /
       calc(var(--s) / var(--n)) var(--s),
     conic-gradient(from 180deg at var(--t) var(--g), var(--c)) 0
@@ -35,26 +36,49 @@
 .title {
   font-size: 6rem;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   text-align: center;
   max-width: 73.5rem;
   font-size: 2.4rem;
+  gap: 2rem;
 }
 
 .franqueados span {
+  font-family: var(--roadstore-font);
+}
+.franqueados .questionMark {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media (max-width: 1024px) {
+  .gridBg {
+    background: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
   .franqueadosContainer {
     padding: 4rem 0rem;
   }
   .title {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
+  .franqueados span {
+    font-size: 4rem;
+  }
+
   .text {
     font-size: 2rem;
+    padding: 2rem;
+    border-radius: .4rem;
+    background-color: var(--dark-grey);
+  }
+  .btnContainer {
+    width: 80dvw;
   }
 }

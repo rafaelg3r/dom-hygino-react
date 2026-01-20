@@ -4,8 +4,7 @@ import { useCurrentSteak } from "../../utils/currentLine";
 import { products } from "../../utils/products";
 import { motion } from "framer-motion";
 
-// TODO: tirar o draggable dos cards, mudar o display sem nada selecionado pra ficar mais bonito,
-//  animações nos acompanhamentos em cascata de cima pra baixo,
+// TODO: animações nos acompanhamentos em cascata de cima pra baixo,
 export function Display() {
   const currentSteakName = useCurrentSteak();
 

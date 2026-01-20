@@ -112,9 +112,11 @@ Link,
   margin-left: -0.6rem;
   padding: 1rem 1rem 1.2rem 1rem;
   border-radius: 0.3rem;
-  background-color: var(--dark-gray);
-  box-shadow: inset 1px 1px 2px var(--dark-pink-gray),
-    inset -1px -1px 1px var(--dark-pink-gray), 0 0 2rem rgba(0, 0, 0, 0.5);
+  background-color: var(--dark-grey);
+  box-shadow:
+    inset 1px 1px 2px var(--dark-pink-grey),
+    inset -1px -1px 1px var(--dark-pink-grey),
+    0 0 2rem rgba(0, 0, 0, 0.5);
   display: flex;
   flex-flow: column;
   gap: 1rem;
@@ -123,14 +125,14 @@ Link,
   text-transform: uppercase;
   font-size: 1.2rem;
   padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--dark-pink-gray);
+  border-bottom: 2px solid var(--dark-pink-grey);
   transition: color 0.1s ease;
 }
 .produtosListItem:hover {
   color: var(--pink-red);
 }
 
-.navMobile {
+.mobileOptions {
   display: none;
 }
 
@@ -148,8 +150,11 @@ Link,
   }
 }
 @media (max-width: 1024px) {
+  .navbarContainer {
+    position: relative;
+  }
   header {
-    padding: 2.4rem 0;
+    padding: 2.4rem 4rem;
     justify-content: center;
   }
 
@@ -158,24 +163,43 @@ Link,
   }
   header .logoContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
+  .mobileOptions {
+    display: block;
+  }
+  .mobileOptions img {
+    cursor: pointer;
+  }
+  .mobileOptionsList {
+    position: absolute;
+    top: 10.5rem;
+    right: 0;
+    left: 0;
+    height: 100dvh;
+    z-index: 1;
 
-  .headerMobile {
-    z-index: 999;
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
-    border-radius: .8rem;
-    background-color: var(--semi-black);
-    color: var(--semi-white);
-    padding: 5rem 0rem;
     display: flex;
+    flex-flow: column;
     align-items: center;
-    box-shadow: 0 0.2rem 3rem black;
+    gap: 1rem;
+    padding: 2.4rem 4rem;
+    background-color: var(--dark-grey);
+  }
+  .mobileLink {
+    font-size: 2.4rem;
+    font-family: var(--barlow-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.4rem;
+    background-color: var(--semi-black);
+  }
+  .mobileLink:hover {
+    background-color: var(--pink-red);
   }
 }
-
 /* @media (max-width: 480px) {
 } */

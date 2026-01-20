@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import "../../global.css";
 
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -37,10 +38,12 @@ export function SectionMain() {
             </p>
             <div className={styles.heroBtns}>
               <Link to="/menu">
-                <Button size="big" className={styles.flexBtn}>Ver Produtos</Button>
+                <Button size="big" className="flexBtn">
+                  Ver Produtos
+                </Button>
               </Link>
               <Link smooth to="/#lojas">
-                <Button size="big" border className={styles.flexBtn}>
+                <Button size="big" border className="flexBtn">
                   Nossas Lojas
                 </Button>
               </Link>

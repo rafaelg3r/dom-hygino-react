@@ -13,10 +13,9 @@
   transition: background-color 0.15s ease;
 
   overflow: hidden;
-
 }
 .cardContainer:hover {
-  background-color: var(--dark-pink-gray);
+  background-color: var(--dark-pink-grey);
 }
 
 .cardContainer:hover .cardImgContainer {
@@ -53,7 +52,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: left 0.35s ease, height 0.35s ease;
+  transition:
+    left 0.35s ease,
+    height 0.35s ease;
 }
 
 .textContainer {
@@ -70,7 +71,7 @@
   color: var(--semi-white);
 }
 .textContainer span {
-  color: var(--light-gray);
+  color: var(--light-grey);
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
@@ -102,7 +103,7 @@
 }
 
 .hoverText span {
-  color: var(--light-gray);
+  color: var(--light-grey);
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;

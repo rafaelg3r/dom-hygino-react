@@ -1,4 +1,4 @@
-.bannerContainer{
+.bannerContainer {
   padding-top: 8.4rem;
 }
 .menuBanner {
@@ -37,7 +37,7 @@
 }
 .bannerLine {
   z-index: 3;
-  background-color:var(--dark-pink-gray);
+  background-color: var(--dark-pink-grey);
   height: 0.5rem;
   width: 100%;
   box-shadow: 0 0.3rem 1.2rem rgba(10, 10, 10, 0.3);

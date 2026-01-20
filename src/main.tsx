@@ -12,7 +12,8 @@ import { Footer } from "./components/Footer";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* TODO:tirar o basename quando for publicar */}
+    <BrowserRouter basename="/dom-hygino-react">
       <ScrollToTop />
       <PageLoader />
       <Navbar />

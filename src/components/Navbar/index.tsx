@@ -7,12 +7,14 @@ import { Button } from "../Button";
 import LogoSlim from "../../assets/logos/logoSlim.png";
 import downArrow from "../../assets/icons/downArrow.png";
 import instagramIcon from "../../assets/icons/instagram.svg";
+import mobileOptionsIcon from "../../assets/icons/options.svg";
+import closeIcon from "../../assets/icons/close.svg";
 
 export function Navbar() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  // const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(false);
+  const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(false);
   return (
-    <>
+    <div className={styles.navbarContainer}>
       <header>
         <Link smooth to="/#home" className={styles.logoContainer}>
           <img
@@ -21,6 +23,53 @@ export function Navbar() {
             alt="Logo pequena da loja de carnes Dom Hygino"
           />
         </Link>
+        <div className={styles.mobileOptions}>
+          <img
+            src={isMenuMobileOpen ? closeIcon : mobileOptionsIcon}
+            alt="Opções"
+            onClick={() => setIsMenuMobileOpen(!isMenuMobileOpen)}
+          />
+          {isMenuMobileOpen && (
+            <div
+              className={styles.mobileOptionsList}
+              onClick={() => setIsMenuMobileOpen(false)}
+            >
+              <Link smooth to="/#home" className={styles.mobileLink}>
+                Home
+              </Link>
+              <Link smooth to="/menu" className={styles.mobileLink}>
+                Linhas
+              </Link>
+              <Link smooth to="/#lojas" className={styles.mobileLink}>
+                Lojas
+              </Link>
+              <Link
+                smooth
+                to="https://wa.me/555599603419"
+                target="_blank"
+                className={styles.mobileLink}
+              >
+                Seja um Franqueado
+              </Link>
+              <Link
+                smooth
+                to="https://linktr.ee/domhygino"
+                target="_blank"
+                className={styles.mobileLink}
+              >
+                Instagram
+              </Link>
+              <Link
+                smooth
+                to="https://wa.me/555599603419"
+                target="_blank"
+                className={styles.mobileLink}
+              >
+                Contato
+              </Link>
+            </div>
+          )}
+        </div>
 
         <nav className={styles.navbar}>
           <div className={styles.leftNav}>
@@ -78,9 +127,6 @@ export function Navbar() {
             <Link smooth className={styles.lineLink} to="/#lojas">
               lojas
             </Link>
-            {/* <NavLink className={styles.lineLink} to="/blog">
-              blog
-            </NavLink> */}
           </div>
 
           <div className={styles.rightNav}>
@@ -114,23 +160,6 @@ export function Navbar() {
           </div>
         </nav>
       </header>
-
-      <div className={styles.headerMobile}>
-        <nav className={styles.navMobile}>
-          <Link smooth className={styles.mobileNavbarButton} to="/#home">
-            <img src="" alt="Icone de casa" />
-            home
-          </Link>
-          <Link smooth className={styles.mobileNavbarButton} to="/menu#home">
-            <img src="" alt="Icone de cardapio" />
-            menu
-          </Link>
-          <Link smooth className={styles.mobileNavbarButton} to="/#lojas">
-            <img src="" alt="Icone de contato" />
-            Contato
-          </Link>
-        </nav>
-      </div>
-    </>
+    </div>
   );
 }

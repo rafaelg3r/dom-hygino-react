@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { GradientText } from "../../components/GradientText";
 import { HashLink as Link } from "react-router-hash-link";
 import { Button } from "../../components/Button";
-
+import "../../global.css";
 //Imagens
 import topBg from "../../assets/home/cortes/cortes-top-bg.png";
 import topBgPhone from "../../assets/home/cortes/cortes-top-bg-phone.png";
@@ -13,11 +13,6 @@ export function SectionCortes() {
   return (
     <>
       <section id="cortes" className={styles.cortesMenu}>
-        <picture>
-          <source srcSet={topBgPhone} media="(max-width: 768px)" />
-          <img draggable="false" src={topBg} className={styles.cortesTopBg} />
-        </picture>
-        <div className={styles.cortesMenuContainer}>
           <GradientText
             as="h2"
             variant="mid"
@@ -25,7 +20,10 @@ export function SectionCortes() {
           >
             Cortes
           </GradientText>
-        </div>
+        <picture>
+          <source srcSet={topBgPhone} media="(max-width: 768px)" />
+          <img draggable="false" src={topBg} className={styles.cortesTopBg} />
+        </picture>
         <div className={styles.menuSelectorsContainer}>
           <div className={styles.linhaBoutique}>
             <div className={styles.menuText}>
@@ -37,8 +35,11 @@ export function SectionCortes() {
                 premium. Indicada para quem busca uma experiência gastronômica
                 fora da curva!
               </p>
-              <Link to="/menu?linha=Boutique">
-                <Button size="medium">--- Acessar Linha ---</Button>
+              <Link className={styles.btnContainer} to="/menu?linha=Boutique">
+                <Button size="big" className="flexBtn">
+                  {" "}
+                  Acessar Linha{" "}
+                </Button>
               </Link>
             </div>
           </div>
@@ -53,8 +54,13 @@ export function SectionCortes() {
                 dia a dia! É uma linha versátil que une tradição e qualidade
                 para todos os momentos.
               </p>
-              <Link to="/menu?linha=Novilho Jovem">
-                <Button size="medium">--- Acessar Linha ---</Button>
+              <Link
+                className={styles.btnContainer}
+                to="/menu?linha=Novilho Jovem"
+              >
+                <Button size="big" className="flexBtn">
+                  Acessar Linha
+                </Button>
               </Link>
             </div>
           </div>
@@ -69,8 +75,11 @@ export function SectionCortes() {
                 e pelo verdadeiro sabor do Sul, é a linha que valoriza a
                 tradição, a rusticidade e o gosto autêntico da carne bem feita.
               </p>
-              <Link to="/menu?linha=Churrasco">
-                <Button size="medium">--- Acessar Linha ---</Button>
+              <Link className={styles.btnContainer} to="/menu?linha=Churrasco">
+                <Button size="big" className="flexBtn">
+                  {" "}
+                  Acessar Linha{" "}
+                </Button>
               </Link>
             </div>
           </div>
@@ -86,8 +95,11 @@ export function SectionCortes() {
                 verdadeiro gosto da carne bem preparada.
               </p>
 
-              <Link to="/menu?linha=Pampeira">
-                <Button size="medium">--- Acessar Linha ---</Button>
+              <Link className={styles.btnContainer} to="/menu?linha=Pampeira">
+                <Button size="big" className="flexBtn">
+                  {" "}
+                  Acessar Linha{" "}
+                </Button>
               </Link>
             </div>
           </div>
@@ -101,7 +113,7 @@ export function SectionCortes() {
               seu churrasco. Perfeitos para complementar carnes e transformar
               cada preparo em uma experiência única!
             </p>  
-            <Link to="/menu?linha=Produtos"><button>--- Acessar Produtos ---</button></Link
+            <Link  className={styles.btnContainer} to="/menu?linha=Produtos"><button> Acessar Produtos </button></Link
             >
           </div>
         </div>*/}
@@ -114,7 +126,6 @@ export function SectionCortes() {
             className={styles.cortesBottomBg}
           />
         </picture>
-        
       </section>
     </>
   );

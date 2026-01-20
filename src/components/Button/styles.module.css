@@ -12,7 +12,9 @@
   cursor: pointer;
   box-shadow: 0.4rem 0.4rem 1rem rgba(3, 1, 1, 0.4);
 
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .btn:hover {
   background-color: var(--pink-red);
@@ -60,16 +62,18 @@
   border: 2px solid var(--pink-red);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .btn {
     font-size: 1.6rem;
     width: 100%;
     flex: 1;
   }
   .big {
-    padding: 1.6rem 0;
+    padding: 2rem 0;
+    width: 100%;
   }
   .borderBig {
-    padding: 1.4rem 7.8rem;
+    padding: 2rem 0;
+    width: 100%;
   }
 }

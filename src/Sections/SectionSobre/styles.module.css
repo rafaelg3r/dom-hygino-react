@@ -1,76 +1,73 @@
 .about {
-  padding-top: 8rem;
+  padding: 9rem 12rem;
   display: flex;
-  flex-flow: column;
-  gap: 12rem;
 }
-
-.about h3 {
-  font-size: 4.2rem;
-  font-family: var(--roadstore-font);
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.about p {
-  font-weight: 400;
-}
-
-.logo {
-  width: max-content;
-  max-height: 33.8rem;
-  filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.2));
-}
-
-.title {
-  display: flex;
-  flex-flow: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-.title h2 {
-  font-size: clamp(4rem, 3.54rem + 1.4286vw, 7.2rem);
-  font-weight: 400;
-}
-
-.title span {
-  font-size: 2rem;
-  font-weight: 400;
-}
-
 .contentContainer {
   display: flex;
-  align-items: top;
-  justify-content: space-between;
-  padding: 0 12rem;
-  gap: 6rem;
+  gap: 7rem;
 }
-.aboutText {
+.imagesContainer {
+  flex: 9;
+  position: relative;
+}
+.aboutImage {
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 0.8rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.aboutImageBg {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 98%;
+  height: 94%;
+  border-radius: 0.8rem;
+  /* background-color: var(--pink-red); */
+  border: 2px solid var(--pink-red);
+  z-index: -1;
+}
+.textContainer {
+  flex: 10;
+}
+.text {
   display: flex;
   flex-flow: column;
-  justify-content: right;
-  width: 100%;
-  max-width: 65.3rem;
+  gap: 2rem;
+  padding-top: 2rem;
+  font-size: 1.8rem;
+}
+.titleContainer {
+  display: flex;
+  flex-flow: column;
   gap: 1rem;
 }
+.aboutTitle {
+  max-width: 80rem;
+  font-size: clamp(3.2rem, 3.54rem + 1.4286vw, 4.6rem);
+  font-weight: 400;
+}
+.aboutSubTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.32rem;
+  color: var(--pink-red);
+  filter: none !important;
+  box-shadow: none !important;
+}
+.highlight {
+  margin-top: -1.4rem;
+  color: var(--pink-red);
+  background: none;
+  background-clip: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: none;
+}
 
-@media (max-width: 1024px) {
-  .contentContainer {
-    align-items: center;
-    flex-direction: column;
-    padding: 0 4rem;
-  }
-  .logo {
-    max-height: 23.8rem;
-  }
+/* @media (max-width: 1024px) {
 }
 @media (max-width: 480px) {
-  .contentContainer {
-    padding: 0 1.5rem;
-  }
-  .logo {
-    max-height: 10rem;
-  }
-}
+} */
