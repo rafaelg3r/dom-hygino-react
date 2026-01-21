@@ -67,6 +67,11 @@
   }
   .title {
     font-size: 3rem;
+    max-width: 50rem;
+    /* display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; */
   }
   .franqueados span {
     font-size: 4rem;
@@ -80,5 +85,7 @@
   }
   .btnContainer {
     width: 80dvw;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -18,7 +18,11 @@ export function SectionSobre() {
             <div className={styles.titleContainer}>
               <span className={styles.aboutSubTitle}>conheça a dom hygino</span>
               <div className={styles.aboutTitleMiniContainer}>
-                <GradientText as="h2" variant="mid" className={styles.aboutTitle}>
+                <GradientText
+                  as="h2"
+                  variant="mid"
+                  className={styles.aboutTitle}
+                >
                   Tradição, Qualidade e{" "}
                 </GradientText>
                 <h2 className={`${styles.aboutTitle} ${styles.highlight}`}>

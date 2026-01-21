@@ -7,7 +7,7 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
+  padding: 5rem clamp(5rem, -7.444rem + 12.153vw, 12rem);
   display: flex;
   flex-flow: column;
   gap: 8rem;
@@ -54,7 +54,7 @@ footer hr {
 .footerContents {
   display: flex;
   flex-wrap: wrap;
-  gap: 6rem;
+  gap: 5rem;
 }
 .footerText {
   display: flex;

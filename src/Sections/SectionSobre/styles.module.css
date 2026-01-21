@@ -86,7 +86,7 @@
 
 @media (max-width: 1200px) {
   .about {
-    padding: 6rem 4rem;
+    padding: 6rem 2rem;
     align-items: center;
   }
   .contentContainer {
@@ -102,22 +102,31 @@
   .aboutImage {
     margin: 0;
     width: 100%;
-    height: 50rem;
+    height: clamp(30rem, 22.727rem + 22.727vw, 50rem);
+    display: inline-block;
   }
   .aboutImageBg {
     display: none;
   }
-  .text {
-    max-width: 100rem;
-    text-align: justify;
-  }
-  .aboutTitleMiniContainer {
-    flex-flow: row;
+  .textContainer {
+    display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+  }
+  .text {
+    max-width: clamp(30rem, 4.545rem + 79.545vw, 100rem);
+    text-align: justify;
   }
   .aboutTitle {
     max-width: none;
+    text-wrap: balance;
+  }
+}
+@media (max-width: 480px) {
+  .statisticsContainer {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 4rem;
   }
 }
