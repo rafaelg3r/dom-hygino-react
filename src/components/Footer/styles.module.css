@@ -7,7 +7,7 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5rem 12rem;
+  padding: 5rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
   display: flex;
   flex-flow: column;
   gap: 8rem;

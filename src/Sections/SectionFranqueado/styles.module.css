@@ -24,7 +24,7 @@
 }
 
 .franqueadosContainer {
-  padding: 8rem 12rem;
+  padding: 8rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
   margin: 12rem 0;
   display: flex;
   flex-flow: column;
@@ -75,7 +75,7 @@
   .text {
     font-size: 2rem;
     padding: 2rem;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     background-color: var(--dark-grey);
   }
   .btnContainer {

@@ -3,8 +3,7 @@ import styles from "./styles.module.css";
 
 import { GradientText } from "../../components/GradientText";
 
-// import LogoDomHygino from "../../assets/logos/logoSlim.png";
-import LojaDomHygino from "../../assets/home/sobre/loja-dom-santa-rosa.jpg";
+import { StatisticNumber } from "../../components/StatisticNumber";
 export function SectionSobre() {
   return (
     <>
@@ -12,21 +11,20 @@ export function SectionSobre() {
         <div className={styles.contentContainer}>
           <div className={styles.imagesContainer}>
             <div className={styles.aboutImageBg}> </div>
-            <img
-              src={LojaDomHygino}
-              alt="logo da dom hygino carnes e especiarias"
-              className={styles.aboutImage}
-            />
+
+            <div className={styles.aboutImage}></div>
           </div>
           <div className={styles.textContainer}>
             <div className={styles.titleContainer}>
               <span className={styles.aboutSubTitle}>conheça a dom hygino</span>
-              <GradientText as="h2" variant="mid" className={styles.aboutTitle}>
-                Tradição, Qualidade e{" "}
-              </GradientText>
-              <h2 className={`${styles.aboutTitle} ${styles.highlight}`}>
-                Excelência
-              </h2>
+              <div className={styles.aboutTitleMiniContainer}>
+                <GradientText as="h2" variant="mid" className={styles.aboutTitle}>
+                  Tradição, Qualidade e{" "}
+                </GradientText>
+                <h2 className={`${styles.aboutTitle} ${styles.highlight}`}>
+                  Excelência
+                </h2>
+              </div>
             </div>
             <div className={styles.text}>
               <p>
@@ -43,22 +41,10 @@ export function SectionSobre() {
               </p>
             </div>
             <div className={styles.statisticsContainer}>
-              <div>
-                <span></span>
-                <strong>Anos no Mercado</strong>
-              </div>
-              <div>
-                <span></span>
-                <strong>Lojas no Brasil</strong>
-              </div>
-              <div>
-                <span></span>
-                <strong>Produtos Diferentes</strong>
-              </div>
-              <div>
-                <span></span>
-                <strong> </strong>
-              </div>
+              <StatisticNumber number="6+" text="Anos no Mercado" />
+              <StatisticNumber number="7+" text="Lojas no Brasil" />
+              <StatisticNumber number="40k+" text="Clientes Satisfeitos" />
+              <StatisticNumber number="100%" text="Qualidade Premium" />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 :root {
   --semi-black: #0a0a0a;
   --semi-white: #f5e1c8;
+  --semi-white-50: rgba(245, 225, 200, 0.5);
   --light-grey: #51484c;
   --dark-grey: #121011;
   --pink-grey: #2c2125;

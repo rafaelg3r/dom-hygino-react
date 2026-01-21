@@ -5,7 +5,7 @@ header {
   color: var(--semi-white);
   width: 100dvw;
   flex: 1;
-  padding: 1rem 12rem;
+  padding: 1rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
   display: flex;
   align-items: center;
   box-shadow: 0 0.2rem 3rem black;

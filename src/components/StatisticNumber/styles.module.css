@@ -1,0 +1,22 @@
+.contentContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.statisticNumber {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--pink-red);
+  filter: drop-shadow(0 0 1.2rem rgba(229, 51, 68, 0.5));
+}
+.statisticText {
+  font-size: 2rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  line-height: 20px;
+  max-width: 12rem;
+  text-align: center;
+  color: var(--semi-white-50);
+}

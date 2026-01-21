@@ -87,7 +87,7 @@
 .menuText {
   display: flex;
   flex-direction: column;
-  padding: 8rem 12rem;
+  padding: 8rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -129,7 +129,7 @@
   .linhaPampeira {
     justify-content: center;
   }
-  .cortesTopBg{
+  .cortesTopBg {
     top: 3rem;
   }
   .menuText {
@@ -151,7 +151,7 @@
 }
 
 @media (max-width: 480px) {
-   .cortesTopBg{
+  .cortesTopBg {
     top: 12rem;
   }
   .menuText h2 {
