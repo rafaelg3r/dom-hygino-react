@@ -40,7 +40,8 @@
 
 html {
   font-size: 62.5%;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
+  scroll-padding-top: 14rem;
 }
 body {
   font-family: var(--barlow-font);
@@ -64,6 +65,14 @@ Link {
   text-decoration: none;
   cursor: pointer;
   color: var(--semi-white);
+}
+
+button,
+a,
+Link,
+input,
+div {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hidden {

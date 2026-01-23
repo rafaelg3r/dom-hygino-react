@@ -23,7 +23,7 @@ export function Menu() {
               <MenuCards />
             </div>
           </div>
-          <div className={styles.menuDisplay}>
+          <div id="Display"   className={styles.menuDisplay}>
             <Display />
           </div>
         </div>

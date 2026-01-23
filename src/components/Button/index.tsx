@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -27,17 +28,23 @@ export function Button({ children, size, border, className }: ButtonProps) {
   if (!border) {
     return (
       <>
-        <button className={clsx(styles.btn, classes, className)}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          className={clsx(styles.btn, classes, className)}
+        >
           {children}
-        </button>
+        </motion.button>
       </>
     );
   } else {
     return (
       <>
-        <button className={clsx(styles.btn, borderClasses, className)}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          className={clsx(styles.btn, borderClasses, className)}
+        >
           {children}
-        </button>
+        </motion.button>
       </>
     );
   }

@@ -1,27 +1,41 @@
 .menuMainContent {
   display: flex;
   align-items: start;
-  /* gap: 4rem; */
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  gap: 2rem;
+  padding: 4rem clamp(3rem, -13rem + 15.625vw, 12rem);
 }
 .menuFilterCardsContainer {
-  margin-left: 12rem;
+  flex: 6;
   display: flex;
   justify-content: center;
-  flex: 6;
   align-items: center;
 }
 
 .filterCards {
   gap: 3rem;
-  max-width: 69rem;
+  /* max-width: 69rem; */
   align-items: center;
   display: flex;
   flex-flow: column;
 }
 
 .menuDisplay {
-  margin-right: 1rem;
   flex: 3;
+}
+@media (max-width: 1024px) {
+  .menuMainContent {
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .menuFilterCardsContainer {
+    flex: 0;
+  }
+  .menuDisplay {
+    flex: 0;
+  }
+  .filterCards {
+    width: 100%;
+  }
 }

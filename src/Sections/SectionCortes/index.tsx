@@ -3,6 +3,7 @@ import { GradientText } from "../../components/GradientText";
 import { HashLink as Link } from "react-router-hash-link";
 import { Button } from "../../components/Button";
 import "../../global.css";
+import { delay, motion } from "framer-motion";
 //Imagens
 import topBg from "../../assets/home/cortes/cortes-top-bg.png";
 import topBgPhone from "../../assets/home/cortes/cortes-top-bg-phone.png";
@@ -13,13 +14,9 @@ export function SectionCortes() {
   return (
     <>
       <section id="cortes" className={styles.cortesMenu}>
-          <GradientText
-            as="h2"
-            variant="mid"
-            className={styles.cortesMenuTitle}
-          >
-            Cortes
-          </GradientText>
+        <GradientText as="h2" variant="mid" className={styles.cortesMenuTitle}>
+          Cortes
+        </GradientText>
         <picture>
           <source srcSet={topBgPhone} media="(max-width: 768px)" />
           <img draggable="false" src={topBg} className={styles.cortesTopBg} />
@@ -27,80 +24,159 @@ export function SectionCortes() {
         <div className={styles.menuSelectorsContainer}>
           <div className={styles.linhaBoutique}>
             <div className={styles.menuText}>
-              <GradientText as="h2" variant="left">
-                linha boutique
-              </GradientText>
-              <p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.4, duration: 0.3 }}
+              >
+                <GradientText as="h2" variant="left">
+                  linha boutique
+                </GradientText>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+              >
                 A Linha Boutique representa o mais alto padrão em cortes
                 premium. Indicada para quem busca uma experiência gastronômica
                 fora da curva!
-              </p>
-              <Link className={styles.btnContainer} to="/menu?linha=Boutique">
-                <Button size="big" className="flexBtn">
-                  {" "}
-                  Acessar Linha{" "}
-                </Button>
-              </Link>
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                <Link className={styles.btnContainer} to="/menu?linha=Boutique">
+                  <Button size="big" className="flexBtn">
+                    {" "}
+                    Acessar Linha{" "}
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className={styles.linhaNovilho}>
             <div className={styles.menuText}>
-              <GradientText as="h2" variant="right">
-                linha novilho jovem
-              </GradientText>
-              <p>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.4, duration: 0.3 }}
+              >
+                <GradientText as="h2" variant="right">
+                  linha novilho jovem
+                </GradientText>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+              >
                 A Linha Novilho Jovem traz cortes selecionados de animais
                 britânicos. Escolha ideal tanto para o churrasco quanto para o
                 dia a dia! É uma linha versátil que une tradição e qualidade
                 para todos os momentos.
-              </p>
-              <Link
-                className={styles.btnContainer}
-                to="/menu?linha=Novilho Jovem"
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.7, duration: 0.5 }}
               >
-                <Button size="big" className="flexBtn">
-                  Acessar Linha
-                </Button>
-              </Link>
+                <Link
+                  className={styles.btnContainer}
+                  to="/menu?linha=Novilho Jovem"
+                >
+                  <Button size="big" className="flexBtn">
+                    Acessar Linha
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className={styles.linhaChurrasco}>
             <div className={styles.menuText}>
-              <GradientText as="h2" variant="left">
-                linha churrasco
-              </GradientText>
-              <p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.4, duration: 0.3 }}
+              >
+                <GradientText as="h2" variant="left">
+                  linha churrasco
+                </GradientText>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+              >
                 A Linha Churrasco oferece cortes tradicionais que carregam a
                 essência da culinária gaúcha. Reconhecida pelo preço competitivo
                 e pelo verdadeiro sabor do Sul, é a linha que valoriza a
                 tradição, a rusticidade e o gosto autêntico da carne bem feita.
-              </p>
-              <Link className={styles.btnContainer} to="/menu?linha=Churrasco">
-                <Button size="big" className="flexBtn">
-                  {" "}
-                  Acessar Linha{" "}
-                </Button>
-              </Link>
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                <Link
+                  className={styles.btnContainer}
+                  to="/menu?linha=Churrasco"
+                >
+                  <Button size="big" className="flexBtn">
+                    {" "}
+                    Acessar Linha{" "}
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className={styles.linhaPampeira}>
             <div className={styles.menuText}>
-              <GradientText as="h2" variant="right">
-                linha pampeira
-              </GradientText>
-              <p>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.4, duration: 0.3 }}
+              >
+                <GradientText as="h2" variant="right">
+                  linha pampeira
+                </GradientText>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+              >
                 A Linha Pampeira é a escolha perfeita para o dia a dia, unindo
                 sabor e economia sem abrir mão da qualidade. Oferece cortes
                 economy, ideais para refeições práticas e acessíveis, mantendo o
                 verdadeiro gosto da carne bem preparada.
-              </p>
+              </motion.p>
 
-              <Link className={styles.btnContainer} to="/menu?linha=Pampeira">
-                <Button size="big" className="flexBtn">
-                  {" "}
-                  Acessar Linha{" "}
-                </Button>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: "all" }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                <Link className={styles.btnContainer} to="/menu?linha=Pampeira">
+                  <Button size="big" className="flexBtn">
+                    {" "}
+                    Acessar Linha{" "}
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
 

@@ -113,3 +113,12 @@
 .cardBtn {
   padding: 1rem 1.4rem;
 }
+
+@media (max-width: 768px) {
+  .cardContainer {
+    width: 100%;
+  }
+  .cardBtn {
+    flex: 0;
+  }
+}

@@ -15,27 +15,27 @@ export function MenuCards() {
         <Card
           name="DENVER"
           shortDescription="Maciez e sabor suave"
-          link="/menu?linha=Boutique&carne=denver"
+          link="/menu?linha=Boutique&carne=denver#Display"
         />
         <Card
           name="COWBOY"
           shortDescription="Suculento, macio e saboroso"
-          link="/menu?linha=Boutique&carne=cowboy"
+          link="/menu?linha=Boutique&carne=cowboy#Display"
         />
         <Card
           name="SHOULDER"
           shortDescription="Sabor intenso e textura marmorizada"
-          link="/menu?linha=Boutique&carne=shoulder"
+          link="/menu?linha=Boutique&carne=shoulder#Display"
         />
         <Card
           name="STEAK SHOULDER"
           shortDescription="Corte magro, macio e versátil"
-          link="/menu?linha=Boutique&carne=steak shoulder"
+          link="/menu?linha=Boutique&carne=steak shoulder#Display"
         />
         <Card
           name="HOUSE RIB"
           shortDescription="Costela premium com maciez extrema"
-          link="/menu?linha=Boutique&carne=house rib"
+          link="/menu?linha=Boutique&carne=house rib#Display"
         />
       </div>
     ),
@@ -44,27 +44,27 @@ export function MenuCards() {
         <Card
           name="CONTRAFILÉ"
           shortDescription="Suculento com capa de gordura"
-          link="/menu?linha=Novilho Jovem&carne=contrafilé"
+          link="/menu?linha=Novilho Jovem&carne=contrafilé#Display"
         />
         <Card
           name="PICANHA"
           shortDescription="Corte nobre com capa de gordura clássica"
-          link="/menu?linha=Novilho Jovem&carne=picanha"
+          link="/menu?linha=Novilho Jovem&carne=picanha#Display"
         />
         <Card
           name="MAMINHA"
           shortDescription="Maciez incomparável e sabor acentuado"
-          link="/menu?linha=Novilho Jovem&carne=maminha"
+          link="/menu?linha=Novilho Jovem&carne=maminha#Display"
         />
         <Card
           name="ENTRECOT"
           shortDescription="Marmoreio rico e suculência premium"
-          link="/menu?linha=Novilho Jovem&carne=entrecot"
+          link="/menu?linha=Novilho Jovem&carne=entrecot#Display"
         />
         <Card
           name="VAZIO"
           shortDescription="Típico churrasco gaúcho, muito saboroso"
-          link="/menu?linha=Novilho Jovem&carne=vazio"
+          link="/menu?linha=Novilho Jovem&carne=vazio#Display"
         />
       </div>
     ),
@@ -73,12 +73,12 @@ export function MenuCards() {
         <Card
           name="COSTELA GRILL"
           shortDescription="Assado de tira macio e irresistível"
-          link="/menu?linha=Churrasco&carne=costela grill"
+          link="/menu?linha=Churrasco&carne=costela grill#Display"
         />
         <Card
           name="COSTELA EM TIRA"
           shortDescription="Sabor tradicional e suculência"
-          link="/menu?linha=Churrasco&carne=costela em tira"
+          link="/menu?linha=Churrasco&carne=costela em tira#Display"
         />
       </div>
     ),
@@ -87,7 +87,7 @@ export function MenuCards() {
         <Card
           name="ALCATRA"
           shortDescription="Corte magro, macio e de sabor equilibrado"
-          link="/menu?linha=Pampeira&carne=alcatra"
+          link="/menu?linha=Pampeira&carne=alcatra#Display"
         />
       </div>
     ),

@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import "../../global.css";
 
 import { HashLink as Link } from "react-router-hash-link";
-
+import { motion } from "framer-motion";
 import HomeImg from "../../assets/home/home-bg.jpg";
 
 import { Button } from "../../components/Button";
@@ -26,27 +26,59 @@ export function SectionMain() {
           alt="Background"
         />
         <div className={styles.heroTextContent}>
-          <strong>Carnes e Especiarias</strong>
+          <motion.strong
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
+          >
+            Carnes e Especiarias
+          </motion.strong>
           <div className={styles.heroText}>
-            <GradientText as="h1" variant="right" className={styles.heroTitle}>
-              Dom Hygino
-            </GradientText>
-            <p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 1.6 }}
+            >
+              <GradientText
+                as="h1"
+                variant="right"
+                className={styles.heroTitle}
+              >
+                Dom Hygino
+              </GradientText>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.8 }}
+            >
               Da nossa seleção especial de carnes para o seu prato. Cortes
               nobres, frescos e com sabor incomparável para transformar suas
               refeições!
-            </p>
+            </motion.p>
             <div className={styles.heroBtns}>
-              <Link to="/menu">
-                <Button size="big" className="flexBtn">
-                  Ver Produtos
-                </Button>
-              </Link>
-              <Link smooth to="/#lojas">
-                <Button size="big" border className="flexBtn">
-                  Nossas Lojas
-                </Button>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 2.2 }}
+              >
+                <Link to="/menu">
+                  <Button size="big" className="flexBtn">
+                    Ver Produtos
+                  </Button>
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 2.4 }}
+              >
+                <Link smooth to="/#lojas">
+                  <Button size="big" border className="flexBtn">
+                    Nossas Lojas
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>

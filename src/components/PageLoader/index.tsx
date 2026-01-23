@@ -35,11 +35,18 @@ export function PageLoader() {
             src={LogoSlim}
             alt="Logo"
             className={styles.loaderLogo}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             // transition={{ duration: 0.5 }}
           />
+          <motion.p
+            className={styles.loaderText}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, }}
+            exit={{ opacity: 0, y: -50 }}
+
+          >Carregando...</motion.p>
         </motion.div>
       )}
     </AnimatePresence>

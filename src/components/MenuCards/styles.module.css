@@ -3,3 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
+@media (max-width: 768px) {
+  .gridCards {
+    grid-template-columns: 1fr;
+    width: 90dvw;
+  }
+}

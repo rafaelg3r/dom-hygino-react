@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import mapImg from "../../assets/home/lojas/lojas-mapa.png";
 import instagramIcon from "../../assets/icons/instagram.svg";
 import outArrow from "../../assets/icons/outArrow.svg";
-
+import { motion } from "framer-motion";
 export function SectionLojas() {
   return (
     <>
@@ -16,14 +16,36 @@ export function SectionLojas() {
         </div>
         <div className={styles.lojasContentContainer}>
           <div className={styles.lojasMap}>
-            <img src={mapImg} className={styles.mapaLojasCidades} alt="" />
+            <motion.img
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              src={mapImg}
+              className={styles.mapaLojasCidades}
+              alt=""
+            />
           </div>
           <div className={styles.lojasSocials}>
-            <GradientText as="h3" variant="mid">
-              ACOMPANHE AS OFERTAS DA SEMANA
-            </GradientText>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <GradientText as="h3" variant="mid">
+                ACOMPANHE AS OFERTAS DA SEMANA
+              </GradientText>
+            </motion.div>
             <div className={styles.lojasLista}>
-              <a target="_blank" href="https://www.instagram.com/domhygino">
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                target="_blank"
+                href="https://www.instagram.com/domhygino"
+              >
                 <div className={styles.domItemLista}>
                   <div className={styles.itemListaContent}>
                     <img src={instagramIcon} alt="logo do instagram" />
@@ -31,8 +53,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.9, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/domhyginocaxiasdosul"
               >
@@ -45,8 +71,15 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a target="_blank" href="http://instagram.com/dom_hygino_capao">
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1, duration: 0.5 }}
+                target="_blank"
+                href="http://instagram.com/dom_hygino_capao"
+              >
                 <div className={styles.domItemLista}>
                   <div className={styles.itemListaContent}>
                     <img src={instagramIcon} alt="" />
@@ -54,8 +87,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.1, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/domhygino_horizontina/"
               >
@@ -66,8 +103,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.2, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/domhyginoijui/"
               >
@@ -78,8 +119,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.3, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/dom_hygino_jaragua/"
               >
@@ -90,8 +135,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.4, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/domhygino_poa/"
               >
@@ -102,8 +151,12 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.5, duration: 0.5 }}
                 target="_blank"
                 href="https://www.instagram.com/domhyginotorres/"
               >
@@ -114,7 +167,7 @@ export function SectionLojas() {
                   </div>
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
