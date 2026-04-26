@@ -29,7 +29,7 @@ export function SectionMain() {
           <motion.strong
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 2.3 }}
           >
             Carnes e Especiarias
           </motion.strong>
@@ -37,7 +37,7 @@ export function SectionMain() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 1.6 }}
+              transition={{ duration: 0.7, delay: 2.6 }}
             >
               <GradientText
                 as="h1"
@@ -50,7 +50,7 @@ export function SectionMain() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.8 }}
+              transition={{ duration: 0.5, delay: 2.8 }}
             >
               Da nossa seleção especial de carnes para o seu prato. Cortes
               nobres, frescos e com sabor incomparável para transformar suas
@@ -60,7 +60,7 @@ export function SectionMain() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 2.2 }}
+                transition={{ duration: 0.5, delay: 3.2 }}
               >
                 <Link to="/menu">
                   <Button size="big" className="flexBtn">
@@ -71,7 +71,7 @@ export function SectionMain() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 2.4 }}
+                transition={{ duration: 0.5, delay: 3.4 }}
               >
                 <Link smooth to="/#lojas">
                   <Button size="big" border className="flexBtn">

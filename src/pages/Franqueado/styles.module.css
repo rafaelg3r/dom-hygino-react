@@ -1,0 +1,15 @@
+.franqueados {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.6rem;
+}
+
+.btnFranqueado {
+  flex: 0;
+  max-width: 20rem;
+}

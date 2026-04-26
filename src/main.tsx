@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import "./global.css";
 
@@ -13,12 +13,12 @@ import { Footer } from "./components/Footer";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {/* TODO:tirar o basename quando for publicar */}
-    <BrowserRouter basename="/dom-hygino-react">
+    <BrowserRouter>
       <ScrollToTop />
       <PageLoader />
       <Navbar />
       <AppRouter />
       <Footer />
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 export function SectionFranqueado() {
   return (
     <>
-      <div className={styles.gridBg}>
         <section className={styles.franqueados}>
           <div className={styles.franqueadosContainer}>
             <motion.div
@@ -37,7 +36,7 @@ export function SectionFranqueado() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8, duration: 0.4 }}
-              href="https://wa.me/555599603419?text=Entre%20em%20contato%20com%20as%20lojas%20Dom%20Hygino!"
+              href="/franqueado"
               className={styles.btnContainer}
             >
               <Button size="big" className="flexBtn">
@@ -46,7 +45,6 @@ export function SectionFranqueado() {
             </motion.a>
           </div>
         </section>
-      </div>
     </>
   );
 }

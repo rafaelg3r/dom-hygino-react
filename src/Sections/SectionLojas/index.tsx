@@ -9,6 +9,7 @@ export function SectionLojas() {
   return (
     <>
       <section id="lojas" className={styles.lojas}>
+        <div className={styles.gradientBottom}></div>
         <div className={styles.lojasTitleContainer}>
           <GradientText as="h2" variant="mid" className={styles.lojasTitle}>
             Nossas Lojas

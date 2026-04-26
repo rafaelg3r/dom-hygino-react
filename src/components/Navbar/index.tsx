@@ -43,12 +43,7 @@ export function Navbar() {
               <Link smooth to="/#lojas" className={styles.mobileLink}>
                 Lojas
               </Link>
-              <Link
-                smooth
-                to="https://wa.me/555599603419"
-                target="_blank"
-                className={styles.mobileLink}
-              >
+              <Link smooth to="/franqueado" className={styles.mobileLink}>
                 Seja um Franqueado
               </Link>
               <Link
@@ -132,8 +127,7 @@ export function Navbar() {
           <div className={styles.rightNav}>
             <a
               className={styles.lineLink}
-              href="https://wa.me/555599603419"
-              target="_blank"
+              href="/franqueado"
               rel="noreferrer"
             >
               seja um franqueado

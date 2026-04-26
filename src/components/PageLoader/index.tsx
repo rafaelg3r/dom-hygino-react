@@ -10,11 +10,11 @@ export function PageLoader() {
   const location = useLocation();
 
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 2200);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -41,12 +41,11 @@ export function PageLoader() {
             // transition={{ duration: 0.5 }}
           />
           <motion.p
-            className={styles.loaderText}
+            className={styles.loader}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-
-          >Carregando...</motion.p>
+          ></motion.p>
         </motion.div>
       )}
     </AnimatePresence>

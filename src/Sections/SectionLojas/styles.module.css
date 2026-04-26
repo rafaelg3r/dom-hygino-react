@@ -4,6 +4,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: -0.3rem;
+  position: relative;
+}
+.gradientBottom {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  background-image: linear-gradient(to bottom, transparent 0%, #0a0a0a 100%);
 }
 
 .lojasTitleContainer {
@@ -136,10 +147,12 @@
 }
 
 @media (max-width: 768px) {
+
   .lojas {
     padding: 10rem 2rem 0 2rem;
   }
   .lojasMap img {
     max-width: 90%;
   }
+  
 }

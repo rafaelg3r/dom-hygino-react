@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Menu } from "../pages/Menu";
+import Franqueado from "../pages/Franqueado";
 
 export function AppRouter() {
   const location = useLocation();
@@ -12,6 +13,7 @@ export function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/franqueado" element={<Franqueado />} />
         <Route path="*" element={<h1>Página não encontrada</h1>} />
       </Routes>
     </AnimatePresence>

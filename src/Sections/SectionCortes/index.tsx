@@ -3,12 +3,7 @@ import { GradientText } from "../../components/GradientText";
 import { HashLink as Link } from "react-router-hash-link";
 import { Button } from "../../components/Button";
 import "../../global.css";
-import { delay, motion } from "framer-motion";
-//Imagens
-import topBg from "../../assets/home/cortes/cortes-top-bg.png";
-import topBgPhone from "../../assets/home/cortes/cortes-top-bg-phone.png";
-import bottomBg from "../../assets/home/cortes/cortes-bottom-bg.png";
-import bottomBgPhone from "../../assets/home/cortes/cortes-bottom-bg-phone.png";
+import { motion } from "framer-motion";
 
 export function SectionCortes() {
   return (
@@ -17,17 +12,14 @@ export function SectionCortes() {
         <GradientText as="h2" variant="mid" className={styles.cortesMenuTitle}>
           Cortes
         </GradientText>
-        <picture>
-          <source srcSet={topBgPhone} media="(max-width: 768px)" />
-          <img draggable="false" src={topBg} className={styles.cortesTopBg} />
-        </picture>
+
         <div className={styles.menuSelectorsContainer}>
           <div className={styles.linhaBoutique}>
             <div className={styles.menuText}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.4, duration: 0.3 }}
               >
                 <GradientText as="h2" variant="left">
@@ -37,7 +29,7 @@ export function SectionCortes() {
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
                 A Linha Boutique representa o mais alto padrão em cortes
@@ -47,7 +39,7 @@ export function SectionCortes() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <Link className={styles.btnContainer} to="/menu?linha=Boutique">
@@ -64,7 +56,7 @@ export function SectionCortes() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.4, duration: 0.3 }}
               >
                 <GradientText as="h2" variant="right">
@@ -74,18 +66,18 @@ export function SectionCortes() {
               <motion.p
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                A Linha Novilho Jovem traz cortes selecionados de animais
-                britânicos. Escolha ideal tanto para o churrasco quanto para o
-                dia a dia! É uma linha versátil que une tradição e qualidade
-                para todos os momentos.
+                A Linha Novilho Jovem traz cortes premium selecionados de
+                novilhos de até 36 meses. Escolha ideal tanto para o churrasco
+                quanto para o dia a dia! É uma linha versátil que une tradição e
+                qualidade para todos os momentos.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <Link
@@ -104,28 +96,28 @@ export function SectionCortes() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.4, duration: 0.3 }}
               >
                 <GradientText as="h2" variant="left">
-                  linha churrasco
+                  linha Campo Nobre
                 </GradientText>
               </motion.div>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                A Linha Churrasco oferece cortes tradicionais que carregam a
+                A Linha Campo Nobre oferece cortes tradicionais que carregam a
                 essência da culinária gaúcha. Reconhecida pelo preço competitivo
                 e pelo verdadeiro sabor do Sul, é a linha que valoriza a
-                tradição, a rusticidade e o gosto autêntico da carne bem feita.
+                tradição, a rusticidade e o gosto autêntico da carne bem feita.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <Link
@@ -145,7 +137,7 @@ export function SectionCortes() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.4, duration: 0.3 }}
               >
                 <GradientText as="h2" variant="right">
@@ -155,7 +147,7 @@ export function SectionCortes() {
               <motion.p
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
                 A Linha Pampeira é a escolha perfeita para o dia a dia, unindo
@@ -167,7 +159,7 @@ export function SectionCortes() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: "all" }}
+                viewport={{ once: true, amount: "some" }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <Link className={styles.btnContainer} to="/menu?linha=Pampeira">
@@ -179,29 +171,7 @@ export function SectionCortes() {
               </motion.div>
             </div>
           </div>
-
-          {/* <div className={styles.linhaProdutos}>
-          <div className={styles.menuText}>
-            <GradientText as="h2" variant="left">Produtos</GradientText>
-            <p>
-              Explore nossa linha de produtos variados, com uma seleção especial
-              de acompanhamentos, temperos e itens gourmet que elevam o sabor do
-              seu churrasco. Perfeitos para complementar carnes e transformar
-              cada preparo em uma experiência única!
-            </p>  
-            <Link  className={styles.btnContainer} to="/menu?linha=Produtos"><button> Acessar Produtos </button></Link
-            >
-          </div>
-        </div>*/}
         </div>
-        <picture>
-          <source srcSet={bottomBgPhone} media="(max-width: 768px)" />
-          <img
-            draggable="false"
-            src={bottomBg}
-            className={styles.cortesBottomBg}
-          />
-        </picture>
       </section>
     </>
   );

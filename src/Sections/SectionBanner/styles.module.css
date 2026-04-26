@@ -42,3 +42,9 @@
   width: 100%;
   box-shadow: 0 0.3rem 1.2rem rgba(10, 10, 10, 0.3);
 }
+
+@media (max-width: 768px) {
+  .menuTitle {
+    display: none;
+  }
+}
