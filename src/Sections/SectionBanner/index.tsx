@@ -3,7 +3,6 @@ import styles from "./styles.module.css";
 import { useSearchParams } from "react-router-dom";
 // import { products, type Product } from "../../data/products";
 
-import Contrafile from "../../assets/menu/carnes/contra-file-design-clean.png";
 import TextNovilho from "../../assets/menu/linhas-banner/textNovilho.png";
 import TextBoutique from "../../assets/menu/linhas-banner/textBoutique.png";
 import TextPampeira from "../../assets/menu/linhas-banner/textPampeira.png";
@@ -46,15 +45,6 @@ export function SectionBanner() {
         <picture className={styles.menuTitle}>
           <source media="(min-width: 1081px)" srcSet={bannerLine} />
           <img id="banner-title" src={bannerLine} alt="Linha novilho jovem" />
-        </picture>
-        <picture className={styles.menuBannerSteak}>
-          <source media="(min-width: 1081px)" srcSet={Contrafile} />
-          <img
-            width="288px"
-            className={styles.bannerImage}
-            src={Contrafile}
-            alt="carne contra file"
-          />
         </picture>
       </div>
       <div className={styles.bannerLine}></div>

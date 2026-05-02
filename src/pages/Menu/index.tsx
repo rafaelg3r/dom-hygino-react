@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 import { SectionBanner } from "../../Sections/SectionBanner";
 import { LineFilter } from "../../components/LineFilter";
-import { MenuCards } from "../../components/MenuCards";
+import { MenuCards } from "../../components/MenuCards/MenuCards";
 import { Display } from "../../components/Display";
 
 export function Menu() {
@@ -17,15 +17,9 @@ export function Menu() {
       <div className={styles.menuContainer}>
         <SectionBanner />
         <div className={styles.menuMainContent}>
-          <div className={styles.menuFilterCardsContainer}>
-            <div className={styles.filterCards}>
-              <LineFilter />
-              <MenuCards />
-            </div>
-          </div>
-          <div id="Display"   className={styles.menuDisplay}>
-            <Display />
-          </div>
+          <LineFilter />
+          <MenuCards />
+          <Display />
         </div>
       </div>
     </motion.div>

@@ -9,7 +9,7 @@ export function Display() {
   const currentSteakName = useCurrentSteak();
 
   const currentProduct = products.find(
-    (p) => p.name.toLowerCase() === currentSteakName?.toLowerCase()
+    (p) => p.name.toLowerCase() === currentSteakName?.toLowerCase(),
   );
 
   if (!currentProduct) {
@@ -56,46 +56,7 @@ export function Display() {
             </motion.div>
           </GradientText>
         </div>
-        <div className={styles.displayInfoContainer}>
-          <div className={styles.displaySidesContainer}>
-            <GradientText
-              as="strong"
-              variant="right"
-              className={styles.sidesTitle}
-            >
-              acompanhamentos
-            </GradientText>
-            {currentProduct.sides.map((side, index) => (
-              <div key={index} className={styles.displaySides}>
-                <div className={styles.iconContainer}>
-                  <img src={side.icon} alt={side.name} />
-                </div>
-                <p>{side.name}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.displayPairingsContainer}>
-            <GradientText
-              as="strong"
-              variant="right"
-              className={styles.sidesTitle}
-            >
-              harmonizações
-            </GradientText>
-            {currentProduct.pairings.map((pairing, index) => (
-              <div key={index} className={styles.displayPairings}>
-                <div className={styles.iconContainer}>
-                  <img
-                    src={pairing.icon}
-                    alt={pairing.name}
-                    className={styles.sidesIcons}
-                  />
-                </div>
-                <p>{pairing.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className={styles.displayInfoContainer}></div>
       </div>
     </>
   );

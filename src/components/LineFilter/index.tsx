@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { useCurrentLine } from "../../utils/currentLine";
-import { GradientText } from "../GradientText";
+import boutiqueLogo from "../../assets/menu/logos/Boutique-white.jpg";
 
 export function LineFilter() {
   const currentLine = useCurrentLine();
@@ -10,53 +10,48 @@ export function LineFilter() {
 
   return (
     <>
-      <div className={styles.menuSelectors}>
-        <div className={styles.menuLinhas}>
-          <div className={styles.selectorTitle}>
-            <GradientText variant="mid" as="strong">
-              Linhas
-            </GradientText>
+      <h2>Escolha uma linha</h2>
+      <div className={styles.selectorOptions}>
+        <Link
+          to="?linha=Boutique"
+          className={clsx(
+            styles.selectorLink,
+            selectedLine === "boutique" && styles.menuSelected,
+          )}
+        >
+          <img src={boutiqueLogo} width={200} alt="" />
+          <div className={styles.selectorInfo}>
+            <span>Primor <br />em <br />cada <br /> corte</span>
           </div>
-          <div className={styles.selectorOptions}>
-            <Link
-              to="?linha=Boutique"
-              className={clsx(
-                styles.selectorLink,
-                selectedLine === "boutique" && styles.menuSelected,
-              )}
-            >
-              boutique
-            </Link>
-            <Link
-              to="?linha=Novilho Jovem"
-              className={clsx(
-                styles.selectorLink,
-                selectedLine === "novilho jovem" && styles.menuSelected,
-              )}
-            >
-              novilho jovem
-            </Link>
-            <Link
-              to="?linha=Churrasco"
-              className={clsx(
-                styles.selectorLink,
-                selectedLine === "churrasco" && styles.menuSelected,
-              )}
-            >
-              churrasco
-            </Link>
-            <Link
-              to="?linha=Pampeira"
-              className={clsx(
-                styles.selectorLink,
-                selectedLine === "pampeira" && styles.menuSelected,
-              )}
-            >
-              pampeira
-            </Link>
-            {/* <Link to="?linha=Produtos">Produtos</Link> */}
-          </div>
-        </div>
+        </Link>
+        <Link
+          to="?linha=Novilho Jovem"
+          className={clsx(
+            styles.selectorLink,
+            selectedLine === "novilho jovem" && styles.menuSelected,
+          )}
+        >
+          <img src={boutiqueLogo} width={200} alt="" />
+        </Link>
+        <Link
+          to="?linha=Churrasco"
+          className={clsx(
+            styles.selectorLink,
+            selectedLine === "churrasco" && styles.menuSelected,
+          )}
+        >
+          <img src={boutiqueLogo} width={200} alt="" />
+        </Link>
+        <Link
+          to="?linha=Pampeira"
+          className={clsx(
+            styles.selectorLink,
+            selectedLine === "pampeira" && styles.menuSelected,
+          )}
+        >
+          <img src={boutiqueLogo} width={200} alt="" />
+        </Link>
+        {/* <Link to="?linha=Produtos">Produtos</Link> */}
       </div>
     </>
   );
