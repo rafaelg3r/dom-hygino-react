@@ -9,7 +9,7 @@ export function LineFilter() {
   const selectedLine = currentLine?.toLocaleLowerCase();
 
   return (
-    <>
+    <div className={styles.lineFilter}>
       <h2>Escolha uma linha</h2>
       <div className={styles.selectorOptions}>
         <Link
@@ -53,6 +53,6 @@ export function LineFilter() {
         </Link>
         {/* <Link to="?linha=Produtos">Produtos</Link> */}
       </div>
-    </>
+    </div>
   );
 }

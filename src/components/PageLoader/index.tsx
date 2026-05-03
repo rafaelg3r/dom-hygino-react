@@ -1,20 +1,24 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react"; // Adicionado useRef
+import { useLocation } from "react-router-dom"; // Usando useLocation conforme appRouter.tsx[cite: 1]
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./styles.module.css";
-// Importe sua logo
 import LogoSlim from "../../assets/logos/logoSlim.png";
 
 export function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
 
-  useEffect(() => {
-    // setIsLoading(true);
+  const visitedPages = useRef(new Set());
 
+  useEffect(() => {
+    setIsLoading(true);
+
+    const hasVisitedBefore = visitedPages.current.has(location.pathname);
+    const delay = hasVisitedBefore ? 1100 : 2200;
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2200);
+      visitedPages.current.add(location.pathname);
+    }, delay);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -38,7 +42,6 @@ export function PageLoader() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-            // transition={{ duration: 0.5 }}
           />
           <motion.p
             className={styles.loader}
