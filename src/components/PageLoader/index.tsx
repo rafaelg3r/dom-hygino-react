@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"; // Adicionado useRef
+import { useEffect, useState } from "react"; // Adicionado useRef
 import { useLocation } from "react-router-dom"; // Usando useLocation conforme appRouter.tsx[cite: 1]
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./styles.module.css";
@@ -8,17 +8,12 @@ export function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
 
-  const visitedPages = useRef(new Set());
-
   useEffect(() => {
     setIsLoading(true);
 
-    const hasVisitedBefore = visitedPages.current.has(location.pathname);
-    const delay = hasVisitedBefore ? 1100 : 2200;
     const timer = setTimeout(() => {
       setIsLoading(false);
-      visitedPages.current.add(location.pathname);
-    }, delay);
+    }, 2200);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);

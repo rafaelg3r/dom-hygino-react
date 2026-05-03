@@ -7,22 +7,8 @@ import HomeImg from "../../assets/home/home-bg.jpg";
 
 import { Button } from "../../components/Button";
 import { GradientText } from "../../components/GradientText";
-import { useEffect, useState } from "react";
 
 export function SectionMain() {
-  const [isFirstVisit, setIsFirstVisit] = useState(true);
-
-  useEffect(() => {
-    const hasVisitedHome = sessionStorage.getItem("visited_home");
-
-    if (hasVisitedHome) {
-      setIsFirstVisit(false);
-    } else {
-      sessionStorage.setItem("visited_home", "true");
-    }
-  }, []);
-
-  const delayReduction = isFirstVisit ? 0 : 1.1;
   return (
     <div id="home">
       <main className={styles.hero}>
@@ -43,7 +29,7 @@ export function SectionMain() {
           <motion.strong
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 2.3 - delayReduction }}
+            transition={{ duration: 0.5, delay: 2.3 }}
           >
             Carnes e Especiarias
           </motion.strong>
@@ -51,7 +37,7 @@ export function SectionMain() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 2.6 - delayReduction }}
+              transition={{ duration: 0.7, delay: 2.6 }}
             >
               <GradientText
                 as="h1"
@@ -64,7 +50,7 @@ export function SectionMain() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 2.8 - delayReduction }}
+              transition={{ duration: 0.5, delay: 2.8 }}
             >
               Da nossa seleção especial de carnes para o seu prato. Cortes
               nobres, frescos e com sabor incomparável para transformar suas
@@ -74,7 +60,7 @@ export function SectionMain() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 3.2 - delayReduction }}
+                transition={{ duration: 0.5, delay: 3.2 }}
               >
                 <Link to="/menu">
                   <Button size="big" className="flexBtn">
@@ -85,7 +71,7 @@ export function SectionMain() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 3.4 - delayReduction }}
+                transition={{ duration: 0.5, delay: 3.4 }}
               >
                 <Link smooth to="/#lojas">
                   <Button size="big" border className="flexBtn">

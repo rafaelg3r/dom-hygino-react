@@ -22,7 +22,7 @@ export const products: Product[] = [
   {
     name: "Denver",
     line: "Boutique",
-    description: "teste denver",
+    description: "Corte macio e suculento, conhecido por seu sabor intenso e textura única. Localizado na parte dianteira do boi, o Denver é valorizado por sua marmorização, que proporciona uma experiência gastronômica rica e saborosa. Ideal para grelhar ou assar, o Denver é uma escolha popular entre os amantes de carne que buscam uma opção premium e cheia de sabor.",
     shortDescription: "teste short denver",
     tagline: "Sabor intenso",
     image: denverBtqImg,
@@ -52,7 +52,7 @@ export const products: Product[] = [
 
   {
     name: "Picanha",
-    line: "Novilho Jovem",
+    line: "Campo Nobre",
     description: "teste picanha",
     shortDescription: "teste short picanha",
     tagline: "Denver",

@@ -1,76 +1,50 @@
 .menuDisplay {
-  padding: 3rem clamp(2rem, -1.556rem + 3.472vw, 4rem);
-  background-image: url("../../assets/menu/display/display-noise-bg.png");
-  background-color: var(--dark-pink-grey);
-  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 4rem;
+  padding: 3rem clamp(2rem, -1.556rem + 3.472vw, 4rem);
+  background-color: var(--dark-pink-grey);
 }
 
 .displaySteakContent {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  max-height: 40rem;
+  overflow: hidden;
 }
 .displaySteakContent img {
   filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
+  max-width: 40rem;
 }
-.displayTitle {
-  font-family: var(--roadstore-font);
-  font-size: 3.6rem;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-}
-.displayDescription {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.55rem;
-  padding-bottom: 0.5rem;
-  text-align: center;
-}
-.displayInfoContainer {
+
+.displayContent{
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: start;
+  justify-content: start;
 }
 
-.displaySidesContainer {
-}
-.sidesTitle {
-  font-size: 2.4rem;
-  font-variant: small-caps;
-  font-weight: 600;
-  max-width: fit-content;
-}
-
-.displaySidesContainer,
-.displayPairingsContainer {
+.marmoreio {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.displaySides,
-.displayPairings {
-  display: flex;
-  gap: 2rem;
-}
-.iconContainer {
-  display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  width: fit-content;
-  border-radius: 0.6rem;
-  padding: 0.8rem;
-  background-color: var(--pink-grey);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
-.sidesIcons {
-  max-width: 2.4rem;
-  max-height: 2.4rem;
+.marmoreio :nth-child(1) {
+  margin-left: 1rem;
+}
+.marmoreioBlock {
+  background-color: var(--pink-red);
+  width: 1.2rem;
+  height: 0.4rem;
+  margin-left: 0.2rem;
+  &:nth-child(5) {
+    background-color: var(--light-grey);
+  }
 }
 
 @media (max-width: 1024px){

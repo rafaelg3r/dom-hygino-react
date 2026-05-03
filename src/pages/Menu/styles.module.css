@@ -8,7 +8,7 @@
 
 @media (max-width: 1024px) {
   .menuMainContent {
-    flex-flow: column-reverse;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     gap: 4rem;

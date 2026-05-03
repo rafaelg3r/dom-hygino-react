@@ -26,13 +26,6 @@ export function Display() {
     <>
       <div className={styles.menuDisplay}>
         <div className={styles.displaySteakContent}>
-          <GradientText
-            as="strong"
-            variant="mid"
-            className={styles.displayTitle}
-          >
-            {currentProduct.name}
-          </GradientText>
           <motion.img
             key={`title-${currentProduct.name}`}
             initial={{ scale: 0 }}
@@ -41,20 +34,21 @@ export function Display() {
             src={currentProduct.image}
             alt={currentProduct.name}
           />
-          <GradientText
-            as="p"
-            variant="mid"
-            className={styles.displayDescription}
-          >
-            <motion.div
-              key={`title-${currentProduct.name}`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-            >
-              {currentProduct.description}
-            </motion.div>
-          </GradientText>
+          <motion.div className={styles.displayContent}>
+            <span>{currentProduct.tagline}</span>
+            <h2>{currentProduct.name}</h2>
+            <p className={styles.marmoreio}>MARMOREIO
+            <div className={styles.marmoreioBlock}></div>
+            <div className={styles.marmoreioBlock}></div>
+            <div className={styles.marmoreioBlock}></div>
+            <div className={styles.marmoreioBlock}></div>
+            <div className={styles.marmoreioBlock}></div>
+             </p>
+             <p>{currentProduct.description}</p>
+             <br />
+             <div className={styles.preparoSugerido}></div>
+             <div className={styles.harmonizacao}></div>
+          </motion.div>
         </div>
         <div className={styles.displayInfoContainer}></div>
       </div>

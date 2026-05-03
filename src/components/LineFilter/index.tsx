@@ -2,8 +2,11 @@ import styles from "./styles.module.css";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { useCurrentLine } from "../../utils/currentLine";
-import boutiqueLogo from "../../assets/menu/logos/Boutique-white.jpg";
 
+import boutiqueLogo from "../../assets/menu/logos/Boutique-white.jpg";
+import novilhoLogo from "../../assets/menu/logos/Novilho-Brown.jpg";
+import nobreLogo from "../../assets/menu/logos/Nobre-azul.jpg";
+import pampeiraLogo from "../../assets/menu/logos/Pampeira-green.jpg";
 export function LineFilter() {
   const currentLine = useCurrentLine();
   const selectedLine = currentLine?.toLocaleLowerCase();
@@ -19,10 +22,7 @@ export function LineFilter() {
             selectedLine === "boutique" && styles.menuSelected,
           )}
         >
-          <img src={boutiqueLogo} width={200} alt="" />
-          <div className={styles.selectorInfo}>
-            <span>Primor <br />em <br />cada <br /> corte</span>
-          </div>
+          <img src={boutiqueLogo} alt="" />
         </Link>
         <Link
           to="?linha=Novilho Jovem"
@@ -31,16 +31,16 @@ export function LineFilter() {
             selectedLine === "novilho jovem" && styles.menuSelected,
           )}
         >
-          <img src={boutiqueLogo} width={200} alt="" />
+          <img src={novilhoLogo} alt="" />
         </Link>
         <Link
-          to="?linha=Churrasco"
+          to="?linha=Campo Nobre"
           className={clsx(
             styles.selectorLink,
-            selectedLine === "churrasco" && styles.menuSelected,
+            selectedLine === "campo nobre" && styles.menuSelected,
           )}
         >
-          <img src={boutiqueLogo} width={200} alt="" />
+          <img src={nobreLogo} alt="" />
         </Link>
         <Link
           to="?linha=Pampeira"
@@ -49,7 +49,7 @@ export function LineFilter() {
             selectedLine === "pampeira" && styles.menuSelected,
           )}
         >
-          <img src={boutiqueLogo} width={200} alt="" />
+          <img src={pampeiraLogo} alt="" />
         </Link>
         {/* <Link to="?linha=Produtos">Produtos</Link> */}
       </div>
