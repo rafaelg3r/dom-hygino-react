@@ -9,12 +9,13 @@
   --pink-grey: #2c2125;
   --dark-pink-grey: #161213;
   --card: hsl(30 10% 18%);
-  --pink-red: #e53344;
-  --pink-red-80: rgb(229, 51, 68, 0.8);
-  /* --pink-red-dark: #b53342; */
-  --pink-red-dark: #e53344;
-  --pink-red-30: rgba(229, 51, 68, 0.3);
   --pink-red-10: rgba(229, 51, 68, 0.1);
+  --pink-red-20: rgba(229, 51, 68, 0.2);
+  --pink-red-30: rgba(229, 51, 68, 0.3);
+  --pink-red-40: rgba(229, 51, 68, 0.4);
+  --pink-red-50: rgba(229, 51, 68, 0.5);
+  --pink-red-80: rgb(229, 51, 68, 0.8);
+  --pink-red: #e53344;
 
   --pink-gradient: linear-gradient(
     90deg,

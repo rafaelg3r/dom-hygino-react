@@ -46,6 +46,7 @@ export function SectionBanner() {
           <source media="(min-width: 1081px)" srcSet={bannerLine} />
           <img id="banner-title" src={bannerLine} alt="Linha novilho jovem" />
         </picture>
+        <div className={styles.menuBannerGradient}></div>
       </div>
       <div className={styles.bannerLine}></div>
     </div>

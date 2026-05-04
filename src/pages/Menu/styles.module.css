@@ -1,7 +1,7 @@
 .menuMainContent {
   display: flex;
   align-items: start;
-  gap: 2rem;
+  gap: 4rem;
   padding: 4rem clamp(3rem, -13rem + 15.625vw, 12rem);
   flex-flow: column;
 }

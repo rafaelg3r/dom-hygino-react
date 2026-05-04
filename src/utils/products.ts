@@ -13,6 +13,8 @@ export type Product = {
   line: "Boutique" | "Novilho Jovem" | "Campo Nobre" | "Pampeira" | "Dia a dia";
   description: string;
   shortDescription: string;
+  suggestedPreparation: string;
+  harmonization: string;
   tagline: string;
   image: string;
 };
@@ -22,8 +24,12 @@ export const products: Product[] = [
   {
     name: "Denver",
     line: "Boutique",
-    description: "Corte macio e suculento, conhecido por seu sabor intenso e textura única. Localizado na parte dianteira do boi, o Denver é valorizado por sua marmorização, que proporciona uma experiência gastronômica rica e saborosa. Ideal para grelhar ou assar, o Denver é uma escolha popular entre os amantes de carne que buscam uma opção premium e cheia de sabor.",
+    description:
+      "Corte macio e suculento, conhecido por seu sabor intenso e textura única. É uma escolha popular entre os amantes de carne que buscam uma opção premium e cheia de sabor.",
     shortDescription: "teste short denver",
+    suggestedPreparation:
+      "Corte em bifes grossos (2 a 3 dedos) e sele em fogo forte para caramelizar o marmoreio. Deixe a carne descansar por 5 minutos antes de fatiar contra a fibra, garantindo máxima suculência.",
+    harmonization: "Malbec encorpado, Cabernet Sauvignon ou um Tannat uruguaio.",
     tagline: "Sabor intenso",
     image: denverBtqImg,
   },
@@ -34,6 +40,8 @@ export const products: Product[] = [
     line: "Novilho Jovem",
     description: "teste picanha",
     shortDescription: "teste short picanha",
+    suggestedPreparation: "a",
+    harmonization: "a",
     tagline: "Picanha",
     image: picanhaNovImg,
   },
@@ -45,6 +53,8 @@ export const products: Product[] = [
     line: "Pampeira",
     description: "teste Maminha",
     shortDescription: "teste short Maminha",
+    suggestedPreparation: "a",
+    harmonization: "a",
     tagline: "Denver",
     image: maminhaPmpImg,
   },
@@ -55,6 +65,8 @@ export const products: Product[] = [
     line: "Campo Nobre",
     description: "teste picanha",
     shortDescription: "teste short picanha",
+    suggestedPreparation: "a",
+    harmonization: "a",
     tagline: "Denver",
     image: anchoGrillNobImg,
   },

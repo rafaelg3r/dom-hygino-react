@@ -1,60 +1,157 @@
+.displayNoContent {
+  margin-bottom: 40rem;
+}
+
 .menuDisplay {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 4rem;
-  padding: 3rem clamp(2rem, -1.556rem + 3.472vw, 4rem);
-  background-color: var(--dark-pink-grey);
+  padding: 3rem;
+  background-color: var(--dark-grey);
+  border: solid 0.1rem var(--card);
 }
 
-.displaySteakContent {
+.displayContent {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-height: 40rem;
+  max-height: 60rem;
   overflow: hidden;
 }
-.displaySteakContent img {
-  filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
-  max-width: 40rem;
+.displayImageContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 60rem;
+  border: 0.1rem solid var(--pink-red-20);
+  background-color: var(--dark-pink-grey);
+  background-image: url("../../assets/menu/BannerBg.png");
+  background-size: cover;
+  background-position: calc(5% - 10rem);
 }
-
-.displayContent{
+.displayImageContainer img {
+  width: 76rem;
+  filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
+}
+.displayTextContainer {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
+  padding: 4rem;
+}
+.displayTextContainer .tagline {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--pink-red-80);
+  margin-bottom: 0.5rem;
+}
+.displayTextContainer h2 {
+  font-size: 6rem;
+  font-family: var(--roadstore-font);
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--semi-white);
+  margin-bottom: 2rem;
+}
+.displayTextContainer .description {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--semi-white-70);
+  margin-bottom: 4rem;
 }
 
 .marmoreio {
   display: flex;
   justify-content: start;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-weight: 400;
+  color: var(--semi-white-50);
+  margin-bottom: 2rem;
 }
 .marmoreio :nth-child(1) {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 .marmoreioBlock {
   background-color: var(--pink-red);
-  width: 1.2rem;
-  height: 0.4rem;
+  width: 2.4rem;
+  height: 0.6rem;
   margin-left: 0.2rem;
   &:nth-child(5) {
     background-color: var(--light-grey);
+    opacity: 0.6;
   }
 }
 
-@media (max-width: 1024px){
+.displayDivider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--card);
+}
+
+.displaySuggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.prepTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--pink-red-80);
+  margin-bottom: 1rem;
+}
+.preparoSugerido .suggestedPreparation {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--semi-white-70);
+}
+
+.btnEntrarContato {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
   .menuDisplay {
     flex-direction: row;
   }
+  .displayContent {
+    flex-direction: column;
+    gap: 2rem;
+    max-height: none;
+  }
+  .displayImageContainer {
+    width: 100%;
+    height: 42rem;
+    flex: none;
+  }
 }
 
-@media ( max-width:768px){
+@media (max-width: 768px) {
   .menuDisplay {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .displayImageContainer img {
+    width: 50rem;
+    filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
   }
 }

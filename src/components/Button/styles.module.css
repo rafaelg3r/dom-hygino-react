@@ -1,5 +1,5 @@
 .btn {
-  background-color: var(--pink-red-dark);
+  background-color: var(--pink-red-80);
   color: var(--semi-white);
   border: none;
   border-radius: 0.4rem;
@@ -58,7 +58,7 @@
 }
 
 .border {
-  border: 2px solid var(--pink-red-dark);
+  border: 2px solid var(--pink-red);
   background-color: var(--pink-red-10) !important;
 }
 .border:hover {

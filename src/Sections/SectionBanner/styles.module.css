@@ -2,7 +2,8 @@
   padding-top: 8.4rem;
 }
 .menuBanner {
-  background-image: url("../../assets/menu/BannerBg.png");
+  /* background-image: url("../../assets/menu/BannerBg.png"); */
+  background-image: url("../../assets/menu/banners/_E7A1377.jpg");
   background-size: cover;
   background-position: center;
   height: 35rem;
@@ -12,33 +13,32 @@
   justify-content: center;
   position: relative;
 }
+.menuBannerGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.0) 100%
+  );
+  z-index: 0;
+}
 .menuTitle {
   position: absolute;
-  top: 6rem;
-  left: 6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
-.menuBannerSteak {
-  position: relative;
 
-  z-index: 2;
-}
-.menuBannerSteak::before {
-  content: "";
-  position: absolute;
-  top: 0rem;
-  padding: 3rem;
-  left: 4rem;
-  right: 5.5rem;
-  bottom: 0rem;
-  background-color: rgb(229, 51, 68, 0.25);
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(5rem);
-}
+
 .bannerLine {
   z-index: 3;
-  background-color: var(--dark-pink-grey);
-  height: 0.5rem;
+  background-color: var(--pink-red-50);
+  height: 0.2rem;
   width: 100%;
   box-shadow: 0 0.3rem 1.2rem rgba(10, 10, 10, 0.3);
 }
