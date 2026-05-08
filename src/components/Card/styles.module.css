@@ -6,17 +6,21 @@
   background-color: var(--dark-grey);
   border: 0.1rem solid var(--card);
 }
-
+.cardBackground {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/menu/carnes/BOUTIQUE/steak-background.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
 .cardImgContainer {
-  max-width: 30rem;
   max-height: 24rem;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/menu/carnes/BOUTIQUE/steak-background.jpg");
-  background-position: bottom;
-  position: relative;
+  overflow: hidden;
 }
 .gradientFilter {
   position: absolute;
@@ -31,7 +35,7 @@
   );
 }
 .cardContainer img {
-  max-height: 50rem;
+  max-height: 45rem;
   filter: drop-shadow(1.5rem -0.8rem 0.7rem rgba(0, 0, 0, 0.5));
   z-index: 2;
 }
@@ -50,7 +54,7 @@
   letter-spacing: 0.16rem;
   color: var(--semi-white);
 }
-.textContainer{
+.textContainer {
   color: var(--semi-white-70);
 }
 .textContainer span {
