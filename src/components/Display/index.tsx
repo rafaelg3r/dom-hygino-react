@@ -13,6 +13,16 @@ export function Display() {
   const currentProduct = products.find(
     (p) => p.name.toLowerCase() === currentSteakName?.toLowerCase(),
   );
+  const renderBlocks = (level: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <div
+        key={i}
+        className={`${styles.marmoreioBlock} ${
+          i < level ? styles.active : styles.inactive
+        }`}
+      />
+    ));
+  };
 
   if (!currentProduct) {
     return (
@@ -34,20 +44,26 @@ export function Display() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
-              src={currentProduct.image}
+              src={currentProduct.smallerImage ? currentProduct.smallerImage : currentProduct.image}
               alt={currentProduct.name}
             />
           </div>
           <motion.div className={styles.displayTextContainer}>
             <span className={styles.tagline}>{currentProduct.tagline}</span>
             <h2>{currentProduct.name}</h2>
-            <div className={styles.marmoreio}>
-              marmoreio
-              <div className={styles.marmoreioBlock}></div>
-              <div className={styles.marmoreioBlock}></div>
-              <div className={styles.marmoreioBlock}></div>
-              <div className={styles.marmoreioBlock}></div>
-              <div className={styles.marmoreioBlock}></div>
+            <div className={styles.levelsContainer}>
+              <div className={styles.marmoreio}>
+                <span>marmorização</span>
+                <div className={styles.blocksContainer}>
+                  {renderBlocks(currentProduct.marbling)}
+                </div>
+              </div>
+              <div className={styles.marmoreio}>
+                <span>maciez</span>
+                <div className={styles.blocksContainer}>
+                  {renderBlocks(currentProduct.softness)}
+                </div>
+              </div>
             </div>
             <p className={styles.description}>{currentProduct.description}</p>
             <div className={styles.displayDivider}></div>
@@ -71,7 +87,9 @@ export function Display() {
                 </p>
               </div>
             </div>
-            <Button size="medium" className={styles.btnEntrarContato}>Ver lojas disponíveis</Button>
+            <Button size="medium" className={styles.btnEntrarContato}>
+              Ver lojas disponíveis
+            </Button>
           </motion.div>
         </div>
       </div>

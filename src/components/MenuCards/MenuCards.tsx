@@ -25,6 +25,8 @@ export function MenuCards() {
             name={product.name.toUpperCase()}
             tagline={product.tagline}
             shortDescription={product.shortDescription}
+            marbling={product.marbling}
+            softness={product.softness}
             image={product.image}
             // O link é gerado automaticamente com base nos dados
             link={`/menu?linha=${product.line}&carne=${product.name.toLowerCase()}#Display`}

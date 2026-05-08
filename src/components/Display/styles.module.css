@@ -68,10 +68,17 @@
   margin-bottom: 4rem;
 }
 
+.levelsContainer {
+  display: flex;
+  gap: 4rem;
+}
+
 .marmoreio {
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  gap: 1rem;
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
@@ -79,18 +86,26 @@
   color: var(--semi-white-50);
   margin-bottom: 2rem;
 }
-.marmoreio :nth-child(1) {
-  margin-left: 1.6rem;
+
+.blocksContainer {
+  display: flex;
 }
+
 .marmoreioBlock {
-  background-color: var(--pink-red);
   width: 2.4rem;
   height: 0.6rem;
   margin-left: 0.2rem;
-  &:nth-child(5) {
-    background-color: var(--light-grey);
-    opacity: 0.6;
-  }
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: var(--pink-red);
+  opacity: 1;
+}
+
+.inactive {
+  background-color: var(--light-grey);
+  opacity: 0.3; /* Mais suave que o anterior */
 }
 
 .displayDivider {
@@ -151,7 +166,7 @@
 
 @media (max-width: 520px) {
   .displayImageContainer img {
-    width: 50rem;
+    width: 38rem;
     filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
   }
 }

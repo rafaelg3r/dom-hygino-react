@@ -1,6 +1,7 @@
 //Boutique
 import denverBtqImg from "../assets/menu/carnes/BOUTIQUE/denver-btq.png";
-import tomahawkBtqImg from "../assets/menu/carnes/BOUTIQUE/tomahawk-btq-smaller.png";
+import tomahawkBtqImg from "../assets/menu/carnes/BOUTIQUE/tomahawk-btq.png";
+import tomahawkSmallerBtqImg from "../assets/menu/carnes/BOUTIQUE/tomahawk-btq-smaller.png";
 import matambreBtqImg from "../assets/menu/carnes/BOUTIQUE/matambre-btq.png";
 import shankBtqImg from "../assets/menu/carnes/BOUTIQUE/shank-btq.png";
 import steakShoulderBtqImg from "../assets/menu/carnes/BOUTIQUE/steak-shoulder-btq.png";
@@ -13,6 +14,7 @@ import shortRibBtqImg from "../assets/menu/carnes/BOUTIQUE/short-rib-btq.png";
 import houseRibBtqImg from "../assets/menu/carnes/BOUTIQUE/house-hib-btq.png";
 import skirtSteakBtqImg from "../assets/menu/carnes/BOUTIQUE/skirt-steak-btq.png";
 import petitFileBtqImg from "../assets/menu/carnes/BOUTIQUE/petit-filet-btq.png";
+import petitFileSmallerBtqImg from "../assets/menu/carnes/BOUTIQUE/petit-filet-btq-smaller.png";
 import brisketBtqImg from "../assets/menu/carnes/BOUTIQUE/brisket-btq.png";
 import cowboySteakBtqImg from "../assets/menu/carnes/BOUTIQUE/cowboy-steak-btq.png";
 // Novilho
@@ -31,7 +33,10 @@ export type Product = {
   suggestedPreparation: string;
   harmonization: string;
   tagline: string;
+  marbling: number;
+  softness: number;
   image: string;
+  smallerImage?: string;
 };
 
 export const products: Product[] = [
@@ -41,12 +46,14 @@ export const products: Product[] = [
     line: "Boutique",
     description:
       "Corte macio e suculento, conhecido por seu sabor intenso e textura única. É uma escolha popular entre os amantes de carne que buscam uma opção premium e cheia de sabor.",
-    shortDescription: "teste short denver",
+    shortDescription: "Marmoreio intenso e sabor marcante.",
     suggestedPreparation:
-      "Corte em bifes grossos (2 a 3 dedos) e sele em fogo forte para caramelizar o marmoreio. Deixe a carne descansar por 5 minutos antes de fatiar contra a fibra, garantindo máxima suculência.",
+      "Prepare em bifes altos, selando em fogo forte para criar crosta caramelizada sem perder a suculência interna. Finalize ao ponto e fatie contra as fibras antes de servir.",
     harmonization:
-      "Malbec encorpado, Cabernet Sauvignon ou um Tannat uruguaio.",
-    tagline: "Sabor intenso",
+      "Malbec reserva, Cabernet Sauvignon ou cervejas IPA e amber ale.",
+    tagline: "Suculência em alto nível",
+    softness: 4,
+    marbling: 4,
     image: denverBtqImg,
   },
   {
@@ -60,7 +67,10 @@ export const products: Product[] = [
     harmonization:
       "Cabernet Sauvignon estruturado, Malbec reserva ou cervejas strong ale.",
     tagline: "Presença e intensidade",
+    softness: 5,
+    marbling: 5,
     image: tomahawkBtqImg,
+    smallerImage: tomahawkSmallerBtqImg, // Usando a mesma imagem para ambos os propósitos
   },
   {
     name: "Matambre",
@@ -72,6 +82,8 @@ export const products: Product[] = [
       "Ideal para preparo na grelha em fogo médio, podendo ser recheado ou servido crocante. Marinadas ajudam a intensificar sabor e maciez.",
     harmonization: "Tempranillo, Pinot Noir ou cervejas amber ale.",
     tagline: "Autenticidade da parrilla",
+    marbling: 1,
+    softness: 3,
     image: matambreBtqImg,
   },
   {
@@ -84,6 +96,8 @@ export const products: Product[] = [
       "Perfeito para cocção lenta, ensopados ou braseados longos. O cozimento prolongado transforma o colágeno em textura gelatinosa e suculenta.",
     harmonization: "Syrah, Merlot encorpado ou cervejas porter.",
     tagline: "Intenso em cozimento lento",
+    softness: 3,
+    marbling: 1,
     image: shankBtqImg,
   },
   {
@@ -96,6 +110,8 @@ export const products: Product[] = [
       "Grelhe em fogo alto até formar crosta dourada, preservando o interior suculento. Fatie contra as fibras para melhor textura.",
     harmonization: "Cabernet Franc, Carménère ou IPA moderada.",
     tagline: "Força e suculência",
+    softness: 3,
+    marbling: 2,
     image: steakShoulderBtqImg,
   },
   {
@@ -108,6 +124,8 @@ export const products: Product[] = [
       "Ideal para churrasco em peça inteira ou bifes grossos. Asse em fogo médio preservando a gordura para manter a suculência.",
     harmonization: "Merlot, Malbec jovem ou cervejas vienna lager.",
     tagline: "Suculência tradicional",
+    softness: 4,
+    marbling: 2,
     image: maminhaBtqImg,
   },
   {
@@ -120,6 +138,8 @@ export const products: Product[] = [
       "Prepare lentamente na grelha em fogo médio para permitir que a gordura derreta gradualmente, mantendo a carne macia.",
     harmonization: "Malbec argentino, Tannat ou cervejas red ale.",
     tagline: "Sabor autêntico",
+    softness: 3,
+    marbling: 3,
     image: vazioBtqImg,
   },
   {
@@ -132,6 +152,8 @@ export const products: Product[] = [
       "Sele rapidamente em fogo alto para criar crosta caramelizada, mantendo o interior ao ponto para preservar a suculência.",
     harmonization: "Cabernet Sauvignon, Malbec reserva ou stout.",
     tagline: "Maciez premium",
+    softness: 5,
+    marbling: 5,
     image: entrecotBtqImg,
   },
   // {
@@ -156,6 +178,8 @@ export const products: Product[] = [
       "Grelhe rapidamente em fogo alto até atingir crosta dourada, preservando o centro macio.",
     harmonization: "Cabernet Sauvignon jovem ou cervejas pale ale.",
     tagline: "Pronto para a grelha",
+    softness: 4,
+    marbling: 4,
     image: chorizoGrillBtqImg,
   },
   {
@@ -168,6 +192,8 @@ export const products: Product[] = [
       "Ideal para grelha em fogo médio, permitindo caramelização gradual da gordura e preservando a maciez.",
     harmonization: "Tannat, Syrah ou cervejas bock.",
     tagline: "Sabor que impressiona",
+    softness: 4,
+    marbling: 4,
     image: costelaGrillBtqImg,
   },
   {
@@ -180,6 +206,8 @@ export const products: Product[] = [
       "Pode ser preparado lentamente ou grelhado em alta temperatura para desenvolver crosta intensa e interior suculento.",
     harmonization: "Malbec reserva, Shiraz ou porter.",
     tagline: "Potência em cada corte",
+    softness: 5,
+    marbling: 5,
     image: shortRibBtqImg,
   },
   {
@@ -191,7 +219,9 @@ export const products: Product[] = [
     suggestedPreparation:
       "Asse lentamente para derreter a gordura entremeada e atingir textura extremamente macia.",
     harmonization: "Tannat uruguaio, Cabernet Sauvignon ou stout.",
-    tagline: "A experiência da costela premium",
+    tagline: "Experiência premium da costela",
+    softness: 5,
+    marbling: 4,
     image: houseRibBtqImg,
   },
   {
@@ -204,6 +234,8 @@ export const products: Product[] = [
       "Grelhe rapidamente em fogo muito alto e fatie contra as fibras para garantir maciez.",
     harmonization: "Pinot Noir, Malbec jovem ou IPA.",
     tagline: "Sabor marcante",
+    softness: 3,
+    marbling: 2,
     image: skirtSteakBtqImg,
   },
   {
@@ -216,6 +248,9 @@ export const products: Product[] = [
       "Prepare rapidamente em fogo alto para preservar a textura macia e o interior suculento.",
     harmonization: "Pinot Noir, Merlot ou cervejas wheat beer.",
     tagline: "Elegância em cada mordida",
+    softness: 5,
+    marbling: 1,
+    smallerImage: petitFileSmallerBtqImg,
     image: petitFileBtqImg,
   },
   {
@@ -228,6 +263,8 @@ export const products: Product[] = [
       "Ideal para defumação ou cocção lenta prolongada, permitindo quebra do colágeno e máxima maciez.",
     harmonization: "Zinfandel, Syrah ou cervejas smoked porter.",
     tagline: "Defumação e profundidade",
+    softness: 4,
+    marbling: 3,
     image: brisketBtqImg,
   },
   {
@@ -241,6 +278,8 @@ export const products: Product[] = [
     harmonization:
       "Cabernet Sauvignon encorpado, Malbec premium ou barley wine.",
     tagline: "Força e personalidade",
+    softness: 5,
+    marbling: 5,
     image: cowboySteakBtqImg,
   },
   // LINHA NOVILHO JOVEM
@@ -252,6 +291,8 @@ export const products: Product[] = [
     suggestedPreparation: "a",
     harmonization: "a",
     tagline: "Picanha",
+    softness: 1,
+    marbling: 4,
     image: picanhaNovImg,
   },
 
@@ -265,6 +306,8 @@ export const products: Product[] = [
     suggestedPreparation: "a",
     harmonization: "a",
     tagline: "Denver",
+    softness: 1,
+    marbling: 4,
     image: maminhaPmpImg,
   },
   // LINHA NOBRE
@@ -277,6 +320,8 @@ export const products: Product[] = [
     suggestedPreparation: "a",
     harmonization: "a",
     tagline: "Denver",
+    softness: 1,
+    marbling: 4,
     image: anchoGrillNobImg,
   },
   // LINHA DIA A DIA

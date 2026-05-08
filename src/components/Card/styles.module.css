@@ -6,13 +6,28 @@
   background-color: var(--dark-grey);
   border: 0.1rem solid var(--card);
 }
-.cardBackground {
-  width: 100%;
-  height: 100%;
+.novilhoBackground {
+  background-image: url("../../assets/menu/carnes/BOUTIQUE/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boutiqueBackground,
+.nobreBackground,
+.pampeiraBackground,
+.diaADiaBackground {
   background-image: url("../../assets/menu/carnes/BOUTIQUE/steak-background.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.boutiqueBackground,
+.novilhoBackground,
+.nobreBackground,
+.pampeiraBackground,
+.diaADiaBackground {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .cardImgContainer {
@@ -64,25 +79,36 @@
   letter-spacing: 0.3rem;
   font-weight: 400;
 }
+/* Remova ou comente o antigo .marmoreioBlock :nth-child(5) */
+
 .marmoreio {
   display: flex;
-  justify-content: start;
+  justify-content: start; /* Melhor para alinhar texto e blocos */
   align-items: center;
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
-.marmoreio :nth-child(1) {
+
+.blocksWrapper {
+  display: flex;
   margin-left: 1rem;
 }
+
 .marmoreioBlock {
-  background-color: var(--pink-red);
   width: 1.2rem;
   height: 0.4rem;
   margin-left: 0.2rem;
-  &:nth-child(5) {
-    background-color: var(--light-grey);
-  }
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: var(--pink-red);
+}
+
+.inactive {
+  background-color: var(--light-grey); /* Ou a cor de fundo desativada */
+  opacity: 0.3;
 }
 .shortDescription {
   font-size: 1.4rem;
@@ -110,4 +136,10 @@
   text-transform: uppercase;
   font-weight: 500;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .cardBackground {
+    background-position: center;
+  }
 }
