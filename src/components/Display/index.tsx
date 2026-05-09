@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 // import { GradientText } from "../GradientText";
-import { useCurrentSteak } from "../../utils/currentLine";
+import { useCurrentLine, useCurrentSteak } from "../../utils/currentLine";
 import { products } from "../../utils/products";
 import { motion } from "framer-motion";
 import { Flame, Wine } from "lucide-react";
@@ -9,9 +9,12 @@ import { Button } from "../Button";
 // TODO: animações nos acompanhamentos em cascata de cima pra baixo,
 export function Display() {
   const currentSteakName = useCurrentSteak();
+  const currentLineName = useCurrentLine();
 
   const currentProduct = products.find(
-    (p) => p.name.toLowerCase() === currentSteakName?.toLowerCase(),
+    (p) => 
+      p.name.toLowerCase() === currentSteakName?.toLowerCase() &&
+      p.line.toLowerCase() === currentLineName?.toLowerCase()
   );
   const renderBlocks = (level: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -44,7 +47,11 @@ export function Display() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
-              src={currentProduct.smallerImage ? currentProduct.smallerImage : currentProduct.image}
+              src={
+                currentProduct.smallerImage
+                  ? currentProduct.smallerImage
+                  : currentProduct.image
+              }
               alt={currentProduct.name}
             />
           </div>

@@ -19,11 +19,48 @@ import brisketBtqImg from "../assets/menu/carnes/BOUTIQUE/brisket-btq.png";
 import cowboySteakBtqImg from "../assets/menu/carnes/BOUTIQUE/cowboy-steak-btq.png";
 // Novilho
 import picanhaNovImg from "../assets/menu/carnes/NOVILHO/picanha-nov.png";
+import maminhaNovImg from "../assets/menu/carnes/NOVILHO/maminha-nov.png";
+import vazioBifeNovImg from "../assets/menu/carnes/NOVILHO/vazio-bife-nov.png";
+import vazioLargoNovImg from "../assets/menu/carnes/NOVILHO/vazio-nov.png";
+import fileMignonNovImg from "../assets/menu/carnes/NOVILHO/file-m-nov.png";
+import entrecotNovImg from "../assets/menu/carnes/NOVILHO/entrecot-nov.png";
+import chorizoNovImg from "../assets/menu/carnes/NOVILHO/bife-de-chorizo-nov.png";
+import bananinhaNovImg from "../assets/menu/carnes/NOVILHO/bananinha-nov.png";
+import patinhoNovImg from "../assets/menu/carnes/NOVILHO/patinho-nov.png";
+import lagartoNovImg from "../assets/menu/carnes/NOVILHO/lagarto-p-nov.png";
+import coxaoMoleNovImg from "../assets/menu/carnes/NOVILHO/coxao-mole-nov.png";
+import costelaEmTiraNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-nov.png";
+import primeRibNovImg from "../assets/menu/carnes/NOVILHO/prime-rib-nov.png";
+import tBoneNovImg from "../assets/menu/carnes/NOVILHO/t-bone-nov.png";
+import granitoNovImg from "../assets/menu/carnes/NOVILHO/granito-nov.png";
+import chorizoGrillNovImg from "../assets/menu/carnes/NOVILHO/chorizo-grill-nov.png";
+import entranhaFinaNovImg from "../assets/menu/carnes/NOVILHO/entranha-fina-nov.png";
+import anchoGrillNovImg from "../assets/menu/carnes/NOVILHO/ancho-grill-nov.png";
+import capaDeFileNovImg from "../assets/menu/carnes/NOVILHO/capa-de-file-nov.png";
 //Pampeira
 import maminhaPmpImg from "../assets/menu/carnes/PAMPEIRA/maminha-pmp.png";
 
-// Nobre
+// campo Nobre
 import anchoGrillNobImg from "../assets/menu/carnes/NOBRE/ancho-grill-nob.png";
+import picanhaNobImg from "../assets/menu/carnes/NOBRE/picanha-nob.png";
+import fileMignonNobImg from "../assets/menu/carnes/NOBRE/file-m-nob.png";
+import entrecotNobImg from "../assets/menu/carnes/NOBRE/entrecot-nob.png";
+import chorizoNobImg from "../assets/menu/carnes/NOBRE/chorizo-nob.png";
+import bananinhaNobImg from "../assets/menu/carnes/NOBRE/bananinha-nob.png";
+import patinhoNobImg from "../assets/menu/carnes/NOBRE/patinho-nob.png";
+import lagartoNobImg from "../assets/menu/carnes/NOBRE/lagarto-p-nob.png";
+import coxaoMoleNobImg from "../assets/menu/carnes/NOBRE/coxao-mole-nob.png";
+import vazioLargoNobImg from "../assets/menu/carnes/NOBRE/vazio-nob.png";
+import capaDeFileNobImg from "../assets/menu/carnes/NOBRE/capa-de-file-nob.png";
+import aranhaAlcatraNobImg from "../assets/menu/carnes/NOBRE/aranha-alcatra-nob.png";
+import lagartoPequenoNobImg from "../assets/menu/carnes/NOBRE/lagarto-pequeno-nob.png";
+import costelaGrillNobImg from "../assets/menu/carnes/NOBRE/costela-grill-nob.png";
+import ossobucoNobImg from "../assets/menu/carnes/NOBRE/ossobuco-nob.png";
+import cupimNobImg from "../assets/menu/carnes/NOBRE/cupim-nob.png";
+import granitoNobImg from "../assets/menu/carnes/NOBRE/granito-nob.png";
+import chorizoGrillNobImg from "../assets/menu/carnes/NOBRE/chorizo-grill-nob.png";
+
+
 // Dia a dia
 export type Product = {
   name: string;
@@ -41,6 +78,7 @@ export type Product = {
 
 export const products: Product[] = [
   // LINHA BOUTIQUE
+  //denver
   {
     name: "Denver",
     line: "Boutique",
@@ -56,6 +94,7 @@ export const products: Product[] = [
     marbling: 4,
     image: denverBtqImg,
   },
+  //tomahawk
   {
     name: "Tomahawk",
     line: "Boutique",
@@ -72,6 +111,7 @@ export const products: Product[] = [
     image: tomahawkBtqImg,
     smallerImage: tomahawkSmallerBtqImg, // Usando a mesma imagem para ambos os propósitos
   },
+  //matambre
   {
     name: "Matambre",
     line: "Boutique",
@@ -86,6 +126,7 @@ export const products: Product[] = [
     softness: 3,
     image: matambreBtqImg,
   },
+  //shank
   {
     name: "Shank",
     line: "Boutique",
@@ -100,6 +141,7 @@ export const products: Product[] = [
     marbling: 1,
     image: shankBtqImg,
   },
+  //steak shoulder
   {
     name: "Steak Shoulder",
     line: "Boutique",
@@ -114,6 +156,7 @@ export const products: Product[] = [
     marbling: 2,
     image: steakShoulderBtqImg,
   },
+  //maminha
   {
     name: "Maminha",
     line: "Boutique",
@@ -128,6 +171,7 @@ export const products: Product[] = [
     marbling: 2,
     image: maminhaBtqImg,
   },
+  //vazio
   {
     name: "Vazio",
     line: "Boutique",
@@ -142,6 +186,7 @@ export const products: Product[] = [
     marbling: 3,
     image: vazioBtqImg,
   },
+  //entrecot
   {
     name: "Entrecot",
     line: "Boutique",
@@ -156,18 +201,7 @@ export const products: Product[] = [
     marbling: 5,
     image: entrecotBtqImg,
   },
-  // {
-  //   name: "Chorizo",
-  //   line: "Boutique",
-  //   description:
-  //     "Corte clássico argentino retirado do contrafilé, reconhecido pela camada uniforme de gordura e sabor marcante.",
-  //   shortDescription: "O clássico das parrillas.",
-  //   suggestedPreparation:
-  //     "Prepare em bifes altos na grelha quente, selando bem os lados para manter o interior macio e suculento.",
-  //   harmonization: "Malbec argentino, Carménère ou lager puro malte.",
-  //   tagline: "Tradição e sabor",
-  //   image: chorizoBtqImg,
-  // },
+  //chorizo grill
   {
     name: "Chorizo Grill",
     line: "Boutique",
@@ -182,6 +216,7 @@ export const products: Product[] = [
     marbling: 4,
     image: chorizoGrillBtqImg,
   },
+  //costela grill
   {
     name: "Costela Grill",
     line: "Boutique",
@@ -196,6 +231,7 @@ export const products: Product[] = [
     marbling: 4,
     image: costelaGrillBtqImg,
   },
+  //short rib
   {
     name: "Short Rib",
     line: "Boutique",
@@ -210,6 +246,7 @@ export const products: Product[] = [
     marbling: 5,
     image: shortRibBtqImg,
   },
+  //house rib
   {
     name: "House Rib",
     line: "Boutique",
@@ -224,6 +261,7 @@ export const products: Product[] = [
     marbling: 4,
     image: houseRibBtqImg,
   },
+  //skirt steak
   {
     name: "Skirt Steak",
     line: "Boutique",
@@ -238,6 +276,7 @@ export const products: Product[] = [
     marbling: 2,
     image: skirtSteakBtqImg,
   },
+  //petit file
   {
     name: "Petit File",
     line: "Boutique",
@@ -253,6 +292,7 @@ export const products: Product[] = [
     smallerImage: petitFileSmallerBtqImg,
     image: petitFileBtqImg,
   },
+  //brisket
   {
     name: "Brisket",
     line: "Boutique",
@@ -267,6 +307,7 @@ export const products: Product[] = [
     marbling: 3,
     image: brisketBtqImg,
   },
+  //cowboy steak
   {
     name: "Cowboy Steak",
     line: "Boutique",
@@ -282,18 +323,267 @@ export const products: Product[] = [
     marbling: 5,
     image: cowboySteakBtqImg,
   },
+  
   // LINHA NOVILHO JOVEM
   {
     name: "Picanha",
     line: "Novilho Jovem",
-    description: "teste picanha",
-    shortDescription: "teste short picanha",
-    suggestedPreparation: "a",
-    harmonization: "a",
-    tagline: "Picanha",
-    softness: 1,
-    marbling: 4,
+    description:
+      "Corte nobre e tradicional do churrasco brasileiro, reconhecido pela capa de gordura que proporciona suculência e sabor marcante.",
+    shortDescription: "O clássico do churrasco.",
+    suggestedPreparation:
+      "Ideal para grelha ou espeto em fogo médio-alto, preservando a gordura para garantir maciez e suculência.",
+    harmonization: "Malbec jovem, Cabernet Sauvignon ou cervejas puro malte.",
+    tagline: "Suculência incomparável",
+    marbling: 3,
+    softness: 4,
     image: picanhaNovImg,
+  },
+  {
+    name: "Maminha",
+    line: "Novilho Jovem",
+    description:
+      "Corte macio localizado na ponta da alcatra, conhecido pela textura suave e sabor equilibrado.",
+    shortDescription: "Maciez e equilíbrio.",
+    suggestedPreparation:
+      "Prepare inteira na churrasqueira ou em bifes altos para preservar a suculência.",
+    harmonization: "Merlot, Pinot Noir ou amber ale.",
+    tagline: "Leveza e sabor",
+    marbling: 2,
+    softness: 4,
+    image: maminhaNovImg,
+  },
+  {
+    name: "Vazio Bife",
+    line: "Novilho Jovem",
+    description:
+      "Versão em bifes do tradicional vazio, corte de fibras longas e sabor intenso muito valorizado na parrilla.",
+    shortDescription: "Sabor autêntico da parrilla.",
+    suggestedPreparation:
+      "Grelhe rapidamente em fogo forte e sirva fatiado contra as fibras.",
+    harmonization: "Malbec argentino ou red ale.",
+    tagline: "Intensidade e tradição",
+    marbling: 3,
+    softness: 3,
+    image: vazioBifeNovImg,
+  },
+  {
+    name: "Vazio Largo",
+    line: "Novilho Jovem",
+    description:
+      "Corte robusto da lateral bovina, conhecido pelas fibras marcantes e excelente sabor na churrasqueira.",
+    shortDescription: "Fibra marcante e muita suculência.",
+    suggestedPreparation:
+      "Ideal para grelha em fogo médio com descanso antes do corte.",
+    harmonization: "Tannat uruguaio ou IPA.",
+    tagline: "Essência do churrasco",
+    marbling: 3,
+    softness: 3,
+    image: vazioLargoNovImg,
+  },
+  {
+    name: "File Mignon",
+    line: "Novilho Jovem",
+    description:
+      "O corte mais macio do boi, com fibras delicadas e sabor suave, ideal para preparos refinados.",
+    shortDescription: "Extrema maciez.",
+    suggestedPreparation:
+      "Sele rapidamente em fogo alto para preservar a textura macia.",
+    harmonization: "Pinot Noir, Merlot ou wheat beer.",
+    tagline: "Maciez absoluta",
+    marbling: 1,
+    softness: 5,
+    image: fileMignonNovImg,
+  },
+  {
+    name: "Entrecot",
+    line: "Novilho Jovem",
+    description:
+      "Corte retirado do contrafilé com excelente marmoreio, sabor intenso e grande suculência.",
+    shortDescription: "Marmoreio e sabor intenso.",
+    suggestedPreparation:
+      "Prepare em fogo alto para formar crosta caramelizada mantendo o interior suculento.",
+    harmonization: "Cabernet Sauvignon ou stout.",
+    tagline: "Suculência premium",
+    marbling: 5,
+    softness: 5,
+    image: entrecotNovImg,
+  },
+  {
+    name: "Chorizo",
+    line: "Novilho Jovem",
+    description:
+      "Corte clássico argentino do contrafilé, com capa de gordura uniforme e sabor marcante.",
+    shortDescription: "O clássico argentino.",
+    suggestedPreparation: "Ideal em bifes altos na grelha ou parrilla.",
+    harmonization: "Malbec ou lager puro malte.",
+    tagline: "Tradição na brasa",
+    marbling: 4,
+    softness: 4,
+    image: chorizoNovImg,
+  },
+  {
+    name: "Bananinha",
+    line: "Novilho Jovem",
+    description:
+      "Corte pequeno retirado entre os ossos da costela, extremamente saboroso e muito apreciado em churrascos.",
+    shortDescription: "Pequena no tamanho, gigante no sabor.",
+    suggestedPreparation:
+      "Prepare rapidamente em fogo forte para caramelizar a gordura.",
+    harmonization: "IPA ou cervejas amber ale.",
+    tagline: "Sabor surpreendente",
+    marbling: 4,
+    softness: 4,
+    image: bananinhaNovImg,
+  },
+  {
+    name: "Patinho",
+    line: "Novilho Jovem",
+    description:
+      "Corte magro e versátil retirado da parte traseira bovina, conhecido pela maciez moderada e fibras curtas.",
+    shortDescription: "Versatilidade no preparo.",
+    suggestedPreparation: "Ideal para bifes, picadinhos ou preparos rápidos.",
+    harmonization: "Merlot jovem ou pilsner.",
+    tagline: "Leve e versátil",
+    marbling: 1,
+    softness: 3,
+    image: patinhoNovImg,
+  },
+  {
+    name: "Lagarto",
+    line: "Novilho Jovem",
+    description:
+      "Corte de fibras longas localizado na parte traseira do boi, muito utilizado em assados e cozidos.",
+    shortDescription: "Fibras longas e sabor marcante.",
+    suggestedPreparation: "Ideal para cozimento lento ou assados com molho.",
+    harmonization: "Syrah ou brown ale.",
+    tagline: "Tradição nos assados",
+    marbling: 1,
+    softness: 2,
+    image: lagartoNovImg,
+  },
+  {
+    name: "Coxao Mole",
+    line: "Novilho Jovem",
+    description:
+      "Corte macio da parte interna da coxa bovina, muito utilizado em bifes e preparos do dia a dia.",
+    shortDescription: "Maciez equilibrada.",
+    suggestedPreparation:
+      "Ideal para bifes grelhados, escalopes ou picadinhos.",
+    harmonization: "Merlot ou lager.",
+    tagline: "Macio e versátil",
+    marbling: 2,
+    softness: 4,
+    image: coxaoMoleNovImg,
+  },
+  {
+    name: "Costela em Tira",
+    line: "Novilho Jovem",
+    description:
+      "Corte transversal da costela bovina muito tradicional na parrilla, conhecido pelo sabor intenso e suculência.",
+    shortDescription: "O sabor da parrilla.",
+    suggestedPreparation:
+      "Prepare lentamente na grelha para derreter a gordura entremeada.",
+    harmonization: "Tannat ou porter.",
+    tagline: "Força e tradição",
+    marbling: 4,
+    softness: 4,
+    image: costelaEmTiraNovImg,
+  },
+  {
+    name: "Prime Rib",
+    line: "Novilho Jovem",
+    description:
+      "Corte nobre retirado do filé de costela com osso, conhecido pelo alto marmoreio e extrema suculência.",
+    shortDescription: "Marmoreio premium.",
+    suggestedPreparation: "Sele em fogo forte e finalize em calor indireto.",
+    harmonization: "Cabernet Sauvignon reserva ou stout.",
+    tagline: "Experiência premium",
+    marbling: 5,
+    softness: 5,
+    image: primeRibNovImg,
+  },
+  {
+    name: "T-Bone",
+    line: "Novilho Jovem",
+    description:
+      "Corte icônico que une contrafilé e filé mignon separados pelo osso em formato de T.",
+    shortDescription: "Dois cortes em uma experiência.",
+    suggestedPreparation:
+      "Ideal para grelha em alta temperatura mantendo os diferentes pontos de cocção.",
+    harmonization: "Cabernet Sauvignon ou barley wine.",
+    tagline: "O equilíbrio perfeito",
+    marbling: 4,
+    softness: 5,
+    image: tBoneNovImg,
+  },
+  {
+    name: "Granito",
+    line: "Novilho Jovem",
+    description:
+      "Corte bovino conhecido pela combinação de fibras marcantes, sabor intenso e boa suculência quando grelhado.",
+    shortDescription: "Textura e intensidade.",
+    suggestedPreparation:
+      "Grelhe rapidamente em fogo alto e fatie contra as fibras.",
+    harmonization: "Syrah ou IPA.",
+    tagline: "Personalidade na brasa",
+    marbling: 2,
+    softness: 3,
+    image: granitoNovImg,
+  },
+  {
+    name: "Chorizo Grill",
+    line: "Novilho Jovem",
+    description:
+      "Versão porcionada do tradicional bife de chorizo, ideal para preparo rápido mantendo maciez e sabor.",
+    shortDescription: "Praticidade premium.",
+    suggestedPreparation: "Prepare em fogo alto até formar crosta dourada.",
+    harmonization: "Malbec jovem ou pale ale.",
+    tagline: "Feito para a grelha",
+    marbling: 4,
+    softness: 4,
+    image: chorizoGrillNovImg,
+  },
+  {
+    name: "Entranha Fina",
+    line: "Novilho Jovem",
+    description:
+      "Corte fino e extremamente saboroso retirado do diafragma bovino, muito apreciado na parrilla.",
+    shortDescription: "Fibra intensa e muito sabor.",
+    suggestedPreparation:
+      "Prepare rapidamente em fogo forte e sirva mal passada.",
+    harmonization: "Malbec ou IPA.",
+    tagline: "Sabor marcante",
+    marbling: 2,
+    softness: 3,
+    image: entranhaFinaNovImg,
+  },
+  {
+    name: "Ancho Grill",
+    line: "Novilho Jovem",
+    description:
+      "Versão porcionada do ancho, corte extremamente macio e marmorizado retirado do filé de costela.",
+    shortDescription: "Maciez e marmoreio.",
+    suggestedPreparation:
+      "Grelhe em alta temperatura preservando o interior suculento.",
+    harmonization: "Cabernet Sauvignon ou stout.",
+    tagline: "O auge da suculência",
+    marbling: 5,
+    softness: 5,
+    image: anchoGrillNovImg,
+  },
+  {
+    name: "Capa de Filé",
+    line: "Novilho Jovem",
+    description:
+      "Parte superior do contrafilé conhecida pelo sabor intenso e gordura entremeada que proporciona suculência.",
+    shortDescription: "Sabor intenso e marcante.",
+    suggestedPreparation: "Ideal para grelha ou cozimento lento.",
+    harmonization: "Syrah ou porter.",
+    tagline: "Intensidade em cada corte",
+    marbling: 4,
+    softness: 3,
+    image: capaDeFileNovImg,
   },
 
   // LINHA PAMPEIRA
@@ -313,16 +603,310 @@ export const products: Product[] = [
   // LINHA NOBRE
 
   {
-    name: "Picanha",
-    line: "Campo Nobre",
-    description: "teste picanha",
-    shortDescription: "teste short picanha",
-    suggestedPreparation: "a",
-    harmonization: "a",
-    tagline: "Denver",
-    softness: 1,
-    marbling: 4,
-    image: anchoGrillNobImg,
-  },
+  name: "Picanha",
+  line: "Campo Nobre",
+  description:
+    "Corte nobre tradicional do churrasco brasileiro, conhecido pela capa de gordura que intensifica sabor e suculência durante o preparo.",
+  shortDescription:
+    "O clássico da brasa.",
+  suggestedPreparation:
+    "Ideal para grelha ou espeto em fogo médio-alto, preservando a gordura para máxima suculência.",
+  harmonization:
+    "Malbec, Cabernet Sauvignon ou lager puro malte.",
+  tagline:
+    "Tradição e suculência",
+  marbling: 3,
+  softness: 4,
+  image: picanhaNobImg,
+},
+{
+  name: "Vazio Largo",
+  line: "Campo Nobre",
+  description:
+    "Corte da lateral traseira bovina com fibras marcantes e sabor intenso, muito valorizado na parrilla.",
+  shortDescription:
+    "A essência da parrilla.",
+  suggestedPreparation:
+    "Prepare lentamente em fogo médio para preservar a maciez e derreter a gordura.",
+  harmonization:
+    "Tannat uruguaio ou red ale.",
+  tagline:
+    "Sabor autêntico",
+  marbling: 3,
+  softness: 3,
+  image: vazioLargoNobImg,
+},
+{
+  name: "File Mignon",
+  line: "Campo Nobre",
+  description:
+    "Corte extremamente macio e de sabor suave, retirado da região lombar bovina.",
+  shortDescription:
+    "Maciez incomparável.",
+  suggestedPreparation:
+    "Sele rapidamente em fogo forte preservando o interior suculento.",
+  harmonization:
+    "Pinot Noir, Merlot ou wheat beer.",
+  tagline:
+    "Delicadeza e maciez",
+  marbling: 1,
+  softness: 5,
+  image: fileMignonNobImg,
+},
+{
+  name: "Entrecot",
+  line: "Campo Nobre",
+  description:
+    "Corte nobre com alto marmoreio, conhecido pela combinação de sabor intenso e extrema suculência.",
+  shortDescription:
+    "Marmoreio premium.",
+  suggestedPreparation:
+    "Ideal para grelha em alta temperatura mantendo o interior ao ponto.",
+  harmonization:
+    "Cabernet Sauvignon ou stout.",
+  tagline:
+    "Suculência elevada",
+  marbling: 5,
+  softness: 5,
+  image: entrecotNobImg,
+},
+{
+  name: "Lagarto",
+  line: "Campo Nobre",
+  description:
+    "Corte magro de fibras longas muito utilizado em assados, cozidos e preparos lentos.",
+  shortDescription:
+    "Tradicional e versátil.",
+  suggestedPreparation:
+    "Ideal para cozimento lento ou assados com molho.",
+  harmonization:
+    "Syrah ou brown ale.",
+  tagline:
+    "Tradição no preparo",
+  marbling: 1,
+  softness: 2,
+  image: lagartoNobImg,
+},
+{
+  name: "Chorizo",
+  line: "Campo Nobre",
+  description:
+    "Corte clássico argentino retirado do contrafilé, conhecido pelo sabor intenso e excelente equilíbrio entre carne e gordura.",
+  shortDescription:
+    "O sabor da parrilla.",
+  suggestedPreparation:
+    "Prepare em bifes altos na grelha ou parrilla.",
+  harmonization:
+    "Malbec argentino ou lager puro malte.",
+  tagline:
+    "Tradição argentina",
+  marbling: 4,
+  softness: 4,
+  image: chorizoNobImg,
+},
+{
+  name: "Capa de File",
+  line: "Campo Nobre",
+  description:
+    "Parte superior do contrafilé com sabor marcante e boa presença de gordura entremeada.",
+  shortDescription:
+    "Intenso e suculento.",
+  suggestedPreparation:
+    "Ideal para grelha em fogo alto ou preparo lento.",
+  harmonization:
+    "Syrah ou porter.",
+  tagline:
+    "Sabor encorpado",
+  marbling: 4,
+  softness: 3,
+  image: capaDeFileNobImg,
+},
+{
+  name: "Bananinha",
+  line: "Campo Nobre",
+  description:
+    "Pequeno corte retirado entre os ossos da costela bovina, conhecido pelo sabor intenso e alta suculência.",
+  shortDescription:
+    "Pequeno corte, grande sabor.",
+  suggestedPreparation:
+    "Prepare rapidamente em fogo forte para caramelizar a gordura.",
+  harmonization:
+    "IPA ou amber ale.",
+  tagline:
+    "Suculência marcante",
+  marbling: 4,
+  softness: 4,
+  image: bananinhaNobImg,
+},
+{
+  name: "Aranha da Alcatra",
+  line: "Campo Nobre",
+  description:
+    "Corte raro e muito saboroso localizado na parte interna da alcatra, conhecido pelas fibras delicadas e excelente suculência.",
+  shortDescription:
+    "Raro e extremamente saboroso.",
+  suggestedPreparation:
+    "Ideal para grelha rápida em fogo forte.",
+  harmonization:
+    "Malbec jovem ou IPA.",
+  tagline:
+    "Uma joia escondida",
+  marbling: 3,
+  softness: 4,
+  image: aranhaAlcatraNobImg,
+},
+{
+  name: "Patinho",
+  line: "Campo Nobre",
+  description:
+    "Corte magro e versátil da parte traseira bovina, muito utilizado em bifes e preparos rápidos.",
+  shortDescription:
+    "Leve e funcional.",
+  suggestedPreparation:
+    "Ideal para bifes, picadinhos ou grelhados rápidos.",
+  harmonization:
+    "Merlot jovem ou pilsner.",
+  tagline:
+    "Versatilidade no dia a dia",
+  marbling: 1,
+  softness: 3,
+  image: patinhoNobImg,
+},
+{
+  name: "Lagarto Pequeno",
+  line: "Campo Nobre",
+  description:
+    "Versão menor e mais uniforme do lagarto, mantendo fibras longas e sabor característico.",
+  shortDescription:
+    "Textura firme e sabor marcante.",
+  suggestedPreparation:
+    "Ideal para assados lentos e cozidos.",
+  harmonization:
+    "Syrah ou brown ale.",
+  tagline:
+    "Tradição nos cozidos",
+  marbling: 1,
+  softness: 2,
+  image: lagartoPequenoNobImg,
+},
+{
+  name: "Coxão Mole",
+  line: "Campo Nobre",
+  description:
+    "Corte macio da parte interna da coxa bovina, conhecido pela textura suave e versatilidade.",
+  shortDescription:
+    "Macio e versátil.",
+  suggestedPreparation:
+    "Ideal para bifes, escalopes e grelhados rápidos.",
+  harmonization:
+    "Merlot ou lager.",
+  tagline:
+    "Equilíbrio e praticidade",
+  marbling: 2,
+  softness: 4,
+  image: coxaoMoleNobImg,
+},
+{
+  name: "Costela Grill",
+  line: "Campo Nobre",
+  description:
+    "Corte retirado da costela bovina com excelente equilíbrio entre carne e gordura.",
+  shortDescription:
+    "Intensidade e suculência.",
+  suggestedPreparation:
+    "Prepare lentamente em fogo médio para caramelizar a gordura.",
+  harmonization:
+    "Tannat ou porter.",
+  tagline:
+    "O sabor da costela",
+  marbling: 4,
+  softness: 4,
+  image: costelaGrillNobImg,
+},
+{
+  name: "Cupim",
+  line: "Campo Nobre",
+  description:
+    "Corte dianteiro extremamente valorizado pela gordura entremeada e textura macia após longo cozimento.",
+  shortDescription:
+    "Maciez que desmancha.",
+  suggestedPreparation:
+    "Ideal para assados longos ou defumação.",
+  harmonization:
+    "Syrah encorpado ou stout.",
+  tagline:
+    "Suculência intensa",
+  marbling: 4,
+  softness: 5,
+  image: cupimNobImg,
+},
+{
+  name: "Ossobuco",
+  line: "Campo Nobre",
+  description:
+    "Corte retirado do músculo bovino com osso, rico em colágeno e sabor intenso.",
+  shortDescription:
+    "Profundidade de sabor.",
+  suggestedPreparation:
+    "Ideal para cozimento lento e ensopados.",
+  harmonization:
+    "Merlot encorpado ou porter.",
+  tagline:
+    "Perfeito para cocção lenta",
+  marbling: 1,
+  softness: 4,
+  image: ossobucoNobImg,
+},
+{
+  name: "Granito",
+  line: "Campo Nobre",
+  description:
+    "Corte de sabor intenso e fibras marcantes, valorizado em preparos rápidos na grelha.",
+  shortDescription:
+    "Textura e personalidade.",
+  suggestedPreparation:
+    "Grelhe rapidamente em fogo alto e sirva fatiado.",
+  harmonization:
+    "Syrah ou IPA.",
+  tagline:
+    "Força na brasa",
+  marbling: 2,
+  softness: 3,
+  image: granitoNobImg,
+},
+{
+  name: "Chorizo Grill",
+  line: "Campo Nobre",
+  description:
+    "Versão porcionada do tradicional chorizo, mantendo sabor intenso e ótima suculência.",
+  shortDescription:
+    "Praticidade premium.",
+  suggestedPreparation:
+    "Ideal para preparo rápido em fogo alto.",
+  harmonization:
+    "Malbec jovem ou pale ale.",
+  tagline:
+    "Feito para grelhar",
+  marbling: 4,
+  softness: 4,
+  image: chorizoGrillNobImg,
+},
+{
+  name: "Ancho Grill",
+  line: "Campo Nobre",
+  description:
+    "Versão porcionada do ancho, corte conhecido pelo alto marmoreio e extrema maciez.",
+  shortDescription:
+    "Marmoreio excepcional.",
+  suggestedPreparation:
+    "Prepare em alta temperatura mantendo o interior suculento.",
+  harmonization:
+    "Cabernet Sauvignon ou stout.",
+  tagline:
+    "O auge da suculência",
+  marbling: 5,
+  softness: 5,
+  image: anchoGrillNobImg,
+},
   // LINHA DIA A DIA
 ];
