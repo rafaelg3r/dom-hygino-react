@@ -12,9 +12,19 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.nobreBackground {
+  background-image: url("../../assets/menu/carnes/NOVILHO/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pampeiraBackground {
+  background-image: url("../../assets/menu/carnes/PAMPEIRA/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .boutiqueBackground,
-.nobreBackground,
-.pampeiraBackground,
 .diaADiaBackground {
   background-image: url("../../assets/menu/carnes/BOUTIQUE/steak-background.jpg");
   background-position: bottom;
@@ -51,7 +61,7 @@
 }
 .cardContainer img {
   max-height: 45rem;
-  filter: drop-shadow(1.5rem -0.8rem 0.7rem rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 0.5));
   z-index: 2;
 }
 

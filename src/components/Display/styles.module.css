@@ -162,11 +162,26 @@
   .menuDisplay {
     flex-direction: column;
   }
+  .displayTextContainer {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 520px) {
   .displayImageContainer img {
     width: 38rem;
     filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.5));
+  }
+  .displayTextContainer {
+    padding: 0rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .menuDisplay {
+    padding: 0rem;
+  }
+  .displayTextContainer {
+    padding: 2rem;
   }
 }

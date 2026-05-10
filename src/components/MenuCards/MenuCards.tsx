@@ -1,7 +1,7 @@
 // index.tsx
 import styles from "./styles.module.css";
 import { useCurrentLine } from "../../utils/currentLine";
-import Card from "../../components/Card/Card";
+import Card from "../Card";
 import { products } from "../../utils/products"; // Importe sua lista
 
 export function MenuCards() {

@@ -6,7 +6,6 @@ import { useSearchParams } from "react-router-dom";
 import TextNovilho from "../../assets/menu/linhas-banner/textNovilho.png";
 import TextBoutique from "../../assets/menu/linhas-banner/textBoutique.png";
 import TextPampeira from "../../assets/menu/linhas-banner/textPampeira.png";
-import TextChurrasco from "../../assets/menu/linhas-banner/textChurrasco.png";
 
 export function SectionBanner() {
   const [searchParams] = useSearchParams();
@@ -19,7 +18,6 @@ export function SectionBanner() {
     boutique: TextBoutique,
     "novilho jovem": TextNovilho,
     pampeira: TextPampeira,
-    churrasco: TextChurrasco,
   };
   type BannerKeys = keyof typeof bannersText;
   const bannerLine =

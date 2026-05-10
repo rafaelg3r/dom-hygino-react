@@ -39,27 +39,30 @@ import anchoGrillNovImg from "../assets/menu/carnes/NOVILHO/ancho-grill-nov.png"
 import capaDeFileNovImg from "../assets/menu/carnes/NOVILHO/capa-de-file-nov.png";
 //Pampeira
 import maminhaPmpImg from "../assets/menu/carnes/PAMPEIRA/maminha-pmp.png";
+import acemPmpImg from "../assets/menu/carnes/PAMPEIRA/acem-pmp.png";
+import paletaPmpImg from "../assets/menu/carnes/PAMPEIRA/paleta-pmp.png";
+import picanhaPmpImg from "../assets/menu/carnes/PAMPEIRA/picanha-pmp.png";
+import vazioPmpImg from "../assets/menu/carnes/PAMPEIRA/vazio-pmp.png";
 
 // campo Nobre
 import anchoGrillNobImg from "../assets/menu/carnes/NOBRE/ancho-grill-nob.png";
 import picanhaNobImg from "../assets/menu/carnes/NOBRE/picanha-nob.png";
-import fileMignonNobImg from "../assets/menu/carnes/NOBRE/file-m-nob.png";
+import fileMignonNobImg from "../assets/menu/carnes/NOBRE/file-mignon-nob.png";
 import entrecotNobImg from "../assets/menu/carnes/NOBRE/entrecot-nob.png";
-import chorizoNobImg from "../assets/menu/carnes/NOBRE/chorizo-nob.png";
+import chorizoNobImg from "../assets/menu/carnes/NOBRE/chorizo-grill-nob.png";
 import bananinhaNobImg from "../assets/menu/carnes/NOBRE/bananinha-nob.png";
 import patinhoNobImg from "../assets/menu/carnes/NOBRE/patinho-nob.png";
 import lagartoNobImg from "../assets/menu/carnes/NOBRE/lagarto-p-nob.png";
+import lagartoPequenoNobImg from "../assets/menu/carnes/NOBRE/lagarto-p-nob.png";
 import coxaoMoleNobImg from "../assets/menu/carnes/NOBRE/coxao-mole-nob.png";
 import vazioLargoNobImg from "../assets/menu/carnes/NOBRE/vazio-nob.png";
 import capaDeFileNobImg from "../assets/menu/carnes/NOBRE/capa-de-file-nob.png";
-import aranhaAlcatraNobImg from "../assets/menu/carnes/NOBRE/aranha-alcatra-nob.png";
-import lagartoPequenoNobImg from "../assets/menu/carnes/NOBRE/lagarto-pequeno-nob.png";
+import aranhaAlcatraNobImg from "../assets/menu/carnes/NOBRE/aranha-de-alcatra-nob.png";
 import costelaGrillNobImg from "../assets/menu/carnes/NOBRE/costela-grill-nob.png";
 import ossobucoNobImg from "../assets/menu/carnes/NOBRE/ossobuco-nob.png";
 import cupimNobImg from "../assets/menu/carnes/NOBRE/cupim-nob.png";
 import granitoNobImg from "../assets/menu/carnes/NOBRE/granito-nob.png";
 import chorizoGrillNobImg from "../assets/menu/carnes/NOBRE/chorizo-grill-nob.png";
-
 
 // Dia a dia
 export type Product = {
@@ -323,7 +326,7 @@ export const products: Product[] = [
     marbling: 5,
     image: cowboySteakBtqImg,
   },
-  
+
   // LINHA NOVILHO JOVEM
   {
     name: "Picanha",
@@ -589,324 +592,317 @@ export const products: Product[] = [
   // LINHA PAMPEIRA
 
   {
+    name: "Acem",
+    line: "Pampeira",
+    description:
+      "Corte dianteiro bovino conhecido pelo sabor marcante e boa presença de gordura e colágeno, muito utilizado em assados, cozidos e churrascos.",
+    shortDescription: "Sabor intenso e tradicional.",
+    suggestedPreparation:
+      "Ideal para cozimentos lentos, panela ou assados prolongados para maior maciez.",
+    harmonization: "Syrah, Merlot encorpado ou brown ale.",
+    tagline: "Força e sabor",
+    marbling: 2,
+    softness: 3,
+    image: acemPmpImg,
+  },
+  {
     name: "Maminha",
     line: "Pampeira",
-    description: "teste Maminha",
-    shortDescription: "teste short Maminha",
-    suggestedPreparation: "a",
-    harmonization: "a",
-    tagline: "Denver",
-    softness: 1,
-    marbling: 4,
+    description:
+      "Corte macio localizado na ponta da alcatra, conhecido pela textura suave e sabor equilibrado.",
+    shortDescription: "Maciez e suculência.",
+    suggestedPreparation:
+      "Ideal para churrasqueira ou forno, mantendo a gordura para preservar a umidade da carne.",
+    harmonization: "Merlot, Pinot Noir ou amber ale.",
+    tagline: "Leveza na brasa",
+    marbling: 2,
+    softness: 4,
     image: maminhaPmpImg,
+  },
+  {
+    name: "Paleta",
+    line: "Pampeira",
+    description:
+      "Corte dianteiro com fibras marcantes e sabor intenso, muito utilizado em cozidos, assados e churrascos tradicionais.",
+    shortDescription: "Rusticidade e sabor.",
+    suggestedPreparation:
+      "Ideal para cozimento lento ou assados longos para atingir maior maciez.",
+    harmonization: "Tannat, Syrah ou porter.",
+    tagline: "Tradição campeira",
+    marbling: 2,
+    softness: 3,
+    image: paletaPmpImg,
+  },
+  {
+    name: "Picanha",
+    line: "Pampeira",
+    description:
+      "Corte clássico do churrasco brasileiro, reconhecido pela capa de gordura que proporciona sabor e suculência característicos.",
+    shortDescription: "O clássico do churrasco.",
+    suggestedPreparation:
+      "Prepare em espeto ou grelha em fogo médio-alto preservando a gordura.",
+    harmonization: "Malbec, Cabernet Sauvignon ou lager puro malte.",
+    tagline: "A alma da churrasqueira",
+    marbling: 3,
+    softness: 4,
+    image: picanhaPmpImg,
+  },
+  {
+    name: "Vazio",
+    line: "Pampeira",
+    description:
+      "Corte tradicional da parrilla retirado da lateral bovina, conhecido pelo sabor intenso e fibras marcantes.",
+    shortDescription: "Autenticidade da parrilla.",
+    suggestedPreparation:
+      "Ideal para preparo lento em fogo médio preservando a suculência.",
+    harmonization: "Malbec argentino, Tannat ou red ale.",
+    tagline: "Sabor tradicional",
+    marbling: 3,
+    softness: 3,
+    image: vazioPmpImg,
   },
   // LINHA NOBRE
 
   {
-  name: "Picanha",
-  line: "Campo Nobre",
-  description:
-    "Corte nobre tradicional do churrasco brasileiro, conhecido pela capa de gordura que intensifica sabor e suculência durante o preparo.",
-  shortDescription:
-    "O clássico da brasa.",
-  suggestedPreparation:
-    "Ideal para grelha ou espeto em fogo médio-alto, preservando a gordura para máxima suculência.",
-  harmonization:
-    "Malbec, Cabernet Sauvignon ou lager puro malte.",
-  tagline:
-    "Tradição e suculência",
-  marbling: 3,
-  softness: 4,
-  image: picanhaNobImg,
-},
-{
-  name: "Vazio Largo",
-  line: "Campo Nobre",
-  description:
-    "Corte da lateral traseira bovina com fibras marcantes e sabor intenso, muito valorizado na parrilla.",
-  shortDescription:
-    "A essência da parrilla.",
-  suggestedPreparation:
-    "Prepare lentamente em fogo médio para preservar a maciez e derreter a gordura.",
-  harmonization:
-    "Tannat uruguaio ou red ale.",
-  tagline:
-    "Sabor autêntico",
-  marbling: 3,
-  softness: 3,
-  image: vazioLargoNobImg,
-},
-{
-  name: "File Mignon",
-  line: "Campo Nobre",
-  description:
-    "Corte extremamente macio e de sabor suave, retirado da região lombar bovina.",
-  shortDescription:
-    "Maciez incomparável.",
-  suggestedPreparation:
-    "Sele rapidamente em fogo forte preservando o interior suculento.",
-  harmonization:
-    "Pinot Noir, Merlot ou wheat beer.",
-  tagline:
-    "Delicadeza e maciez",
-  marbling: 1,
-  softness: 5,
-  image: fileMignonNobImg,
-},
-{
-  name: "Entrecot",
-  line: "Campo Nobre",
-  description:
-    "Corte nobre com alto marmoreio, conhecido pela combinação de sabor intenso e extrema suculência.",
-  shortDescription:
-    "Marmoreio premium.",
-  suggestedPreparation:
-    "Ideal para grelha em alta temperatura mantendo o interior ao ponto.",
-  harmonization:
-    "Cabernet Sauvignon ou stout.",
-  tagline:
-    "Suculência elevada",
-  marbling: 5,
-  softness: 5,
-  image: entrecotNobImg,
-},
-{
-  name: "Lagarto",
-  line: "Campo Nobre",
-  description:
-    "Corte magro de fibras longas muito utilizado em assados, cozidos e preparos lentos.",
-  shortDescription:
-    "Tradicional e versátil.",
-  suggestedPreparation:
-    "Ideal para cozimento lento ou assados com molho.",
-  harmonization:
-    "Syrah ou brown ale.",
-  tagline:
-    "Tradição no preparo",
-  marbling: 1,
-  softness: 2,
-  image: lagartoNobImg,
-},
-{
-  name: "Chorizo",
-  line: "Campo Nobre",
-  description:
-    "Corte clássico argentino retirado do contrafilé, conhecido pelo sabor intenso e excelente equilíbrio entre carne e gordura.",
-  shortDescription:
-    "O sabor da parrilla.",
-  suggestedPreparation:
-    "Prepare em bifes altos na grelha ou parrilla.",
-  harmonization:
-    "Malbec argentino ou lager puro malte.",
-  tagline:
-    "Tradição argentina",
-  marbling: 4,
-  softness: 4,
-  image: chorizoNobImg,
-},
-{
-  name: "Capa de File",
-  line: "Campo Nobre",
-  description:
-    "Parte superior do contrafilé com sabor marcante e boa presença de gordura entremeada.",
-  shortDescription:
-    "Intenso e suculento.",
-  suggestedPreparation:
-    "Ideal para grelha em fogo alto ou preparo lento.",
-  harmonization:
-    "Syrah ou porter.",
-  tagline:
-    "Sabor encorpado",
-  marbling: 4,
-  softness: 3,
-  image: capaDeFileNobImg,
-},
-{
-  name: "Bananinha",
-  line: "Campo Nobre",
-  description:
-    "Pequeno corte retirado entre os ossos da costela bovina, conhecido pelo sabor intenso e alta suculência.",
-  shortDescription:
-    "Pequeno corte, grande sabor.",
-  suggestedPreparation:
-    "Prepare rapidamente em fogo forte para caramelizar a gordura.",
-  harmonization:
-    "IPA ou amber ale.",
-  tagline:
-    "Suculência marcante",
-  marbling: 4,
-  softness: 4,
-  image: bananinhaNobImg,
-},
-{
-  name: "Aranha da Alcatra",
-  line: "Campo Nobre",
-  description:
-    "Corte raro e muito saboroso localizado na parte interna da alcatra, conhecido pelas fibras delicadas e excelente suculência.",
-  shortDescription:
-    "Raro e extremamente saboroso.",
-  suggestedPreparation:
-    "Ideal para grelha rápida em fogo forte.",
-  harmonization:
-    "Malbec jovem ou IPA.",
-  tagline:
-    "Uma joia escondida",
-  marbling: 3,
-  softness: 4,
-  image: aranhaAlcatraNobImg,
-},
-{
-  name: "Patinho",
-  line: "Campo Nobre",
-  description:
-    "Corte magro e versátil da parte traseira bovina, muito utilizado em bifes e preparos rápidos.",
-  shortDescription:
-    "Leve e funcional.",
-  suggestedPreparation:
-    "Ideal para bifes, picadinhos ou grelhados rápidos.",
-  harmonization:
-    "Merlot jovem ou pilsner.",
-  tagline:
-    "Versatilidade no dia a dia",
-  marbling: 1,
-  softness: 3,
-  image: patinhoNobImg,
-},
-{
-  name: "Lagarto Pequeno",
-  line: "Campo Nobre",
-  description:
-    "Versão menor e mais uniforme do lagarto, mantendo fibras longas e sabor característico.",
-  shortDescription:
-    "Textura firme e sabor marcante.",
-  suggestedPreparation:
-    "Ideal para assados lentos e cozidos.",
-  harmonization:
-    "Syrah ou brown ale.",
-  tagline:
-    "Tradição nos cozidos",
-  marbling: 1,
-  softness: 2,
-  image: lagartoPequenoNobImg,
-},
-{
-  name: "Coxão Mole",
-  line: "Campo Nobre",
-  description:
-    "Corte macio da parte interna da coxa bovina, conhecido pela textura suave e versatilidade.",
-  shortDescription:
-    "Macio e versátil.",
-  suggestedPreparation:
-    "Ideal para bifes, escalopes e grelhados rápidos.",
-  harmonization:
-    "Merlot ou lager.",
-  tagline:
-    "Equilíbrio e praticidade",
-  marbling: 2,
-  softness: 4,
-  image: coxaoMoleNobImg,
-},
-{
-  name: "Costela Grill",
-  line: "Campo Nobre",
-  description:
-    "Corte retirado da costela bovina com excelente equilíbrio entre carne e gordura.",
-  shortDescription:
-    "Intensidade e suculência.",
-  suggestedPreparation:
-    "Prepare lentamente em fogo médio para caramelizar a gordura.",
-  harmonization:
-    "Tannat ou porter.",
-  tagline:
-    "O sabor da costela",
-  marbling: 4,
-  softness: 4,
-  image: costelaGrillNobImg,
-},
-{
-  name: "Cupim",
-  line: "Campo Nobre",
-  description:
-    "Corte dianteiro extremamente valorizado pela gordura entremeada e textura macia após longo cozimento.",
-  shortDescription:
-    "Maciez que desmancha.",
-  suggestedPreparation:
-    "Ideal para assados longos ou defumação.",
-  harmonization:
-    "Syrah encorpado ou stout.",
-  tagline:
-    "Suculência intensa",
-  marbling: 4,
-  softness: 5,
-  image: cupimNobImg,
-},
-{
-  name: "Ossobuco",
-  line: "Campo Nobre",
-  description:
-    "Corte retirado do músculo bovino com osso, rico em colágeno e sabor intenso.",
-  shortDescription:
-    "Profundidade de sabor.",
-  suggestedPreparation:
-    "Ideal para cozimento lento e ensopados.",
-  harmonization:
-    "Merlot encorpado ou porter.",
-  tagline:
-    "Perfeito para cocção lenta",
-  marbling: 1,
-  softness: 4,
-  image: ossobucoNobImg,
-},
-{
-  name: "Granito",
-  line: "Campo Nobre",
-  description:
-    "Corte de sabor intenso e fibras marcantes, valorizado em preparos rápidos na grelha.",
-  shortDescription:
-    "Textura e personalidade.",
-  suggestedPreparation:
-    "Grelhe rapidamente em fogo alto e sirva fatiado.",
-  harmonization:
-    "Syrah ou IPA.",
-  tagline:
-    "Força na brasa",
-  marbling: 2,
-  softness: 3,
-  image: granitoNobImg,
-},
-{
-  name: "Chorizo Grill",
-  line: "Campo Nobre",
-  description:
-    "Versão porcionada do tradicional chorizo, mantendo sabor intenso e ótima suculência.",
-  shortDescription:
-    "Praticidade premium.",
-  suggestedPreparation:
-    "Ideal para preparo rápido em fogo alto.",
-  harmonization:
-    "Malbec jovem ou pale ale.",
-  tagline:
-    "Feito para grelhar",
-  marbling: 4,
-  softness: 4,
-  image: chorizoGrillNobImg,
-},
-{
-  name: "Ancho Grill",
-  line: "Campo Nobre",
-  description:
-    "Versão porcionada do ancho, corte conhecido pelo alto marmoreio e extrema maciez.",
-  shortDescription:
-    "Marmoreio excepcional.",
-  suggestedPreparation:
-    "Prepare em alta temperatura mantendo o interior suculento.",
-  harmonization:
-    "Cabernet Sauvignon ou stout.",
-  tagline:
-    "O auge da suculência",
-  marbling: 5,
-  softness: 5,
-  image: anchoGrillNobImg,
-},
+    name: "Picanha",
+    line: "Campo Nobre",
+    description:
+      "Corte nobre tradicional do churrasco brasileiro, conhecido pela capa de gordura que intensifica sabor e suculência durante o preparo.",
+    shortDescription: "O clássico da brasa.",
+    suggestedPreparation:
+      "Ideal para grelha ou espeto em fogo médio-alto, preservando a gordura para máxima suculência.",
+    harmonization: "Malbec, Cabernet Sauvignon ou lager puro malte.",
+    tagline: "Tradição e suculência",
+    marbling: 3,
+    softness: 4,
+    image: picanhaNobImg,
+  },
+  {
+    name: "Vazio Largo",
+    line: "Campo Nobre",
+    description:
+      "Corte da lateral traseira bovina com fibras marcantes e sabor intenso, muito valorizado na parrilla.",
+    shortDescription: "A essência da parrilla.",
+    suggestedPreparation:
+      "Prepare lentamente em fogo médio para preservar a maciez e derreter a gordura.",
+    harmonization: "Tannat uruguaio ou red ale.",
+    tagline: "Sabor autêntico",
+    marbling: 3,
+    softness: 3,
+    image: vazioLargoNobImg,
+  },
+  {
+    name: "File Mignon",
+    line: "Campo Nobre",
+    description:
+      "Corte extremamente macio e de sabor suave, retirado da região lombar bovina.",
+    shortDescription: "Maciez incomparável.",
+    suggestedPreparation:
+      "Sele rapidamente em fogo forte preservando o interior suculento.",
+    harmonization: "Pinot Noir, Merlot ou wheat beer.",
+    tagline: "Delicadeza e maciez",
+    marbling: 1,
+    softness: 5,
+    image: fileMignonNobImg,
+  },
+  {
+    name: "Entrecot",
+    line: "Campo Nobre",
+    description:
+      "Corte nobre com alto marmoreio, conhecido pela combinação de sabor intenso e extrema suculência.",
+    shortDescription: "Marmoreio premium.",
+    suggestedPreparation:
+      "Ideal para grelha em alta temperatura mantendo o interior ao ponto.",
+    harmonization: "Cabernet Sauvignon ou stout.",
+    tagline: "Suculência elevada",
+    marbling: 5,
+    softness: 5,
+    image: entrecotNobImg,
+  },
+  {
+    name: "Lagarto",
+    line: "Campo Nobre",
+    description:
+      "Corte magro de fibras longas muito utilizado em assados, cozidos e preparos lentos.",
+    shortDescription: "Tradicional e versátil.",
+    suggestedPreparation: "Ideal para cozimento lento ou assados com molho.",
+    harmonization: "Syrah ou brown ale.",
+    tagline: "Tradição no preparo",
+    marbling: 1,
+    softness: 2,
+    image: lagartoNobImg,
+  },
+  {
+    name: "Chorizo",
+    line: "Campo Nobre",
+    description:
+      "Corte clássico argentino retirado do contrafilé, conhecido pelo sabor intenso e excelente equilíbrio entre carne e gordura.",
+    shortDescription: "O sabor da parrilla.",
+    suggestedPreparation: "Prepare em bifes altos na grelha ou parrilla.",
+    harmonization: "Malbec argentino ou lager puro malte.",
+    tagline: "Tradição argentina",
+    marbling: 4,
+    softness: 4,
+    image: chorizoNobImg,
+  },
+  {
+    name: "Capa de File",
+    line: "Campo Nobre",
+    description:
+      "Parte superior do contrafilé com sabor marcante e boa presença de gordura entremeada.",
+    shortDescription: "Intenso e suculento.",
+    suggestedPreparation: "Ideal para grelha em fogo alto ou preparo lento.",
+    harmonization: "Syrah ou porter.",
+    tagline: "Sabor encorpado",
+    marbling: 4,
+    softness: 3,
+    image: capaDeFileNobImg,
+  },
+  {
+    name: "Bananinha",
+    line: "Campo Nobre",
+    description:
+      "Pequeno corte retirado entre os ossos da costela bovina, conhecido pelo sabor intenso e alta suculência.",
+    shortDescription: "Pequeno corte, grande sabor.",
+    suggestedPreparation:
+      "Prepare rapidamente em fogo forte para caramelizar a gordura.",
+    harmonization: "IPA ou amber ale.",
+    tagline: "Suculência marcante",
+    marbling: 4,
+    softness: 4,
+    image: bananinhaNobImg,
+  },
+  {
+    name: "Aranha da Alcatra",
+    line: "Campo Nobre",
+    description:
+      "Corte raro e muito saboroso localizado na parte interna da alcatra, conhecido pelas fibras delicadas e excelente suculência.",
+    shortDescription: "Raro e extremamente saboroso.",
+    suggestedPreparation: "Ideal para grelha rápida em fogo forte.",
+    harmonization: "Malbec jovem ou IPA.",
+    tagline: "Uma joia escondida",
+    marbling: 3,
+    softness: 4,
+    image: aranhaAlcatraNobImg,
+  },
+  {
+    name: "Patinho",
+    line: "Campo Nobre",
+    description:
+      "Corte magro e versátil da parte traseira bovina, muito utilizado em bifes e preparos rápidos.",
+    shortDescription: "Leve e funcional.",
+    suggestedPreparation: "Ideal para bifes, picadinhos ou grelhados rápidos.",
+    harmonization: "Merlot jovem ou pilsner.",
+    tagline: "Versatilidade no dia a dia",
+    marbling: 1,
+    softness: 3,
+    image: patinhoNobImg,
+  },
+  {
+    name: "Lagarto Pequeno",
+    line: "Campo Nobre",
+    description:
+      "Versão menor e mais uniforme do lagarto, mantendo fibras longas e sabor característico.",
+    shortDescription: "Textura firme e sabor marcante.",
+    suggestedPreparation: "Ideal para assados lentos e cozidos.",
+    harmonization: "Syrah ou brown ale.",
+    tagline: "Tradição nos cozidos",
+    marbling: 1,
+    softness: 2,
+    image: lagartoPequenoNobImg,
+  },
+  {
+    name: "Coxão Mole",
+    line: "Campo Nobre",
+    description:
+      "Corte macio da parte interna da coxa bovina, conhecido pela textura suave e versatilidade.",
+    shortDescription: "Macio e versátil.",
+    suggestedPreparation: "Ideal para bifes, escalopes e grelhados rápidos.",
+    harmonization: "Merlot ou lager.",
+    tagline: "Equilíbrio e praticidade",
+    marbling: 2,
+    softness: 4,
+    image: coxaoMoleNobImg,
+  },
+  {
+    name: "Costela Grill",
+    line: "Campo Nobre",
+    description:
+      "Corte retirado da costela bovina com excelente equilíbrio entre carne e gordura.",
+    shortDescription: "Intensidade e suculência.",
+    suggestedPreparation:
+      "Prepare lentamente em fogo médio para caramelizar a gordura.",
+    harmonization: "Tannat ou porter.",
+    tagline: "O sabor da costela",
+    marbling: 4,
+    softness: 4,
+    image: costelaGrillNobImg,
+  },
+  {
+    name: "Cupim",
+    line: "Campo Nobre",
+    description:
+      "Corte dianteiro extremamente valorizado pela gordura entremeada e textura macia após longo cozimento.",
+    shortDescription: "Maciez que desmancha.",
+    suggestedPreparation: "Ideal para assados longos ou defumação.",
+    harmonization: "Syrah encorpado ou stout.",
+    tagline: "Suculência intensa",
+    marbling: 4,
+    softness: 5,
+    image: cupimNobImg,
+  },
+  {
+    name: "Ossobuco",
+    line: "Campo Nobre",
+    description:
+      "Corte retirado do músculo bovino com osso, rico em colágeno e sabor intenso.",
+    shortDescription: "Profundidade de sabor.",
+    suggestedPreparation: "Ideal para cozimento lento e ensopados.",
+    harmonization: "Merlot encorpado ou porter.",
+    tagline: "Perfeito para cocção lenta",
+    marbling: 1,
+    softness: 4,
+    image: ossobucoNobImg,
+  },
+  {
+    name: "Granito",
+    line: "Campo Nobre",
+    description:
+      "Corte de sabor intenso e fibras marcantes, valorizado em preparos rápidos na grelha.",
+    shortDescription: "Textura e personalidade.",
+    suggestedPreparation: "Grelhe rapidamente em fogo alto e sirva fatiado.",
+    harmonization: "Syrah ou IPA.",
+    tagline: "Força na brasa",
+    marbling: 2,
+    softness: 3,
+    image: granitoNobImg,
+  },
+  {
+    name: "Chorizo Grill",
+    line: "Campo Nobre",
+    description:
+      "Versão porcionada do tradicional chorizo, mantendo sabor intenso e ótima suculência.",
+    shortDescription: "Praticidade premium.",
+    suggestedPreparation: "Ideal para preparo rápido em fogo alto.",
+    harmonization: "Malbec jovem ou pale ale.",
+    tagline: "Feito para grelhar",
+    marbling: 4,
+    softness: 4,
+    image: chorizoGrillNobImg,
+  },
+  {
+    name: "Ancho Grill",
+    line: "Campo Nobre",
+    description:
+      "Versão porcionada do ancho, corte conhecido pelo alto marmoreio e extrema maciez.",
+    shortDescription: "Marmoreio excepcional.",
+    suggestedPreparation:
+      "Prepare em alta temperatura mantendo o interior suculento.",
+    harmonization: "Cabernet Sauvignon ou stout.",
+    tagline: "O auge da suculência",
+    marbling: 5,
+    softness: 5,
+    image: anchoGrillNobImg,
+  },
   // LINHA DIA A DIA
 ];
