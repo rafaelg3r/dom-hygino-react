@@ -30,6 +30,7 @@ import patinhoNovImg from "../assets/menu/carnes/NOVILHO/patinho-nov.png";
 import lagartoNovImg from "../assets/menu/carnes/NOVILHO/lagarto-p-nov.png";
 import coxaoMoleNovImg from "../assets/menu/carnes/NOVILHO/coxao-mole-nov.png";
 import costelaEmTiraNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-nov.png";
+import costelaEmTiraDuplaNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-dupla-nov.png";
 import primeRibNovImg from "../assets/menu/carnes/NOVILHO/prime-rib-nov.png";
 import tBoneNovImg from "../assets/menu/carnes/NOVILHO/t-bone-nov.png";
 import granitoNovImg from "../assets/menu/carnes/NOVILHO/granito-nov.png";
@@ -492,6 +493,18 @@ export const products: Product[] = [
     marbling: 4,
     softness: 4,
     image: costelaEmTiraNovImg,
+  },
+  {
+    name: "Costela em Tira Dupla",
+    line: "Novilho Jovem",
+    description: "Corte especial da costela bovina com osso duplo, oferecendo ainda mais sabor e suculência em cada pedaço.",
+    shortDescription: "Dupla dose de sabor e suculência.",
+    suggestedPreparation: "Prepare lentamente na grelha para derreter a gordura entremeada e realçar o sabor intenso.",
+    harmonization: "Tannat uruguaio, Syrah ou cervejas bock.",
+    tagline: "O auge da costela",
+    marbling: 4,
+    softness: 4,
+    image: costelaEmTiraDuplaNovImg,
   },
   {
     name: "Prime Rib",
