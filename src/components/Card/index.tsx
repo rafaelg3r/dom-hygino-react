@@ -1,5 +1,5 @@
-import { MoveRight } from "lucide-react";
 import styles from "./styles.module.css";
+import { MoveRight } from "lucide-react";
 
 import { HashLink as Link } from "react-router-hash-link";
 import { useCurrentLine } from "../../utils/currentLine";

@@ -21,7 +21,7 @@
   font-size: 1.8rem;
 }
 .menuSelected {
-  border: 3px solid var(--pink-red-80) !important ;
+  border: 2px solid var(--pink-red-80) !important ;
   box-shadow: 0 0 5rem var(--pink-red-30) !important ;
 }
 .selectorLink {
@@ -34,6 +34,11 @@
   border-radius: 0.4rem;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+.selectorLink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5rem var(--pink-red-30);
 }
 .selectorLink:nth-child(2) {
   background-color: #241e1e;

@@ -5,12 +5,15 @@
   align-items: center;
   background-color: var(--dark-grey);
   border: 0.1rem solid var(--card);
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 .cardContainer:hover {
   border-color: var(--pink-red);
   transform: scale(1.05);
 }
+
 .cardContainer:hover .verDetalhes {
   background-color: var(--pink-red);
 }

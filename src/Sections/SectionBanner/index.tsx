@@ -7,7 +7,7 @@ import TextNovilho from "../../assets/menu/linhas-banner/textNovilho.png";
 import TextBoutique from "../../assets/menu/linhas-banner/textBoutique.png";
 import TextPampeira from "../../assets/menu/linhas-banner/textPampeira.png";
 import TextCampoNobre from "../../assets/menu/linhas-banner/textCampoNobre.png";
-// import TextDiaADia from "../../assets/menu/linhas-banner/textDiaADia.png";
+import TextDiaADia from "../../assets/menu/linhas-banner/textDiaADia.png";
 
 export function SectionBanner() {
   const [searchParams] = useSearchParams();
@@ -21,7 +21,7 @@ export function SectionBanner() {
     "novilho jovem": TextNovilho,
     pampeira: TextPampeira,
     "campo nobre": TextCampoNobre,
-    // "dia a dia": TextDiaADia,
+    "dia a dia": TextDiaADia,
   };
   type BannerTextKeys = keyof typeof bannersText;
   const bannerTextLine =
