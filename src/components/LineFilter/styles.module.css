@@ -21,8 +21,8 @@
   font-size: 1.8rem;
 }
 .menuSelected {
-  border: 1px solid var(--pink-red-80) !important;
-  box-shadow: 0 0 5rem var(--pink-red-30) !important;
+  border: 3px solid var(--pink-red-80) !important ;
+  box-shadow: 0 0 5rem var(--pink-red-30) !important ;
 }
 .selectorLink {
   display: flex;
@@ -54,6 +54,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .selectorOptions {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 512px) {

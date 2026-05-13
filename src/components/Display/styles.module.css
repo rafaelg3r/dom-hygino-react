@@ -179,9 +179,16 @@
 
 @media (max-width: 420px) {
   .menuDisplay {
-    padding: 0rem;
+    padding: 1rem;
   }
   .displayTextContainer {
     padding: 2rem;
+  }
+  .levelsContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btnEntrarContato {
+    padding: 2rem 2.4rem;
   }
 }

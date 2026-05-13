@@ -91,7 +91,7 @@ export function SectionCortes() {
               </motion.div>
             </div>
           </div>
-          <div className={styles.linhaChurrasco}>
+          <div className={styles.linhaCampoNobre}>
             <div className={styles.menuText}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -122,7 +122,7 @@ export function SectionCortes() {
               >
                 <Link
                   className={styles.btnContainer}
-                  to="/menu?linha=Churrasco"
+                  to="/menu?linha=Campo Nobre"
                 >
                   <Button size="big" className="flexBtn">
                     {" "}

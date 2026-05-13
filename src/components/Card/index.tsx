@@ -62,14 +62,22 @@ const Card = ({
           <span>{tagline}</span>
           <strong>{name}</strong>
           <p className={styles.shortDescription}>{shortDescription}</p>
-          <div className={styles.marmoreio}>
-            MARMOREIO
-            <div className={styles.blocksWrapper}>{renderBlocks(marbling)}</div>
-          </div>
-          <div className={styles.marmoreio}>
-            MACIEZ
-            <div className={styles.blocksWrapper}>{renderBlocks(softness)}</div>
-          </div>
+          {currentLine !== "Dia a dia" && (
+            <>
+              <div className={styles.marmoreio}>
+                MARMOREIO
+                <div className={styles.blocksWrapper}>
+                  {renderBlocks(marbling)}
+                </div>
+              </div>
+              <div className={styles.marmoreio}>
+                MACIEZ
+                <div className={styles.blocksWrapper}>
+                  {renderBlocks(softness)}
+                </div>
+              </div>
+            </>
+          )}
           <div className={styles.verDetalhes}>
             <p>Ver detalhes</p>
             <MoveRight />

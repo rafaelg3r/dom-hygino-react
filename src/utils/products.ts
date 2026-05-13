@@ -26,15 +26,20 @@ import fileMignonNovImg from "../assets/menu/carnes/NOVILHO/file-m-nov.png";
 import entrecotNovImg from "../assets/menu/carnes/NOVILHO/entrecot-nov.png";
 import chorizoNovImg from "../assets/menu/carnes/NOVILHO/bife-de-chorizo-nov.png";
 import bananinhaNovImg from "../assets/menu/carnes/NOVILHO/bananinha-nov.png";
+import mioloDeAlcatraNovImg from "../assets/menu/carnes/NOVILHO/miolo-de-alcatra-p-nov.png";
 import patinhoNovImg from "../assets/menu/carnes/NOVILHO/patinho-nov.png";
 import lagartoNovImg from "../assets/menu/carnes/NOVILHO/lagarto-p-nov.png";
 import coxaoMoleNovImg from "../assets/menu/carnes/NOVILHO/coxao-mole-nov.png";
 import costelaEmTiraNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-nov.png";
-import costelaEmTiraDuplaNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-dupla-nov.png";
+import costelaJanelaNovImg from "../assets/menu/carnes/NOVILHO/costela-janela-nov.png";
+import costelaGrillNovImg from "../assets/menu/carnes/NOVILHO/costela-grill-nov.png";
+import costelaGourmetDoDianteiroNovImg from "../assets/menu/carnes/NOVILHO/costela-gourmet-do-dianteiro-nov.png";
+import costelaMingaDesossadaNovImg from "../assets/menu/carnes/NOVILHO/costela-m-desossada-nov.png";
 import primeRibNovImg from "../assets/menu/carnes/NOVILHO/prime-rib-nov.png";
 import tBoneNovImg from "../assets/menu/carnes/NOVILHO/t-bone-nov.png";
 import granitoNovImg from "../assets/menu/carnes/NOVILHO/granito-nov.png";
 import chorizoGrillNovImg from "../assets/menu/carnes/NOVILHO/chorizo-grill-nov.png";
+import costelaEmTiraDuplaNovImg from "../assets/menu/carnes/NOVILHO/costela-em-tira-dupla-nov.png";
 import entranhaFinaNovImg from "../assets/menu/carnes/NOVILHO/entranha-fina-nov.png";
 import anchoGrillNovImg from "../assets/menu/carnes/NOVILHO/ancho-grill-nov.png";
 import capaDeFileNovImg from "../assets/menu/carnes/NOVILHO/capa-de-file-nov.png";
@@ -50,32 +55,44 @@ import anchoGrillNobImg from "../assets/menu/carnes/NOBRE/ancho-grill-nob.png";
 import picanhaNobImg from "../assets/menu/carnes/NOBRE/picanha-nob.png";
 import fileMignonNobImg from "../assets/menu/carnes/NOBRE/file-mignon-nob.png";
 import entrecotNobImg from "../assets/menu/carnes/NOBRE/entrecot-nob.png";
+import lagartoNobImg from "../assets/menu/carnes/NOBRE/lagarto-nob.png";
 import chorizoNobImg from "../assets/menu/carnes/NOBRE/chorizo-grill-nob.png";
 import bananinhaNobImg from "../assets/menu/carnes/NOBRE/bananinha-nob.png";
 import patinhoNobImg from "../assets/menu/carnes/NOBRE/patinho-nob.png";
-import lagartoNobImg from "../assets/menu/carnes/NOBRE/lagarto-p-nob.png";
 import lagartoPequenoNobImg from "../assets/menu/carnes/NOBRE/lagarto-p-nob.png";
 import coxaoMoleNobImg from "../assets/menu/carnes/NOBRE/coxao-mole-nob.png";
 import vazioLargoNobImg from "../assets/menu/carnes/NOBRE/vazio-nob.png";
 import capaDeFileNobImg from "../assets/menu/carnes/NOBRE/capa-de-file-nob.png";
 import aranhaAlcatraNobImg from "../assets/menu/carnes/NOBRE/aranha-de-alcatra-nob.png";
 import costelaGrillNobImg from "../assets/menu/carnes/NOBRE/costela-grill-nob.png";
+import costelaJanelaNobImg from "../assets/menu/carnes/NOBRE/costela-janela-nob.png";
+import costelaEmTiraNobImg from "../assets/menu/carnes/NOBRE/costela-em-tira-nob.png";
 import ossobucoNobImg from "../assets/menu/carnes/NOBRE/ossobuco-nob.png";
 import cupimNobImg from "../assets/menu/carnes/NOBRE/cupim-nob.png";
 import granitoNobImg from "../assets/menu/carnes/NOBRE/granito-nob.png";
 import chorizoGrillNobImg from "../assets/menu/carnes/NOBRE/chorizo-grill-nob.png";
 
 // Dia a dia
+import carneBurguerDdImg from "../assets/menu/carnes/DIA-A-DIA/burguer-DD.png";
+import carneMoidaPrimeiraDdImg from "../assets/menu/carnes/DIA-A-DIA/carne-moida-DD.png";
+import carneMoidaSegundaDdImg from "../assets/menu/carnes/DIA-A-DIA/carne-moida-2-DD.png";
+import carneMoidaAcemDdImg from "../assets/menu/carnes/DIA-A-DIA/carne-moida-acem-DD.png";
+import carneMoidaPatinhoDdImg from "../assets/menu/carnes/DIA-A-DIA/carne-moida-patinho-DD.png";
+import patinhoCubosDdImg from "../assets/menu/carnes/DIA-A-DIA/cubos-patinho-DD.png";
+import fileMignonIscasDdImg from "../assets/menu/carnes/DIA-A-DIA/iscas-file-mignon-DD.png";
+import patinhoIscasDdImg from "../assets/menu/carnes/DIA-A-DIA/iscas-patinho-DD.png";
+import kitCarreteiroDdImg from "../assets/menu/carnes/DIA-A-DIA/kit-carreteiro-DD.png";
+
 export type Product = {
   name: string;
   line: "Boutique" | "Novilho Jovem" | "Campo Nobre" | "Pampeira" | "Dia a dia";
   description: string;
   shortDescription: string;
   suggestedPreparation: string;
-  harmonization: string;
+  harmonization?: string;
   tagline: string;
-  marbling: number;
-  softness: number;
+  marbling?: number;
+  softness?: number;
   image: string;
   smallerImage?: string;
 };
@@ -328,7 +345,10 @@ export const products: Product[] = [
     image: cowboySteakBtqImg,
   },
 
+  // total de cortes da linha boutique: 16 cortes
+
   // LINHA NOVILHO JOVEM
+  //picanha
   {
     name: "Picanha",
     line: "Novilho Jovem",
@@ -343,6 +363,7 @@ export const products: Product[] = [
     softness: 4,
     image: picanhaNovImg,
   },
+  // maminha
   {
     name: "Maminha",
     line: "Novilho Jovem",
@@ -357,6 +378,7 @@ export const products: Product[] = [
     softness: 4,
     image: maminhaNovImg,
   },
+  // vazio bife
   {
     name: "Vazio Bife",
     line: "Novilho Jovem",
@@ -371,6 +393,7 @@ export const products: Product[] = [
     softness: 3,
     image: vazioBifeNovImg,
   },
+  // vazio largo
   {
     name: "Vazio Largo",
     line: "Novilho Jovem",
@@ -385,6 +408,7 @@ export const products: Product[] = [
     softness: 3,
     image: vazioLargoNovImg,
   },
+  // file mignon
   {
     name: "File Mignon",
     line: "Novilho Jovem",
@@ -399,6 +423,7 @@ export const products: Product[] = [
     softness: 5,
     image: fileMignonNovImg,
   },
+  //entrecot
   {
     name: "Entrecot",
     line: "Novilho Jovem",
@@ -413,6 +438,7 @@ export const products: Product[] = [
     softness: 5,
     image: entrecotNovImg,
   },
+  //chorizo
   {
     name: "Chorizo",
     line: "Novilho Jovem",
@@ -426,6 +452,7 @@ export const products: Product[] = [
     softness: 4,
     image: chorizoNovImg,
   },
+  // bananinha
   {
     name: "Bananinha",
     line: "Novilho Jovem",
@@ -440,6 +467,7 @@ export const products: Product[] = [
     softness: 4,
     image: bananinhaNovImg,
   },
+  // patinho
   {
     name: "Patinho",
     line: "Novilho Jovem",
@@ -453,6 +481,7 @@ export const products: Product[] = [
     softness: 3,
     image: patinhoNovImg,
   },
+  // lagarto
   {
     name: "Lagarto",
     line: "Novilho Jovem",
@@ -466,6 +495,7 @@ export const products: Product[] = [
     softness: 2,
     image: lagartoNovImg,
   },
+  // coxao mole
   {
     name: "Coxao Mole",
     line: "Novilho Jovem",
@@ -480,6 +510,7 @@ export const products: Product[] = [
     softness: 4,
     image: coxaoMoleNovImg,
   },
+  // costela em tira
   {
     name: "Costela em Tira",
     line: "Novilho Jovem",
@@ -494,18 +525,22 @@ export const products: Product[] = [
     softness: 4,
     image: costelaEmTiraNovImg,
   },
+  // costela em tira dupla
   {
     name: "Costela em Tira Dupla",
     line: "Novilho Jovem",
-    description: "Corte especial da costela bovina com osso duplo, oferecendo ainda mais sabor e suculência em cada pedaço.",
+    description:
+      "Corte especial da costela bovina com osso duplo, oferecendo ainda mais sabor e suculência em cada pedaço.",
     shortDescription: "Dupla dose de sabor e suculência.",
-    suggestedPreparation: "Prepare lentamente na grelha para derreter a gordura entremeada e realçar o sabor intenso.",
+    suggestedPreparation:
+      "Prepare lentamente na grelha para derreter a gordura entremeada e realçar o sabor intenso.",
     harmonization: "Tannat uruguaio, Syrah ou cervejas bock.",
     tagline: "O auge da costela",
     marbling: 4,
     softness: 4,
     image: costelaEmTiraDuplaNovImg,
   },
+  // prime rib
   {
     name: "Prime Rib",
     line: "Novilho Jovem",
@@ -519,6 +554,7 @@ export const products: Product[] = [
     softness: 5,
     image: primeRibNovImg,
   },
+  // t-bone
   {
     name: "T-Bone",
     line: "Novilho Jovem",
@@ -533,6 +569,7 @@ export const products: Product[] = [
     softness: 5,
     image: tBoneNovImg,
   },
+  // granito
   {
     name: "Granito",
     line: "Novilho Jovem",
@@ -547,6 +584,7 @@ export const products: Product[] = [
     softness: 3,
     image: granitoNovImg,
   },
+  // chorizo grill
   {
     name: "Chorizo Grill",
     line: "Novilho Jovem",
@@ -560,6 +598,7 @@ export const products: Product[] = [
     softness: 4,
     image: chorizoGrillNovImg,
   },
+  // entranha fina
   {
     name: "Entranha Fina",
     line: "Novilho Jovem",
@@ -574,6 +613,7 @@ export const products: Product[] = [
     softness: 3,
     image: entranhaFinaNovImg,
   },
+  // ancho grill
   {
     name: "Ancho Grill",
     line: "Novilho Jovem",
@@ -588,6 +628,7 @@ export const products: Product[] = [
     softness: 5,
     image: anchoGrillNovImg,
   },
+  // capa de filé
   {
     name: "Capa de Filé",
     line: "Novilho Jovem",
@@ -601,7 +642,81 @@ export const products: Product[] = [
     softness: 3,
     image: capaDeFileNovImg,
   },
-
+  // costela gourmet do dianteiro
+  {
+    name: "Costela Gourmet do Dianteiro",
+    line: "Novilho Jovem",
+    description:
+      "Corte especial da costela dianteira selecionado por seu sabor intenso e textura suculenta, ideal para experiências premium de churrasco.",
+    shortDescription: "Costela dianteira premium.",
+    suggestedPreparation:
+      "Asse lentamente para derreter a gordura entremeada e atingir textura extremamente macia.",
+    harmonization: "Tannat uruguaio, Syrah ou cervejas bock.",
+    tagline: "O auge da costela dianteira",
+    softness: 5,
+    marbling: 4,
+    image: costelaGourmetDoDianteiroNovImg,
+  },
+  // costela minga desossada
+  {
+    name: "Costela Minga Desossada",
+    line: "Novilho Jovem",
+    description:
+      "Corte desossado da costela bovina, conhecido pelo sabor intenso e textura suculenta, ideal para preparos rápidos na grelha.",
+    shortDescription: "Costela desossada e suculenta.",
+    suggestedPreparation:
+      "Grelhe rapidamente em fogo alto para formar crosta caramelizada mantendo o interior suculento.",
+    harmonization: "Tannat ou porter.",
+    tagline: "Sabor intenso sem osso",
+    softness: 4,
+    marbling: 4,
+    image: costelaMingaDesossadaNovImg,
+  },
+  // costela grill
+  {
+    name: "Costela Grill",
+    line: "Novilho Jovem",
+    description:
+      "Corte retirado da costela bovina com equilíbrio entre carne e gordura, oferecendo sabor intenso e textura suculenta.",
+    shortDescription: "Sabor que impressiona.",
+    suggestedPreparation:
+      "Ideal para grelha em fogo médio, permitindo caramelização gradual da gordura e preservando a maciez.",
+    harmonization: "Tannat, Syrah ou cervejas bock.",
+    tagline: "Sabor que impressiona",
+    softness: 4,
+    marbling: 4,
+    image: costelaGrillNovImg,
+  },
+  // costela Janela
+  {
+    name: "Costela Janela",
+    line: "Novilho Jovem",
+    description:
+      "Corte especial da costela bovina com osso exposto, proporcionando sabor intenso e textura suculenta, ideal para experiências premium de churrasco.",
+    shortDescription: "Costela com osso exposto.",
+    suggestedPreparation:
+      "Asse lentamente para derreter a gordura entremeada e atingir textura extremamente macia.",
+    harmonization: "Tannat uruguaio, Syrah ou cervejas bock.",
+    tagline: "O auge da costela com osso",
+    softness: 5,
+    marbling: 4,
+    image: costelaJanelaNovImg,
+  },
+  //miolo de alcatra
+  {
+    name: "Miolo de Alcatra",
+    line: "Novilho Jovem",
+    description:
+      "Corte macio e suculento retirado do miolo da alcatra, conhecido pelo sabor suave e textura delicada.",
+    shortDescription: "Maciez e sabor suave.",
+    suggestedPreparation:
+      "Ideal para bifes grelhados ou assados em forno, preservando a suculência.",
+    harmonization: "Merlot ou cervejas pilsner.",
+    tagline: "Delicadeza na brasa",
+    softness: 4,
+    marbling: 2,
+    image: mioloDeAlcatraNovImg,
+  },
   // LINHA PAMPEIRA
 
   {
@@ -732,6 +847,7 @@ export const products: Product[] = [
     softness: 5,
     image: entrecotNobImg,
   },
+  // lagarto
   {
     name: "Lagarto",
     line: "Campo Nobre",
@@ -744,6 +860,20 @@ export const products: Product[] = [
     marbling: 1,
     softness: 2,
     image: lagartoNobImg,
+  },
+  // lagarto pequeno
+  {
+    name: "Lagarto Pequeno",
+    line: "Campo Nobre",
+    description:
+      "Versão menor e mais uniforme do lagarto, mantendo fibras longas e sabor característico.",
+    shortDescription: "Textura firme e sabor marcante.",
+    suggestedPreparation: "Ideal para assados lentos e cozidos.",
+    harmonization: "Syrah ou brown ale.",
+    tagline: "Tradição nos cozidos",
+    marbling: 1,
+    softness: 2,
+    image: lagartoPequenoNobImg,
   },
   {
     name: "Chorizo",
@@ -811,19 +941,7 @@ export const products: Product[] = [
     softness: 3,
     image: patinhoNobImg,
   },
-  {
-    name: "Lagarto Pequeno",
-    line: "Campo Nobre",
-    description:
-      "Versão menor e mais uniforme do lagarto, mantendo fibras longas e sabor característico.",
-    shortDescription: "Textura firme e sabor marcante.",
-    suggestedPreparation: "Ideal para assados lentos e cozidos.",
-    harmonization: "Syrah ou brown ale.",
-    tagline: "Tradição nos cozidos",
-    marbling: 1,
-    softness: 2,
-    image: lagartoPequenoNobImg,
-  },
+
   {
     name: "Coxão Mole",
     line: "Campo Nobre",
@@ -836,6 +954,37 @@ export const products: Product[] = [
     marbling: 2,
     softness: 4,
     image: coxaoMoleNobImg,
+  },
+  //costela janela
+  {
+    name: "Costela Janela",
+    line: "Campo Nobre",
+    description:
+      "Corte especial da costela bovina com osso exposto, proporcionando sabor intenso e textura suculenta, ideal para experiências premium de churrasco.",
+    shortDescription: "Costela com osso exposto.",
+    suggestedPreparation:
+      "Asse lentamente para derreter a gordura entremeada e atingir textura extremamente macia.",
+    harmonization: "Tannat uruguaio, Syrah ou cervejas bock.",
+    tagline: "O auge da costela com osso",
+    softness: 5,
+    marbling: 4,
+    image: costelaJanelaNobImg,
+  },
+
+  // costela em tira
+  {
+    name: "Costela em Tira",
+    line: "Campo Nobre",
+    description:
+      "Corte transversal da costela bovina muito tradicional na parrilla, conhecido pelo sabor intenso e suculência.",
+    shortDescription: "O sabor da parrilla.",
+    suggestedPreparation:
+      "Prepare lentamente na grelha para derreter a gordura entremeada.",
+    harmonization: "Tannat ou porter.",
+    tagline: "Força e tradição",
+    marbling: 4,
+    softness: 4,
+    image: costelaEmTiraNobImg,
   },
   {
     name: "Costela Grill",
@@ -917,5 +1066,105 @@ export const products: Product[] = [
     softness: 5,
     image: anchoGrillNobImg,
   },
+
   // LINHA DIA A DIA
+  {
+    name: "Carne Burguer Campo Nobre",
+    line: "Dia a dia",
+    description:
+      "Hambúrguer bovino congelado produzido com carne bovina selecionada, ideal para preparos rápidos mantendo sabor e suculência.",
+    shortDescription: "Praticidade para qualquer momento.",
+    suggestedPreparation:
+      "Prepare na chapa, frigideira ou churrasqueira até atingir o ponto desejado.",
+    tagline: "Sabor rápido e prático",
+    image: carneBurguerDdImg,
+  },
+  {
+    name: "Carne Moída de 1º",
+    line: "Dia a dia",
+    description:
+      "Carne bovina moída congelada de primeira, com textura equilibrada e ótima versatilidade para receitas do cotidiano.",
+    shortDescription: "Versátil e prática.",
+    suggestedPreparation:
+      "Ideal para molhos, hambúrgueres, recheios e preparos rápidos.",
+    tagline: "Base para grandes receitas",
+    image: carneMoidaPrimeiraDdImg,
+  },
+  {
+    name: "Carne Moída de 2º",
+    line: "Dia a dia",
+    description:
+      "Carne bovina moída congelada de segunda, indicada para receitas cozidas e preparos do dia a dia.",
+    shortDescription: "Sabor e rendimento.",
+    suggestedPreparation:
+      "Ideal para molhos, refogados, recheios e pratos caseiros.",
+    tagline: "Praticidade na rotina",
+    image: carneMoidaSegundaDdImg,
+  },
+  {
+    name: "Carne Moída Acém",
+    line: "Dia a dia",
+    description:
+      "Carne moída produzida a partir do acém bovino, oferecendo sabor marcante e boa suculência.",
+    shortDescription: "Sabor intenso e versatilidade.",
+    suggestedPreparation:
+      "Ideal para hambúrgueres, molhos, almôndegas e recheios.",
+    tagline: "Mais sabor no preparo",
+    image: carneMoidaAcemDdImg,
+  },
+  {
+    name: "Carne Moída Patinho",
+    line: "Dia a dia",
+    description:
+      "Carne moída feita com patinho bovino, corte magro e versátil muito utilizado em preparos leves.",
+    shortDescription: "Leve e prática.",
+    suggestedPreparation:
+      "Ideal para receitas rápidas, molhos e hambúrgueres caseiros.",
+    tagline: "Equilíbrio no dia a dia",
+    image: carneMoidaPatinhoDdImg,
+  },
+  {
+    name: "Patinho em Cubos",
+    line: "Dia a dia",
+    description:
+      "Cubos de patinho bovino congelado, corte magro e versátil ideal para cozidos e refogados.",
+    shortDescription: "Pronto para cozinhar.",
+    suggestedPreparation:
+      "Ideal para ensopados, estrogonofe e receitas rápidas.",
+    tagline: "Facilidade no preparo",
+    image: patinhoCubosDdImg,
+  },
+  {
+    name: "Filé Mignon em Iscas",
+    line: "Dia a dia",
+    description:
+      "Iscas de filé mignon bovino congelado, conhecidas pela maciez e rapidez no preparo.",
+    shortDescription: "Maciez e praticidade.",
+    suggestedPreparation:
+      "Ideal para estrogonofe, grelhados rápidos e receitas salteadas.",
+    tagline: "Rapidez com maciez",
+    image: fileMignonIscasDdImg,
+  },
+  {
+    name: "Patinho em Iscas",
+    line: "Dia a dia",
+    description:
+      "Iscas de patinho bovino congelado, corte magro e versátil para preparos rápidos.",
+    shortDescription: "Praticidade e leveza.",
+    suggestedPreparation:
+      "Ideal para refogados, grelhados rápidos e receitas do cotidiano.",
+    tagline: "Agilidade na cozinha",
+    image: patinhoIscasDdImg,
+  },
+  {
+    name: "Kit Carreteiro",
+    line: "Dia a dia",
+    description:
+      "Kit com ingredientes bovinos selecionados para preparo de arroz carreteiro, composto por coxão duro e lagarto.",
+    shortDescription: "O sabor do carreteiro.",
+    suggestedPreparation:
+      "Ideal para cozimento lento junto ao arroz e temperos tradicionais.",
+    tagline: "Tradição em cada preparo",
+    image: kitCarreteiroDdImg,
+  },
 ];

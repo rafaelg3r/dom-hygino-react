@@ -6,6 +6,8 @@ import { useSearchParams } from "react-router-dom";
 import TextNovilho from "../../assets/menu/linhas-banner/textNovilho.png";
 import TextBoutique from "../../assets/menu/linhas-banner/textBoutique.png";
 import TextPampeira from "../../assets/menu/linhas-banner/textPampeira.png";
+import TextCampoNobre from "../../assets/menu/linhas-banner/textCampoNobre.png";
+// import TextDiaADia from "../../assets/menu/linhas-banner/textDiaADia.png";
 
 export function SectionBanner() {
   const [searchParams] = useSearchParams();
@@ -18,31 +20,35 @@ export function SectionBanner() {
     boutique: TextBoutique,
     "novilho jovem": TextNovilho,
     pampeira: TextPampeira,
+    "campo nobre": TextCampoNobre,
+    // "dia a dia": TextDiaADia,
   };
-  type BannerKeys = keyof typeof bannersText;
-  const bannerLine =
-    bannersText[currentLine.toLocaleLowerCase() as BannerKeys] || TextBoutique;
+  type BannerTextKeys = keyof typeof bannersText;
+  const bannerTextLine =
+    bannersText[currentLine.toLocaleLowerCase() as BannerTextKeys] ||
+    TextBoutique;
 
-  // Controle do Produto Selecionado (Display)
-  //  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-
-  // Filtra os produtos com base na linha atual
-  //  const filteredProducts = products.filter((p) => p.line === currentLine);
-
-  // Função para mudar a linha (atualiza URL)
-  // const handleLineChange = (newLine: string) => {
-  //   setSearchParams({ linha: newLine }); // IMPORTANTE -----------------------------------------
-  //   setSelectedProduct(null); //Limpa o display ao trocar de linha
-  // };
-
-  //Função para definir a imagem do banner dinamicamente baseado no currentLine
-
+  const bannersImage: Record<string, string> = {
+    boutique: "bannerBtq",
+    "novilho jovem": "bannerNov",
+    "campo nobre": "bannerNob",
+    pampeira: "bannerPmp",
+    "dia a dia": "bannerDia",
+  };
+  type BannerImgKeys = keyof typeof bannersImage;
+  const bannerImgLine =
+    bannersImage[currentLine.toLocaleLowerCase() as BannerImgKeys] ||
+    "bannerBtq";
   return (
     <div className={styles.bannerContainer}>
-      <div className={styles.menuBanner}>
+      <div className={`${styles.menuBanner} ${styles[`${bannerImgLine}`]}`}>
         <picture className={styles.menuTitle}>
-          <source media="(min-width: 1081px)" srcSet={bannerLine} />
-          <img id="banner-title" src={bannerLine} alt="Linha novilho jovem" />
+          <source media="(min-width: 1081px)" srcSet={bannerTextLine} />
+          <img
+            id="banner-title"
+            src={bannerTextLine}
+            alt={`Banner da linha ${currentLine}`}
+          />
         </picture>
         <div className={styles.menuBannerGradient}></div>
       </div>

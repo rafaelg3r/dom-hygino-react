@@ -1,9 +1,22 @@
 .bannerContainer {
   padding-top: 8.4rem;
 }
+.bannerBtq {
+  background-image: url("../../assets/menu/banners/Boutique-large.jpg");
+}
+.bannerNov {
+  background-image: url("../../assets/menu/banners/NovilhoJovem-large.jpg");
+}
+.bannerNob {
+  background-image: url("../../assets/menu/banners/CampoNobre-large.jpg");
+}
+.bannerPmp {
+  background-image: url("../../assets/menu/banners/angusBanner.jpg");
+}
+/* .bannerDia {
+  background-image: url("../../assets/menu/banners/diaADiaBanner.jpg");
+} */
 .menuBanner {
-  /* background-image: url("../../assets/menu/BannerBg.png"); */
-  background-image: url("../../assets/menu/banners/banner-boutique.jpg");
   background-size: cover;
   background-position: center;
   height: 35rem;
@@ -22,7 +35,7 @@
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.0) 100%
+    rgba(0, 0, 0, 0) 100%
   );
   z-index: 0;
 }
@@ -34,7 +47,6 @@
   z-index: 1;
 }
 
-
 .bannerLine {
   z-index: 3;
   background-color: var(--pink-red-50);
@@ -43,8 +55,18 @@
   box-shadow: 0 0.3rem 1.2rem rgba(10, 10, 10, 0.3);
 }
 
+@media (max-width: 1024px) {
+  .bannerBtq {
+    background-image: url("../../assets/menu/banners/boutique-medium.jpg");
+  }
+}
 @media (max-width: 768px) {
-  .menuTitle {
-    display: none;
+  .bannerBtq {
+    background-image: url("../../assets/menu/banners/Boutique-small.jpg");
+  }
+}
+@media (max-width: 520px) {
+  .bannerBtq {
+    background-image: url("../../assets/menu/banners/Boutique-smallest.jpg");
   }
 }

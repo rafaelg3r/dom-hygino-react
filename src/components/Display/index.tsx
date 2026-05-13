@@ -5,6 +5,7 @@ import { products } from "../../utils/products";
 import { motion } from "framer-motion";
 import { Flame, Wine } from "lucide-react";
 import { Button } from "../Button";
+import { HashLink as Link } from "react-router-hash-link";
 
 // TODO: animações nos acompanhamentos em cascata de cima pra baixo,
 export function Display() {
@@ -12,9 +13,9 @@ export function Display() {
   const currentLineName = useCurrentLine();
 
   const currentProduct = products.find(
-    (p) => 
+    (p) =>
       p.name.toLowerCase() === currentSteakName?.toLowerCase() &&
-      p.line.toLowerCase() === currentLineName?.toLowerCase()
+      p.line.toLowerCase() === currentLineName?.toLowerCase(),
   );
   const renderBlocks = (level: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -58,20 +59,24 @@ export function Display() {
           <motion.div className={styles.displayTextContainer}>
             <span className={styles.tagline}>{currentProduct.tagline}</span>
             <h2>{currentProduct.name}</h2>
-            <div className={styles.levelsContainer}>
-              <div className={styles.marmoreio}>
-                <span>marmorização</span>
-                <div className={styles.blocksContainer}>
-                  {renderBlocks(currentProduct.marbling)}
+            {currentProduct.line !== "Dia a dia" && (
+              <>
+                <div className={styles.levelsContainer}>
+                  <div className={styles.marmoreio}>
+                    <span>marmorização</span>
+                    <div className={styles.blocksContainer}>
+                      {renderBlocks(currentProduct.marbling ?? 0)}
+                    </div>
+                  </div>
+                  <div className={styles.marmoreio}>
+                    <span>maciez</span>
+                    <div className={styles.blocksContainer}>
+                      {renderBlocks(currentProduct.softness ?? 0)}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.marmoreio}>
-                <span>maciez</span>
-                <div className={styles.blocksContainer}>
-                  {renderBlocks(currentProduct.softness)}
-                </div>
-              </div>
-            </div>
+              </>
+            )}
             <p className={styles.description}>{currentProduct.description}</p>
             <div className={styles.displayDivider}></div>
             <div className={styles.displaySuggestions}>
@@ -84,19 +89,25 @@ export function Display() {
                   {currentProduct.suggestedPreparation}
                 </p>
               </div>
-              <div className={styles.preparoSugerido}>
-                <div className={styles.prepTitle}>
-                  <Wine size={16} color={` var(--pink-red-80) `} />
-                  <span>Harmonização</span>
+              { currentProduct.line !== "Dia a dia" && (
+              <>
+                <div className={styles.preparoSugerido}>
+                  <div className={styles.prepTitle}>
+                    <Wine size={16} color={` var(--pink-red-80) `} />
+                    <span>Harmonização</span>
+                  </div>
+                  <p className={styles.suggestedPreparation}>
+                    {currentProduct.harmonization}
+                  </p>
                 </div>
-                <p className={styles.suggestedPreparation}>
-                  {currentProduct.harmonization}
-                </p>
-              </div>
+              </>
+              )}
             </div>
-            <Button size="medium" className={styles.btnEntrarContato}>
-              Ver lojas disponíveis
-            </Button>
+            <Link to="/#lojas">
+              <Button size="medium" className={styles.btnEntrarContato}>
+                Ver lojas nossas lojas
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

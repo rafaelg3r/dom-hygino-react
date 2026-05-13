@@ -51,6 +51,15 @@ export function LineFilter() {
         >
           <img src={pampeiraLogo} alt="" />
         </Link>
+        <Link
+          to="?linha=Dia a dia"
+          className={clsx(
+            styles.selectorLink,
+            selectedLine === "dia a dia " && styles.menuSelected,
+          )}
+        >
+          <img src={pampeiraLogo} alt="" />
+        </Link>
         {/* <Link to="?linha=Produtos">Produtos</Link> */}
       </div>
     </div>

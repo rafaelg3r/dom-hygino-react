@@ -5,29 +5,37 @@
   align-items: center;
   background-color: var(--dark-grey);
   border: 0.1rem solid var(--card);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.cardContainer:hover {
+  border-color: var(--pink-red);
+  transform: scale(1.05);
+}
+.cardContainer:hover .verDetalhes {
+  background-color: var(--pink-red);
 }
 .novilhoBackground {
-  background-image: url("../../assets/menu/carnes/BOUTIQUE/bg.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.nobreBackground {
   background-image: url("../../assets/menu/carnes/NOVILHO/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.nobreBackground {
+  background-image: url("../../assets/menu/carnes/NOBRE/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .pampeiraBackground {
-  background-image: url("../../assets/menu/carnes/PAMPEIRA/bg.jpeg");
+  background-image: url("../../assets/menu/carnes/PAMPEIRA/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .boutiqueBackground,
 .diaADiaBackground {
-  background-image: url("../../assets/menu/carnes/BOUTIQUE/steak-background.jpg");
-  background-position: bottom;
+  background-image: url("../../assets/menu/carnes/BOUTIQUE/bg.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -140,6 +148,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
+  transition: background-color 0.2s ease;
 }
 .verDetalhes p {
   font-size: 1.6rem;
@@ -151,5 +160,13 @@
 @media (max-width: 768px) {
   .cardBackground {
     background-position: center;
+  }
+  .textContainer span {
+    letter-spacing: 0.15rem;
+  }
+}
+@media (max-width: 512px) {
+  .cardContainer {
+    min-width: 30rem;
   }
 }

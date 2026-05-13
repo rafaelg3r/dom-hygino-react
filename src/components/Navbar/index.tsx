@@ -97,10 +97,10 @@ export function Navbar() {
                       Linha Novilho Jovem
                     </Link>
                     <Link
-                      to="/menu?linha=Churrasco"
+                      to="/menu?linha=Campo Nobre"
                       className={styles.produtosListItem}
                     >
-                      Linha Churrasco
+                      Linha Campo Nobre
                     </Link>
                     <Link
                       to="/menu?linha=Pampeira"
@@ -125,11 +125,7 @@ export function Navbar() {
           </div>
 
           <div className={styles.rightNav}>
-            <a
-              className={styles.lineLink}
-              href="/franqueado"
-              rel="noreferrer"
-            >
+            <a className={styles.lineLink} href="/franqueado" rel="noreferrer">
               seja um franqueado
             </a>
             <a

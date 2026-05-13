@@ -21,7 +21,7 @@
 
 .linhaBoutique,
 .linhaNovilho,
-.linhaChurrasco,
+.linhaCampoNobre,
 .linhaPampeira {
   display: flex;
   justify-content: end;
@@ -44,7 +44,7 @@
 }
 
 .linhaBoutique,
-.linhaChurrasco {
+.linhaCampoNobre {
   justify-content: start;
 }
 
@@ -56,7 +56,7 @@
   background-image: url("../../assets/home/cortes/novilho-image-bg.png");
 }
 
-.linhaChurrasco {
+.linhaCampoNobre {
   background-image: url("../../assets/home/cortes/churrasco-image-bg.png");
 }
 
@@ -108,7 +108,7 @@
 @media (max-width: 768px) {
   .linhaBoutique,
   .linhaNovilho,
-  .linhaChurrasco,
+  .linhaCampoNobre,
   .linhaPampeira {
     justify-content: center;
   }
