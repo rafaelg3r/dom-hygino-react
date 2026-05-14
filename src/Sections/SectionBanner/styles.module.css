@@ -13,9 +13,10 @@
 .bannerPmp {
   background-image: url("../../assets/menu/banners/angusBanner.jpg");
 }
-/* .bannerDia {
-  background-image: url("../../assets/menu/banners/diaADiaBanner.jpg");
-} */
+.bannerDia {
+  background-image: url("../../assets/menu/banners/bannerDD.jpg");
+  background-position: bottom !important;
+} 
 .menuBanner {
   background-size: cover;
   background-position: center;

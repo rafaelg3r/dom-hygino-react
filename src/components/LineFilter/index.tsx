@@ -7,6 +7,7 @@ import boutiqueLogo from "../../assets/menu/logos/Boutique-white.jpg";
 import novilhoLogo from "../../assets/menu/logos/Novilho-Brown.jpg";
 import nobreLogo from "../../assets/menu/logos/Nobre-azul.jpg";
 import pampeiraLogo from "../../assets/menu/logos/Pampeira-green.jpg";
+import diaADiaLogo from "../../assets/menu/logos/DiaADia.jpg";
 export function LineFilter() {
   const currentLine = useCurrentLine();
   const selectedLine = currentLine?.toLocaleLowerCase();
@@ -58,7 +59,7 @@ export function LineFilter() {
             selectedLine === "dia a dia " && styles.menuSelected,
           )}
         >
-          <img src={pampeiraLogo} alt="" />
+          <img src={diaADiaLogo} alt="" />
         </Link>
         {/* <Link to="?linha=Produtos">Produtos</Link> */}
       </div>

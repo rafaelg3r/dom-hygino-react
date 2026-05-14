@@ -49,14 +49,23 @@
 .selectorLink:nth-child(4) {
   background-color: #30a749;
 }
+.selectorLink:nth-child(5) {
+  background-color: #fffbf8;
+}
 
 .selectorLink:hover {
   color: var(--pink-red);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1540px) {
   .selectorOptions {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .selectorOptions {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
