@@ -108,12 +108,12 @@ export function Navbar() {
                     >
                       Linha Pampeira
                     </Link>
-                    {/* <Link
-                      to="/menu?linha=Produtos"
+                     <Link
+                      to="/menu?linha=Dia a dia"
                       className={styles.produtosListItem}
                     >
-                      Produtos
-                    </Link> */}
+                      Linha Dia a Dia
+                    </Link>
                   </div>
                 </div>
               )}
