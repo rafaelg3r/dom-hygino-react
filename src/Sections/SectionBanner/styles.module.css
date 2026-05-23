@@ -16,7 +16,7 @@
 .bannerDia {
   background-image: url("../../assets/menu/banners/bannerDD.jpg");
   background-position: bottom !important;
-} 
+}
 .menuBanner {
   background-size: cover;
   background-position: center;
@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  background-repeat: no-repeat;
 }
 .menuBannerGradient {
   position: absolute;
