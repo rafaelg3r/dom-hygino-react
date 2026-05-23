@@ -58,7 +58,7 @@ export function Display() {
           </div>
           <motion.div className={styles.displayTextContainer}>
             <span className={styles.tagline}>{currentProduct.tagline}</span>
-            <h2>{currentProduct.name}</h2>
+            <h2 className={styles.displayProductName}>{currentProduct.name}</h2>
             {currentProduct.line !== "Dia a dia" && (
               <>
                 <div className={styles.levelsContainer}>

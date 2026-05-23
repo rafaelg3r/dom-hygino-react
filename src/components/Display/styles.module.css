@@ -177,12 +177,15 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .menuDisplay {
     padding: 1rem;
   }
   .displayTextContainer {
     padding: 2rem;
+  }
+  .displayTextContainer h2 {
+    font-size: 4rem;
   }
   .levelsContainer {
     flex-direction: column;
