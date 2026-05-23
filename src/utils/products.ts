@@ -333,7 +333,7 @@ export const products: Product[] = [
     name: "Cowboy Steak",
     line: "Boutique",
     description:
-      "Corte robusto semelhante ao tomahawk, porém com osso mais curto. Possui alto marmoreio, sabor intenso e excelente suculência.",
+      "O Cowboy Steak é um corte premium retirado do miolo do acém bovino, conhecido pelo excelente marmoreio e sabor intenso.",
     shortDescription: "Robusto e extremamente saboroso.",
     suggestedPreparation:
       "Sele em fogo forte e finalize em calor indireto até o ponto desejado, mantendo o descanso antes de servir.",
