@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {/* TODO:tirar o basename quando for publicar */}
+  
     <BrowserRouter>
       <ScrollToTop />
       <PageLoader />
