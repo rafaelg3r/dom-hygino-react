@@ -153,6 +153,22 @@ export function SectionLojas() {
                   <img src={outArrow} alt="abrir em uma nova guia" />
                 </div>
               </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.5, duration: 0.5 }}
+                target="_blank"
+                href="https://www.instagram.com/domhyginotorres/"
+              >
+                <div className={`${styles.domItemLista} ${styles.dom8}`}>
+                  <div className={styles.itemListaContent}>
+                    <img src={instagramIcon} alt="" />
+                    <span>Dom Hygino Torres</span>
+                  </div>
+                  <img src={outArrow} alt="abrir em uma nova guia" />
+                </div>
+              </motion.a>
             </div>
           </div>
         </div>
