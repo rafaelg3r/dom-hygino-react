@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"; // Adicionado useRef
 import { useLocation } from "react-router-dom"; // Usando useLocation conforme appRouter.tsx[cite: 1]
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./styles.module.css";
-import LogoSlim from "../../assets/logos/logoSlim.png";
+import TouroLogo from "../../assets/logos/touro-logo.jpeg";
 
 export function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export function PageLoader() {
           }}
         >
           <motion.img
-            src={LogoSlim}
+            src={TouroLogo}
             alt="Logo"
             className={styles.loaderLogo}
             initial={{ opacity: 0, y: 100 }}

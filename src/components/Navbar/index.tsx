@@ -4,7 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { Button } from "../Button";
 
 // Imagens
-import LogoSlim from "../../assets/logos/logoSlim.png";
+import LogoNavbar from "../../assets/logos/logo-dh-fundo-preto.jpg";
 import downArrow from "../../assets/icons/downArrow.png";
 import instagramIcon from "../../assets/icons/instagram.svg";
 import mobileOptionsIcon from "../../assets/icons/options.svg";
@@ -19,7 +19,7 @@ export function Navbar() {
         <Link smooth to="/#home" className={styles.logoContainer}>
           <img
             className={styles.logo}
-            src={LogoSlim}
+            src={LogoNavbar}
             alt="Logo pequena da loja de carnes Dom Hygino"
           />
         </Link>
@@ -108,7 +108,7 @@ export function Navbar() {
                     >
                       Linha Pampeira
                     </Link>
-                     <Link
+                    <Link
                       to="/menu?linha=Dia a dia"
                       className={styles.produtosListItem}
                     >

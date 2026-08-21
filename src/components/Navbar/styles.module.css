@@ -1,18 +1,24 @@
 header {
   z-index: 999;
   position: fixed;
-  background-color: var(--semi-black);
+  background-color: #000;
   color: var(--semi-white);
   width: 100dvw;
   flex: 1;
-  padding: 1rem clamp(6rem, -4.667rem + 10.417vw, 12rem);
+  padding: 0 clamp(6rem, -4.667rem + 10.417vw, 12rem);
   display: flex;
   align-items: center;
   box-shadow: 0 0.2rem 3rem black;
 }
 
+.logoContainer {
+  display: flex;
+}
+
 .logo {
-  width: 9.9rem;
+  width: 20rem;
+  height: auto;
+  object-fit: contain;
 }
 header .navbar {
   display: flex;
@@ -140,13 +146,13 @@ Link,
 
 @media (max-width: 1300px) {
   header {
-    padding: 1rem 6rem;
+    padding: 0 6rem;
   }
 }
 
 @media (max-width: 1120px) {
   header {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
   }
 }
 @media (max-width: 1024px) {
@@ -154,7 +160,7 @@ Link,
     position: relative;
   }
   header {
-    padding: 2.4rem 4rem;
+    padding: 0 4rem;
     justify-content: center;
   }
 
@@ -174,7 +180,7 @@ Link,
   }
   .mobileOptionsList {
     position: absolute;
-    top: 10.5rem;
+    top: 100%;
     right: 0;
     left: 0;
     height: 100dvh;
